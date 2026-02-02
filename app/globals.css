@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Light Mode (New) */
+    --background: #ffffff;
+    --foreground: #1A1A1A;
+
+    --primary: #3A86FF;
+    --secondary: #8338EC;
+    --accent: #4CC9F0;
+
+    --card: #f8f9fa;
+    --card-foreground: #1A1A1A;
+    --border: #e2e8f0;
+  }
+
+  .dark {
+    /* Dark Mode (Original) */
+    --background: #1A1A1A;
+    --foreground: #F8F9FA;
+
+    --primary: #3A86FF;
+    --secondary: #8338EC;
+    --accent: #4CC9F0;
+
+    --card: #2d2d2d;
+    --card-foreground: #F8F9FA;
+    --border: #333333;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* Fallback for some browsers */
+  display: inline-block;
+  /* Often needed for transform/clip to work correctly on spans */
+  padding-bottom: 0.2em;
+  /* Increased to catch deep descenders */
+  margin-bottom: -0.2em;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
