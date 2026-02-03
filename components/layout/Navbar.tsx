@@ -19,7 +19,7 @@ export function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
             <div className="container mx-auto flex items-center justify-between px-6 py-4">
                 <Link href="/" className="text-2xl font-bold text-gradient">
-                    Portfolio
+                    George Georgiou Portfolio
                 </Link>
                 <div className="hidden md:flex items-center gap-8">
                     <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>

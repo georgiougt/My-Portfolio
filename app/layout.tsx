@@ -14,8 +14,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Georg - Digital Product Designer",
-  description: "Portfolio and Showroom",
+  title: "George Georgiou Portfolio",
+  description: "Digital Product Designer Portfolio",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground`}
       >

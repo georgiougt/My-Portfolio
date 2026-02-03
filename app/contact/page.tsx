@@ -16,11 +16,15 @@ export default function Contact() {
                     </p>
 
                     <Card className="p-8">
-                        <form className="space-y-6">
+                        {/* 
+                          Form functional with user provided ID
+                        */}
+                        <form className="space-y-6" action="https://formspree.io/f/maqbkqzg" method="POST">
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
                                 <input
                                     id="name"
+                                    name="name"
                                     type="text"
                                     placeholder="Your Name"
                                     className="w-full rounded-md border border-border bg-background/50 px-4 py-2 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all"
@@ -30,6 +34,7 @@ export default function Contact() {
                                 <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
                                 <input
                                     id="email"
+                                    name="email"
                                     type="email"
                                     placeholder="your@email.com"
                                     className="w-full rounded-md border border-border bg-background/50 px-4 py-2 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all"
@@ -39,6 +44,7 @@ export default function Contact() {
                                 <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     rows={4}
                                     placeholder="Tell me about your project..."
                                     className="w-full rounded-md border border-border bg-background/50 px-4 py-2 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none transition-all"
