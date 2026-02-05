@@ -30,9 +30,17 @@ const projects = [
         image: '/projects/jdm-wash.png',
         link: 'https://jdm-carwash.vercel.app/',
     },
+    {
+        id: 7,
+        title: 'Kintsugi',
+        description: 'Financial analytics dashboard with real-time transaction tracking.',
+        category: 'Fintech',
+        image: '/projects/fintech-dashboard.png',
+        link: 'https://fin-tech-dashboard.vercel.app/',
+    },
 ];
 
-const categories = ['All', 'Healthcare', 'Services'];
+const categories = ['All', 'Healthcare', 'Services', 'Fintech'];
 
 export function PortfolioGrid() {
     const [activeCategory, setActiveCategory] = useState('All');
