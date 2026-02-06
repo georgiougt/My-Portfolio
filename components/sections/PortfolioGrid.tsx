@@ -38,6 +38,14 @@ const projects = [
         image: '/projects/fintech-dashboard.png',
         link: 'https://fin-tech-dashboard.vercel.app/',
     },
+    {
+        id: 8,
+        title: 'FitCore Gym',
+        description: 'Modern gym website with membership plans and class schedules.',
+        category: 'Services',
+        image: '/projects/fitcore.png',
+        link: 'https://fitcore-gym.web.app/',
+    },
 ];
 
 const categories = ['All', 'Healthcare', 'Services', 'Fintech'];
