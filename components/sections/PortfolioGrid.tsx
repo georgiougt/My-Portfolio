@@ -46,6 +46,22 @@ const projects = [
         image: '/projects/fitcore.png',
         link: 'https://fitcore-gym.web.app/',
     },
+    {
+        id: 9,
+        title: 'Pharmacy Petros Petridis',
+        description: 'Your Trusted Neighborhood Pharmacy in Limassol. Personalized care and expert guidance.',
+        category: 'Healthcare',
+        image: '/projects/pharmacy.png',
+        link: 'https://georgiougt.github.io/Pharmacy/',
+    },
+    {
+        id: 10,
+        title: 'Nerouppos Barber Shop',
+        description: 'Sharp Cuts. Clean Fades. Fresh Confidence. Traditional barbering with modern precision.',
+        category: 'Services',
+        image: '',
+        link: 'https://georgiougt.github.io/Barber/',
+    },
 ];
 
 const categories = ['All', 'Healthcare', 'Services', 'Fintech'];
