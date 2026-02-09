@@ -59,7 +59,7 @@ const projects = [
         title: 'Nerouppos Barber Shop',
         description: 'Sharp Cuts. Clean Fades. Fresh Confidence. Traditional barbering with modern precision.',
         category: 'Services',
-        image: '',
+        image: '/projects/barber.png',
         link: 'https://georgiougt.github.io/Barber/',
     },
 ];
