@@ -31,9 +31,9 @@ export default function PricingPage() {
                             loop
                             muted
                             playsInline
-                            controls
+                            preload="auto"
                         >
-                            <source src="/Advert.mp4" type="video/mp4" />
+                            <source src="/advert.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
