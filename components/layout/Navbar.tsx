@@ -25,6 +25,7 @@ export function Navbar() {
                     <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
                     <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
                     <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+                    <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
                     <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
 
                     {mounted && (
