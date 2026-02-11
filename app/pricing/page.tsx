@@ -24,19 +24,24 @@ export default function PricingPage() {
                         Professional web solutions tailored for your business needs.
                     </p>
 
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border">
-                        <video
-                            className="w-full h-full object-cover"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            preload="auto"
-                        >
-                            <source src="/advert.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                    <div
+                        className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border"
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                <video 
+                                    class="w-full h-full object-cover" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline 
+                                    preload="auto"
+                                >
+                                    <source src="/advert.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            `
+                        }}
+                    />
                 </div>
 
                 {/* Website vs No Website Comparison */}
