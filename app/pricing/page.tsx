@@ -1,3 +1,5 @@
+'use client';
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/Button";
 import { Check, X, Phone } from "lucide-react";
