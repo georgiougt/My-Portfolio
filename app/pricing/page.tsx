@@ -155,7 +155,7 @@ export default function PricingPage() {
                             className="flex-1 gap-2"
                             asChild
                         >
-                            <a href="tel:+35799999999">
+                            <a href="tel:+35799717717">
                                 <Phone className="h-4 w-4" />
                                 Call Us
                             </a>
