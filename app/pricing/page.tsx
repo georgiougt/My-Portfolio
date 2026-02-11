@@ -26,12 +26,10 @@ export default function PricingPage() {
                     </p>
 
                     <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black/10">
-                        <Image
-                            src="/advert.gif"
-                            alt="Services Advertisement"
-                            fill
-                            className="object-cover"
-                            unoptimized
+                        <img
+                            src="/service-preview.gif"
+                            alt="Services Preview"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
