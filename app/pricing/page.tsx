@@ -6,6 +6,7 @@ import { Check, X, Phone } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function PricingPage() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -24,11 +25,13 @@ export default function PricingPage() {
                         Professional web solutions tailored for your business needs.
                     </p>
 
-                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border">
-                        <img
+                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black/10">
+                        <Image
                             src="/advert.gif"
                             alt="Services Advertisement"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            unoptimized
                         />
                     </div>
                 </div>
