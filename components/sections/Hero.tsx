@@ -1,10 +1,15 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import * as motion from "framer-motion/client"
 import Image from 'next/image';
+import { Modal } from '@/components/ui/Modal';
+import { ContactForm } from '@/components/sections/ContactForm';
 
 export function Hero() {
+    const [isContactOpen, setIsContactOpen] = useState(false);
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 text-center">
             {/* Background Layer 1: Animated GIF */}
@@ -40,7 +45,21 @@ export function Hero() {
                             View My Work <span className="ml-2">→</span>
                         </Link>
                     </Button>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        onClick={() => setIsContactOpen(true)}
+                    >
+                        Get Started
+                    </Button>
                 </div>
+
+                <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} title="Get Started">
+                    <p className="mb-4 text-sm text-muted-foreground text-left">
+                        Fill out the form below and I'll get back to you to discuss your project.
+                    </p>
+                    <ContactForm showCard={false} />
+                </Modal>
             </div>
         </section>
     );
