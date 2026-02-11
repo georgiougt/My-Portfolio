@@ -20,9 +20,23 @@ export default function PricingPage() {
                     <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
                         <span className="text-gradient">Pricing & Offers</span>
                     </h1>
-                    <p className="text-lg leading-8 text-muted-foreground">
+                    <p className="text-lg leading-8 text-muted-foreground mb-12">
                         Professional web solutions tailored for your business needs.
                     </p>
+
+                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border">
+                        <video
+                            className="w-full h-full object-cover"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls
+                        >
+                            <source src="/Advert.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
 
                 {/* Website vs No Website Comparison */}
