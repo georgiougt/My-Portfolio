@@ -1,8 +1,13 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/Button";
-import { Check, X } from "lucide-react";
+import { Check, X, Phone } from "lucide-react";
+import { Modal } from "@/components/ui/Modal";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { useState } from "react";
 
 export default function PricingPage() {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
     return (
         <main className="flex min-h-screen flex-col bg-background text-foreground">
             <Navbar />
@@ -134,10 +139,34 @@ export default function PricingPage() {
                         * Terms and conditions apply.
                     </div>
 
-                    <Button className="mt-8 w-full bg-gradient-brand hover:opacity-90 transition-opacity" size="lg">
-                        Get Started
-                    </Button>
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <Button
+                            className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                            size="lg"
+                            onClick={() => setIsContactOpen(true)}
+                        >
+                            Get Started
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            className="flex-1 gap-2"
+                            asChild
+                        >
+                            <a href="tel:+35799999999">
+                                <Phone className="h-4 w-4" />
+                                Call Us
+                            </a>
+                        </Button>
+                    </div>
                 </div>
+
+                <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} title="Get Started">
+                    <p className="mb-4 text-sm text-muted-foreground">
+                        Fill out the form below and I'll get back to you to discuss your project.
+                    </p>
+                    <ContactForm showCard={false} />
+                </Modal>
 
             </div>
         </main>
