@@ -18,56 +18,8 @@ export default function PricingPage() {
                     </p>
                 </div>
 
-                {/* Small Business Offer */}
-                <div className="mx-auto max-w-lg rounded-3xl p-8 ring-1 ring-primary/20 bg-card/50 backdrop-blur-sm shadow-xl mb-24 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 -mb-2 -ml-8 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>
-
-                    <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">Small Business Offer</h3>
-                    <p className="text-center text-muted-foreground mb-6">Perfect for establishing your online presence</p>
-
-                    <div className="flex items-baseline justify-center gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-foreground">€30</span>
-                        <span className="text-sm font-semibold leading-6 text-muted-foreground">/month</span>
-                    </div>
-
-                    <div className="mt-4 text-center text-sm text-muted-foreground">
-                        (Starting price)
-                    </div>
-
-                    <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
-                        <li className="flex gap-x-3 text-foreground">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Free landing page creation *
-                        </li>
-                        <li className="flex gap-x-3 text-foreground">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Only pay for hosting & maintenance
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Mobile-responsive design
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Basic SEO optimization
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            SSL Security Certificate
-                        </li>
-                    </ul>
-                    <div className="mt-2 text-xs text-muted-foreground text-center">
-                        * Terms and conditions apply.
-                    </div>
-
-                    <Button className="mt-8 w-full bg-gradient-brand hover:opacity-90 transition-opacity" size="lg">
-                        Get Started
-                    </Button>
-                </div>
-
                 {/* Website vs No Website Comparison */}
-                <div className="mx-auto max-w-5xl">
+                <div className="mx-auto max-w-5xl mb-24">
                     <h2 className="text-3xl font-bold text-center mb-12">
                         Why You Need a <span className="text-gradient">Website</span>
                     </h2>
@@ -112,23 +64,79 @@ export default function PricingPage() {
                             <ul className="space-y-4">
                                 <li className="flex gap-3 text-foreground">
                                     <Check className="w-5 h-5 text-green-500 flex-none" />
-                                    <span><strong>24/7 Availability:</strong> Your business never sleeps. Open for info 24/7.</span>
+                                    <span><strong>Appearance on Google & Google Maps:</strong> Be visible to customers searching online.</span>
                                 </li>
                                 <li className="flex gap-3 text-foreground">
                                     <Check className="w-5 h-5 text-green-500 flex-none" />
-                                    <span><strong>Global Reach:</strong> Attract customers from anywhere, anytime.</span>
+                                    <span><strong>Professional Image:</strong> Build trust with a modern digital presence.</span>
                                 </li>
                                 <li className="flex gap-3 text-foreground">
                                     <Check className="w-5 h-5 text-green-500 flex-none" />
-                                    <span><strong>Instant Credibility:</strong> Professional showcase of your work and reviews.</span>
+                                    <span><strong>Increase in calls and visits:</strong> Convert online traffic into real customers.</span>
                                 </li>
                                 <li className="flex gap-3 text-foreground">
                                     <Check className="w-5 h-5 text-green-500 flex-none" />
-                                    <span><strong>Automation:</strong> Online booking and sales specific to your needs.</span>
+                                    <span><strong>Appearance to tourists searching online:</strong> Capture the market of visitors in your area.</span>
+                                </li>
+                                <li className="flex gap-3 text-foreground">
+                                    <Check className="w-5 h-5 text-green-500 flex-none" />
+                                    <span><strong>Full ownership of the website:</strong> You own your digital asset, not a platform.</span>
+                                </li>
+                                <li className="flex gap-3 text-foreground">
+                                    <Check className="w-5 h-5 text-green-500 flex-none" />
+                                    <span><strong>No commitments, no large upfront payments:</strong> Flexible terms that scale with you.</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                {/* Small Business Offer */}
+                <div className="mx-auto max-w-lg rounded-3xl p-8 ring-1 ring-primary/20 bg-card/50 backdrop-blur-sm shadow-xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 -mb-2 -ml-8 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>
+
+                    <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">Small Business Offer</h3>
+                    <p className="text-center text-muted-foreground mb-6">Perfect for establishing your online presence</p>
+
+                    <div className="flex items-baseline justify-center gap-x-2">
+                        <span className="text-5xl font-bold tracking-tight text-foreground">€30</span>
+                        <span className="text-sm font-semibold leading-6 text-muted-foreground">/month</span>
+                    </div>
+
+                    <div className="mt-4 text-center text-sm text-muted-foreground">
+                        (Starting price)
+                    </div>
+
+                    <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
+                        <li className="flex gap-x-3 text-foreground">
+                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                            Free landing page creation *
+                        </li>
+                        <li className="flex gap-x-3 text-foreground">
+                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                            Only pay for hosting & maintenance
+                        </li>
+                        <li className="flex gap-x-3">
+                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                            Mobile-responsive design
+                        </li>
+                        <li className="flex gap-x-3">
+                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                            Basic SEO optimization
+                        </li>
+                        <li className="flex gap-x-3">
+                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                            SSL Security Certificate
+                        </li>
+                    </ul>
+                    <div className="mt-2 text-xs text-muted-foreground text-center">
+                        * Terms and conditions apply.
+                    </div>
+
+                    <Button className="mt-8 w-full bg-gradient-brand hover:opacity-90 transition-opacity" size="lg">
+                        Get Started
+                    </Button>
                 </div>
 
             </div>
