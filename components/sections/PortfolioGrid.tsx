@@ -62,9 +62,25 @@ const projects = [
         image: '/projects/barber.png',
         link: 'https://georgiougt.github.io/Barber/',
     },
+    {
+        id: 11,
+        title: 'Diamantides Yachting',
+        description: 'Exclusive yacht chartering and luxury maritime services in Cyprus, presenting a premium fleet with online booking inquiries.',
+        category: 'Services',
+        image: '/projects/diamantides.png',
+        link: 'https://georgiougt.github.io/Diamantides/',
+    },
+    {
+        id: 12,
+        title: 'Tofrontistirio',
+        description: 'Bespoke tutoring center management and student performance tracking platform, optimizing academic scheduling and learning analytics.',
+        category: 'Education',
+        image: '/projects/tofrontistirio.png',
+        link: 'https://tofrontistirio.com/',
+    },
 ];
 
-const categories = ['All', 'Healthcare', 'Services', 'Fintech'];
+const categories = ['All', 'Healthcare', 'Services', 'Fintech', 'Education'];
 
 export function PortfolioGrid() {
     const [activeCategory, setActiveCategory] = useState('All');
