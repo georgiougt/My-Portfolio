@@ -67,7 +67,7 @@ const projects = [
         title: 'Diamantides Yachting',
         description: 'Exclusive yacht chartering and luxury maritime services in Cyprus, presenting a premium fleet with online booking inquiries.',
         category: 'Services',
-        image: '/projects/diamantides.png',
+        image: '/projects/diamantides.jpg',
         link: 'https://georgiougt.github.io/Diamantides/',
     },
     {
