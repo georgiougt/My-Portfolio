@@ -107,74 +107,227 @@ export default function PricingPage() {
                     </div>
                 </div>
 
-                {/* Small Business Offer */}
-                <div className="mx-auto max-w-lg rounded-3xl p-8 ring-1 ring-primary/20 bg-card/50 backdrop-blur-sm shadow-xl relative overflow-hidden">
-                    <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-0 left-0 -mb-2 -ml-8 w-32 h-32 bg-secondary/20 rounded-full blur-3xl"></div>
+                {/* Pricing Grid */}
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-3">
+                    {/* One-Page Website Offer */}
+                    <div className="rounded-3xl p-8 ring-1 ring-primary/20 bg-card/50 backdrop-blur-sm shadow-xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-primary/20 rounded-full blur-3xl"></div>
+                            <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">One-Page Offer</h3>
+                            <p className="text-center text-muted-foreground mb-6 min-h-[40px]">Perfect for establishing your online presence quickly and professionally</p>
 
-                    <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">Small Business Offer</h3>
-                    <p className="text-center text-muted-foreground mb-6">Perfect for establishing your online presence</p>
+                            <div className="flex items-baseline justify-center gap-x-2 h-[60px] items-center">
+                                <span className="text-5xl font-bold tracking-tight text-foreground">€30</span>
+                                <span className="text-sm font-semibold leading-6 text-muted-foreground">/month</span>
+                            </div>
 
-                    <div className="flex items-baseline justify-center gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-foreground">€30</span>
-                        <span className="text-sm font-semibold leading-6 text-muted-foreground">/month</span>
+                            <div className="mt-4 text-center text-sm text-muted-foreground">
+                                (Starting price)
+                            </div>
+
+                            <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Free professional landing page *
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Ultra-reliable hosting included
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    High-performance optimization
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Mobile-responsive layout
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Basic SEO setup
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    SSL Security Certificate
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="mt-4 text-xs text-muted-foreground text-center mb-6">
+                                * Terms and conditions apply.
+                            </div>
+
+                            <div className="flex flex-col gap-3 sm:flex-row">
+                                <Button
+                                    className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                    size="lg"
+                                    onClick={() => setIsContactOpen(true)}
+                                >
+                                    Get Started
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    size="lg"
+                                    className="flex-1 gap-2"
+                                    asChild
+                                >
+                                    <a href="tel:+35799717717">
+                                        <Phone className="h-4 w-4" />
+                                        Call Us
+                                    </a>
+                                </Button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="mt-4 text-center text-sm text-muted-foreground">
-                        (Starting price)
+                    {/* 5-Page Website Offer */}
+                    <div className="rounded-3xl p-8 ring-2 ring-primary bg-card/65 backdrop-blur-sm shadow-2xl relative overflow-hidden flex flex-col justify-between border border-primary/20">
+                        <div>
+                            <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-secondary/35 rounded-full blur-3xl"></div>
+                            <div className="absolute top-0 right-4 translate-y-[-50%] bg-primary text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                                Most Popular
+                            </div>
+                            <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">5-Page Offer</h3>
+                            <p className="text-center text-muted-foreground mb-6 min-h-[40px]">Perfect for growing businesses needing a comprehensive and robust site</p>
+
+                            <div className="flex items-baseline justify-center gap-x-2 h-[60px] items-center">
+                                <span className="text-5xl font-bold tracking-tight text-foreground">€40</span>
+                                <span className="text-sm font-semibold leading-6 text-muted-foreground">/month</span>
+                            </div>
+
+                            <div className="mt-4 text-center text-sm text-muted-foreground">
+                                (Starting price)
+                            </div>
+
+                            <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
+                                <li className="flex gap-x-3 text-foreground font-semibold">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Up to 5 professional pages *
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Free bespoke website creation
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    High-speed hosting & backup system
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Advanced SEO & Google Indexing
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Custom domain connectivity
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    SSL Security & priority support
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="mt-4 text-xs text-muted-foreground text-center mb-6">
+                                * Terms and conditions apply.
+                            </div>
+
+                            <div className="flex flex-col gap-3 sm:flex-row">
+                                <Button
+                                    className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                    size="lg"
+                                    onClick={() => setIsContactOpen(true)}
+                                >
+                                    Get Started
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    size="lg"
+                                    className="flex-1 gap-2"
+                                    asChild
+                                >
+                                    <a href="tel:+35799717717">
+                                        <Phone className="h-4 w-4" />
+                                        Call Us
+                                    </a>
+                                </Button>
+                            </div>
+                        </div>
                     </div>
 
-                    <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
-                        <li className="flex gap-x-3 text-foreground">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Free landing page creation *
-                        </li>
-                        <li className="flex gap-x-3 text-foreground">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Only pay for hosting & maintenance
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Mobile-responsive design
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            Basic SEO optimization
-                        </li>
-                        <li className="flex gap-x-3">
-                            <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
-                            SSL Security Certificate
-                        </li>
-                    </ul>
-                    <div className="mt-2 text-xs text-muted-foreground text-center">
-                        * Terms and conditions apply.
-                    </div>
+                    {/* Custom Website Offer */}
+                    <div className="rounded-3xl p-8 ring-1 ring-primary/20 bg-card/50 backdrop-blur-sm shadow-xl relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-accent/20 rounded-full blur-3xl"></div>
+                            <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">Custom Offer</h3>
+                            <p className="text-center text-muted-foreground mb-6 min-h-[40px]">Tailored enterprise software, custom dashboards, and premium digital systems</p>
 
-                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                        <Button
-                            className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
-                            size="lg"
-                            onClick={() => setIsContactOpen(true)}
-                        >
-                            Get Started
-                        </Button>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="flex-1 gap-2"
-                            asChild
-                        >
-                            <a href="tel:+35799717717">
-                                <Phone className="h-4 w-4" />
-                                Call Us
-                            </a>
-                        </Button>
+                            <div className="flex items-baseline justify-center gap-x-2 h-[60px] items-center">
+                                <span className="text-4xl font-bold tracking-tight text-gradient">Let&apos;s Talk</span>
+                            </div>
+
+                            <div className="mt-4 text-center text-sm text-muted-foreground">
+                                Designed around your business
+                            </div>
+
+                            <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-muted-foreground">
+                                <li className="flex gap-x-3 text-foreground font-semibold">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Unlimited pages & workflows
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Bespoke UI/UX design & motion systems
+                                </li>
+                                <li className="flex gap-x-3 text-foreground">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Complex database & API integrations
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    E-commerce or dedicated portals
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Highly scalable & cloud-native setup
+                                </li>
+                                <li className="flex gap-x-3">
+                                    <Check className="h-6 w-5 flex-none text-primary" aria-hidden="true" />
+                                    Dedicated support SLA options
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div className="mt-4 text-xs text-muted-foreground text-center mb-6">
+                                Fully customized scope and quotes.
+                            </div>
+
+                            <div className="flex flex-col gap-3 sm:flex-row">
+                                <Button
+                                    className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                    size="lg"
+                                    onClick={() => setIsContactOpen(true)}
+                                >
+                                    Get in Touch
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    size="lg"
+                                    className="flex-1 gap-2"
+                                    asChild
+                                >
+                                    <a href="tel:+35799717717">
+                                        <Phone className="h-4 w-4" />
+                                        Call Us
+                                    </a>
+                                </Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} title="Get Started">
                     <p className="mb-4 text-sm text-muted-foreground">
-                        Fill out the form below and I'll get back to you to discuss your project.
+                        Fill out the form below and our team will get back to you to discuss your project.
                     </p>
                     <ContactForm showCard={false} />
                 </Modal>

@@ -14,8 +14,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "George Georgiou Portfolio",
-  description: "Digital Product Designer Portfolio",
+  title: "Stellar Reach Solutions | Premium Digital Products & Web Development",
+  description: "Stellar Reach Solutions is a premier digital agency building high-performance web applications, enterprise software, and custom digital solutions.",
 };
 
 export default function RootLayout({

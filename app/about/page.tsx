@@ -10,18 +10,18 @@ export default function About() {
                     <div className="flex flex-col md:flex-row gap-12 items-start mb-16">
                         <div className="flex-1">
                             <h1 className="mb-8 text-4xl font-bold md:text-5xl">
-                                <span className="text-gradient">About Me</span>
+                                <span className="text-gradient">About Us</span>
                             </h1>
 
                             <div className="space-y-6 text-lg text-muted-foreground">
                                 <p>
-                                    I am an Electrical and Computer Engineer with a strong foundation in both software development and embedded systems.
-                                    Holding a Master&apos;s degree from the Aristotle University of Thessaloniki, I have navigated through complex technical landscapes—from developing high-performance C++ applications for telecom giants to teaching advanced computer architecture.
+                                    Stellar Reach Solutions is a premier digital solutions agency specializing in bespoke software development, high-performance web applications, and digital products. We translate complex business requirements into seamless, elegant, and modern technical architectures.
                                 </p>
                                 <p>
-                                    My professional journey is diverse, spanning roles as a Software Developer, Engineering Lecturer, and IT Manager.
-                                    Currently, I combine my technical expertise with my creative passion as a Freelance Web Developer, building robust and engaging digital solutions.
-                                    I thrive on solving challenging problems, whether they lie in database optimization or crafting pixel-perfect user interfaces.
+                                    The agency was founded by George Georgiou, an Electrical and Computer Engineer with a Master&apos;s degree from the Aristotle University of Thessaloniki. George has a diverse and extensive background—ranging from designing enterprise-grade, real-time invoicing engines for major telecommunication firms to lecturing advanced computer architecture.
+                                </p>
+                                <p>
+                                    This deep engineering foundation defines our company DNA. At Stellar Reach Solutions, we don&apos;t just build websites; we craft secure, scalable, and highly optimized digital assets that empower businesses to command a powerful online presence and grow effortlessly.
                                 </p>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ export default function About() {
                             <div className="relative w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border-4 border-secondary/20 shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
                                 <Image
                                     src="/profile.jpg"
-                                    alt="George Georgiou"
+                                    alt="George Georgiou - Founder & Lead Engineer"
                                     fill
                                     className="object-cover"
                                     priority
@@ -42,7 +42,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <h2 className="mb-6 text-2xl font-bold">Experience</h2>
+                    <h2 className="mb-6 text-2xl font-bold">Our Track Record & Experience</h2>
                     <div className="space-y-8 border-l-2 border-border pl-8 relative ml-2">
                         {/* Timeline Items */}
                         <div className="relative">
@@ -53,43 +53,42 @@ export default function About() {
                         </div>
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-secondary border-4 border-background" />
-                            <h3 className="text-xl font-semibold">IT & Marketing Manager</h3>
+                            <h3 className="text-xl font-semibold">IT & Marketing Management</h3>
                             <p className="text-sm text-primary">Y. Skembedjis & Sons Group of Companies • Nov 2024 - Present</p>
                         </div>
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-accent border-4 border-background" />
-                            <h3 className="text-xl font-semibold">Support Engineer / Project Manager</h3>
+                            <h3 className="text-xl font-semibold">Support Engineering & Project Management</h3>
                             <p className="text-sm text-primary">DCON IT-AV Solutions • Apr 2024 - Present</p>
-                            <p className="mt-2 text-muted-foreground">Freelancing</p>
                         </div>
 
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-secondary border-4 border-background" />
-                            <h3 className="text-xl font-semibold">Freelance Web Developer</h3>
-                            <p className="text-sm text-primary">Freelance • 2022 - Present</p>
+                            <h3 className="text-xl font-semibold">Bespoke Web Development & Consultancy</h3>
+                            <p className="text-sm text-primary">Freelance Agency Operations • 2022 - Present</p>
                         </div>
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-primary border-4 border-background" />
-                            <h3 className="text-xl font-semibold">Experienced Software Developer (C++, SQL)</h3>
+                            <h3 className="text-xl font-semibold">Enterprise Software Engineering (C++, SQL)</h3>
                             <p className="text-sm text-primary">Amdocs, Cyprus • July 2023 - April 2024</p>
                             <p className="mt-2 text-muted-foreground">
-                                Development for Invoicing Team for Vodafone Italy. Production Incident Handling and Customer Migration.
+                                High-performance telecom billing and invoicing development, data migrations, and production incident response.
                             </p>
                         </div>
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-secondary border-4 border-background" />
-                            <h3 className="text-xl font-semibold">Junior Software Developer (C++, SQL)</h3>
+                            <h3 className="text-xl font-semibold">Systems & Database Engineering</h3>
                             <p className="text-sm text-primary">Amdocs, Cyprus • Dec 2021 - July 2023</p>
-                            <p className="mt-2 text-muted-foreground">Development for Invoicing Team for Vodafone Italy.</p>
+                            <p className="mt-2 text-muted-foreground">Software development for major telecommunications platforms.</p>
                         </div>
                         <div className="relative">
                             <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-accent border-4 border-background" />
-                            <h3 className="text-xl font-semibold">Front-End Web Programming</h3>
+                            <h3 className="text-xl font-semibold">Advanced Front-End Systems</h3>
                             <p className="text-sm text-primary">Google Developer Challenge Scholarship • Nov 2017 - Feb 2018</p>
                         </div>
                     </div>
 
-                    <h2 className="mb-6 mt-12 text-2xl font-bold">Education</h2>
+                    <h2 className="mb-6 mt-12 text-2xl font-bold">Academic Foundation</h2>
                     <div className="space-y-4">
                         <div className="rounded-lg border border-border bg-card p-6">
                             <h3 className="text-xl font-semibold">Aristotle University Of Thessaloniki</h3>

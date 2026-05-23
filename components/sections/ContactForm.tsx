@@ -40,7 +40,7 @@ export function ContactForm({ className = '', showCard = true }: ContactFormProp
                     id="message"
                     name="message"
                     rows={4}
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell us about your project..."
                     required
                     className="w-full rounded-md border border-border bg-background/50 px-4 py-2 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none transition-all"
                 />
