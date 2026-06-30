@@ -4,7 +4,9 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Stats } from "@/components/sections/Stats";
 import { Services } from "@/components/sections/Services";
+import { Process } from "@/components/sections/Process";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
+import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
@@ -21,7 +23,9 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+      <Process />
       <PortfolioGrid />
+      <FAQ />
       <CTA />
       <Footer />
     </main>

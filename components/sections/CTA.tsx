@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/Button';
 import { Modal } from '@/components/ui/Modal';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { Reveal } from '@/components/effects/Reveal';
+import { site, whatsappLink } from '@/lib/site';
+import { MessageCircle } from 'lucide-react';
 
 export function CTA() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -26,13 +28,33 @@ export function CTA() {
                             won&apos;t forget. Tell us about your project and we&apos;ll take it from there.
                         </p>
                         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                            <Button size="lg" variant="gradient" onClick={() => setIsContactOpen(true)}>
-                                Start Your Project
-                            </Button>
+                            {site.bookingUrl ? (
+                                <Button size="lg" variant="gradient" asChild>
+                                    <a href={site.bookingUrl} target="_blank" rel="noopener noreferrer">
+                                        Book a Free Call
+                                    </a>
+                                </Button>
+                            ) : (
+                                <Button size="lg" variant="gradient" onClick={() => setIsContactOpen(true)}>
+                                    Book a Free Call
+                                </Button>
+                            )}
                             <Button size="lg" variant="outline" asChild>
-                                <a href="/portfolio">View Our Work</a>
+                                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                                    <MessageCircle className="mr-2 h-5 w-5" /> Message on WhatsApp
+                                </a>
                             </Button>
                         </div>
+                        <p className="mt-6 text-sm text-muted-foreground">
+                            Prefer email? Reach us at{' '}
+                            <a
+                                href={`mailto:${site.email}`}
+                                className="text-primary underline-offset-4 hover:underline"
+                            >
+                                {site.email}
+                            </a>{' '}
+                            — we reply within 24 hours.
+                        </p>
                     </div>
                 </Reveal>
             </div>

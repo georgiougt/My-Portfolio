@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 const socials = [
-    { label: 'Email', href: 'mailto:george.tranta@gmail.com', icon: Mail },
+    { label: 'Email', href: 'mailto:georgiougt94@icloud.com', icon: Mail },
     { label: 'GitHub', href: 'https://github.com/georgiougt', icon: Github },
     { label: 'LinkedIn', href: '#', icon: Linkedin },
     { label: 'Instagram', href: '#', icon: Instagram },

@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CursorGlow } from "@/components/effects/CursorGlow";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -90,7 +91,7 @@ const jsonLd = {
   image: `${siteUrl}/hero-banner.jpg`,
   "@id": siteUrl,
   url: siteUrl,
-  email: "george.tranta@gmail.com",
+  email: "georgiougt94@icloud.com",
   description:
     "Cyprus-based web design and development studio building fast, modern, high-converting websites and web apps for businesses in Limassol and across Cyprus.",
   founder: {
@@ -138,6 +139,7 @@ export default function RootLayout({
         >
           <CursorGlow />
           {children}
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>

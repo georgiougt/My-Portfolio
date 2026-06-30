@@ -1,87 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/effects/Reveal';
 import NextImage from 'next/image';
-
-const projects = [
-    {
-        id: 4,
-        title: 'Dr. Savvas Savvoulas',
-        description: 'Paediatrician & Family Physician website with appointment booking.',
-        category: 'Healthcare',
-        image: '/projects/dr-savvas.png',
-        link: 'https://georgiougt.github.io/Doctor-Website/',
-    },
-    {
-        id: 5,
-        title: 'Neon Wash',
-        description: 'Premium car detailing booking platform with dark aesthetic.',
-        category: 'Services',
-        image: '/projects/neon-wash.png',
-        link: 'https://neon-carwash.vercel.app/',
-    },
-    {
-        id: 6,
-        title: 'JDM Carwash',
-        description: 'Japanese detailed machines. Premium auto detailing in Limassol.',
-        category: 'Services',
-        image: '/projects/jdm-wash.png',
-        link: 'https://jdm-carwash.vercel.app/',
-    },
-    {
-        id: 7,
-        title: 'Kintsugi',
-        description: 'Financial analytics dashboard with real-time transaction tracking.',
-        category: 'Fintech',
-        image: '/projects/fintech-dashboard.png',
-        link: 'https://fin-tech-dashboard.vercel.app/',
-    },
-    {
-        id: 8,
-        title: 'FitCore Gym',
-        description: 'Modern gym website with membership plans and class schedules.',
-        category: 'Services',
-        image: '/projects/fitcore.png',
-        link: 'https://fitcore-gym.web.app/',
-    },
-    {
-        id: 9,
-        title: 'Pharmacy Petros Petridis',
-        description: 'Your Trusted Neighborhood Pharmacy in Limassol. Personalized care and expert guidance.',
-        category: 'Healthcare',
-        image: '/projects/pharmacy.png',
-        link: 'https://georgiougt.github.io/Pharmacy/',
-    },
-    {
-        id: 10,
-        title: 'Nerouppos Barber Shop',
-        description: 'Sharp Cuts. Clean Fades. Fresh Confidence. Traditional barbering with modern precision.',
-        category: 'Services',
-        image: '/projects/barber.png',
-        link: 'https://georgiougt.github.io/Barber/',
-    },
-    {
-        id: 11,
-        title: 'Diamantides Yachting',
-        description: 'Exclusive yacht chartering and luxury maritime services in Cyprus, presenting a premium fleet with online booking inquiries.',
-        category: 'Services',
-        image: '/projects/diamantides.jpg',
-        link: 'https://georgiougt.github.io/Diamantides/',
-    },
-    {
-        id: 12,
-        title: 'Tofrontistirio',
-        description: 'Bespoke tutoring center management and student performance tracking platform, optimizing academic scheduling and learning analytics.',
-        category: 'Education',
-        image: '/projects/tofrontistirio.png',
-        link: 'https://tofrontistirio.com/',
-    },
-];
-
-const categories = ['All', 'Healthcare', 'Services', 'Fintech', 'Education'];
+import { projects, categories } from '@/lib/projects';
 
 export function PortfolioGrid() {
     const [activeCategory, setActiveCategory] = useState('All');
@@ -146,10 +71,15 @@ export function PortfolioGrid() {
                             <div className="flex flex-1 flex-col p-6">
                                 <h3 className="font-display text-xl font-semibold text-foreground">{project.title}</h3>
                                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
-                                <div className="mt-6">
-                                    <Button variant="outline" size="sm" className="w-full" asChild>
+                                <div className="mt-6 flex gap-3">
+                                    <Button variant="gradient" size="sm" className="flex-1" asChild>
+                                        <Link href={`/projects/${project.slug}`}>
+                                            Case Study <span className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span>
+                                        </Link>
+                                    </Button>
+                                    <Button variant="outline" size="sm" className="flex-1" asChild>
                                         <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                            Visit Website <span className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span>
+                                            Visit Site
                                         </a>
                                     </Button>
                                 </div>
