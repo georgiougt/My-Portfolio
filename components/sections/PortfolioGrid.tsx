@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
+import { Reveal } from '@/components/effects/Reveal';
 import NextImage from 'next/image';
 
 const projects = [
@@ -92,7 +93,7 @@ export function PortfolioGrid() {
     return (
         <section id="portfolio" className="py-24 sm:py-32 bg-background relative z-10">
             <div className="container mx-auto px-4">
-                <div className="mx-auto mb-12 max-w-2xl text-center">
+                <Reveal className="mx-auto mb-12 max-w-2xl text-center">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                         Our Work
                     </span>
@@ -102,7 +103,7 @@ export function PortfolioGrid() {
                     <p className="mt-4 text-base text-muted-foreground sm:text-lg">
                         A selection of real businesses we&apos;ve helped launch and grow online.
                     </p>
-                </div>
+                </Reveal>
 
                 <div className="mb-10 flex flex-wrap justify-center gap-4">
                     {categories.map(category => (
@@ -118,8 +119,9 @@ export function PortfolioGrid() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {filteredProjects.map(project => (
-                        <Card key={project.id} className="group flex flex-col overflow-hidden hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
+                    {filteredProjects.map((project, i) => (
+                        <Reveal key={project.id} delay={(i % 3) * 0.1} className="h-full">
+                        <Card className="group flex h-full flex-col overflow-hidden hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
                             {/* Project Image */}
                             <div className="aspect-video w-full bg-zinc-800 overflow-hidden relative">
                                 {project.image && (project.image.endsWith('.jpg') || project.image.endsWith('.png')) ? (
@@ -153,6 +155,7 @@ export function PortfolioGrid() {
                                 </div>
                             </div>
                         </Card>
+                        </Reveal>
                     ))}
                 </div>
             </div>

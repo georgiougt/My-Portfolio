@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ContactForm } from "@/components/sections/ContactForm";
+
+export const metadata: Metadata = {
+    title: "Contact",
+    description:
+        "Get in touch with Stellar Reach Solutions to discuss your website or web app project. Cyprus-based web design and development for businesses in Limassol and beyond.",
+    alternates: { canonical: "/contact" },
+};
 
 export default function Contact() {
     return (

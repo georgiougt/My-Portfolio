@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description:
+        "Stellar Reach Solutions is a Cyprus-based web design and development studio founded by engineer George Georgiou, crafting secure, scalable, high-performance websites and web apps.",
+    alternates: { canonical: "/about" },
+};
 
 export default function About() {
     return (

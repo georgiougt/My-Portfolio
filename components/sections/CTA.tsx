@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Modal } from '@/components/ui/Modal';
 import { ContactForm } from '@/components/sections/ContactForm';
+import { Reveal } from '@/components/effects/Reveal';
 
 export function CTA() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -11,7 +12,7 @@ export function CTA() {
     return (
         <section className="relative z-10 bg-background py-24 sm:py-32">
             <div className="container mx-auto px-4">
-                <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center sm:px-16 sm:py-24">
+                <Reveal className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center sm:px-16 sm:py-24">
                     {/* Glow accents */}
                     <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/20 blur-[120px]" />
                     <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-secondary/20 blur-[120px]" />
@@ -33,7 +34,7 @@ export function CTA() {
                             </Button>
                         </div>
                     </div>
-                </div>
+                </Reveal>
             </div>
 
             <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} title="Start Your Project">
