@@ -1,28 +1,72 @@
 import React from 'react';
 import { Card } from '@/components/ui/Card';
 import { Reveal } from '@/components/effects/Reveal';
-import { Palette, Code2, Smartphone, Rocket } from 'lucide-react';
+import {
+    Palette,
+    Target,
+    Facebook,
+    Instagram,
+    Sparkles,
+    PenLine,
+    Search,
+    TrendingUp,
+    LifeBuoy,
+} from 'lucide-react';
 
 const services = [
     {
         icon: Palette,
-        title: 'Web Design',
-        description: 'Distinctive, brand-led interfaces crafted to make a striking first impression and build trust instantly.',
+        title: 'Web Design & Development',
+        description:
+            'Custom, high-performance websites and web apps designed to impress and built to convert.',
     },
     {
-        icon: Code2,
-        title: 'Web Development',
-        description: 'Fast, accessible, future-proof sites and web apps engineered with modern frameworks and clean code.',
+        icon: Target,
+        title: 'Google Ads',
+        description:
+            'Targeted Search & Display campaigns that put you in front of customers ready to buy.',
     },
     {
-        icon: Smartphone,
-        title: 'Responsive & Mobile',
-        description: 'Pixel-perfect experiences that feel effortless on every screen, from widescreen desktops to phones.',
+        icon: Facebook,
+        title: 'Facebook Ads',
+        description:
+            'Scroll-stopping Meta campaigns that build awareness and bring in qualified leads.',
     },
     {
-        icon: Rocket,
-        title: 'Launch & Growth',
-        description: 'SEO, performance tuning, and ongoing support to get you live and keep you climbing the rankings.',
+        icon: Instagram,
+        title: 'Instagram Ads',
+        description:
+            'Visually-driven Instagram advertising that grows your audience and drives sales.',
+    },
+    {
+        icon: Sparkles,
+        title: 'Content Creation',
+        description:
+            'Eye-catching graphics, photos and video tailored to your brand and your channels.',
+    },
+    {
+        icon: PenLine,
+        title: 'Blog Writing',
+        description:
+            'SEO-friendly articles that build authority and pull in steady organic traffic.',
+    },
+    {
+        icon: Search,
+        title: 'Basic SEO',
+        description:
+            'On-page essentials — titles, meta, structure and speed — so Google can find you.',
+    },
+    {
+        icon: TrendingUp,
+        title: 'Advanced SEO',
+        description:
+            'Technical SEO, content strategy and local optimisation to climb the rankings.',
+    },
+    {
+        icon: LifeBuoy,
+        title: 'Support & Maintenance',
+        description:
+            'Ongoing updates, monitoring and improvements to keep everything running smoothly.',
     },
 ];
 
@@ -35,22 +79,20 @@ export function Services() {
                         What We Do
                     </span>
                     <h2 className="mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                        Everything you need to stand out online
+                        Everything you need to grow online
                     </h2>
                     <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                        We blend stunning design with high-performance engineering to deliver
-                        digital products that look incredible and convert.
+                        From a stunning website to the marketing that fills it — we&apos;re your
+                        one partner for design, advertising, content and SEO.
                     </p>
                 </Reveal>
 
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((service, i) => {
                         const Icon = service.icon;
                         return (
-                            <Reveal key={service.title} delay={i * 0.1}>
-                                <Card
-                                    className="group h-full p-8 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
-                                >
+                            <Reveal key={service.title} delay={(i % 3) * 0.1}>
+                                <Card className="group h-full p-8 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                                     <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-brand text-white shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
                                         <Icon className="h-6 w-6" />
                                     </div>
