@@ -14,6 +14,7 @@ export default function Portfolio() {
         <main className="min-h-screen bg-background text-foreground pb-20">
             <Navbar />
             <div className="pt-20">
+                <h1 className="sr-only">Our Web Design & Development Portfolio</h1>
                 <PortfolioGrid />
             </div>
         </main>
