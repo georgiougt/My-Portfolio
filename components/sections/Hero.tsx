@@ -33,11 +33,11 @@ export function Hero() {
 
             <div className="container px-4 animation-fade-in-up relative z-10">
                 <h1 className="mb-8 text-5xl font-extrabold tracking-tight sm:text-7xl leading-tight">
-                    Stellar Digital <br className="hidden sm:block" />
-                    <span className="text-gradient pb-2">Solutions</span>
+                    Web Design & <br className="hidden sm:block" />
+                    <span className="text-gradient pb-2">Development in Cyprus</span>
                 </h1>
                 <p className="mx-auto mb-10 max-w-2xl text-lg text-white/60 sm:text-xl">
-                    Creating premium digital experiences that blend stunning design with high-performance software engineering.
+                    A premium web design and development studio in Limassol, Cyprus. We build fast, modern, and secure websites and web apps optimized for SEO and conversion.
                 </p>
                 <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                     <Button size="lg" variant="gradient" asChild>

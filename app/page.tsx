@@ -10,9 +10,9 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Stellar Reach Solutions | Web Design & Development in Cyprus",
+  title: "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
   description:
-    "Stellar Reach Solutions designs and builds premium websites and web apps for businesses in Cyprus. Stunning design, high-performance engineering, and SEO built in.",
+    "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We design and build fast, modern, and SEO-optimized websites for businesses in Limassol and across Cyprus.",
   alternates: { canonical: "/" },
 };
 

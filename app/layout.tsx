@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Stellar Reach Solutions | Web Design & Development in Cyprus",
+      "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
     template: "%s | Stellar Reach Solutions",
   },
   description:
-    "Stellar Reach Solutions is a Cyprus-based web design and development studio building fast, modern, high-converting websites and web apps for businesses in Limassol and across Cyprus.",
+    "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We build fast, modern, and secure websites to grow your business in Limassol and across Cyprus.",
   keywords: [
     "web design Cyprus",
     "web development Cyprus",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Stellar Reach Solutions",
-    title: "Stellar Reach Solutions | Web Design & Development in Cyprus",
+    title: "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
     description:
-      "Cyprus-based web design and development studio building fast, modern, high-converting websites and web apps for businesses in Limassol and across Cyprus.",
+      "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We build fast, modern, and secure websites to grow your business in Limassol and across Cyprus.",
     images: [
       {
         url: "/hero-banner.jpg",
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stellar Reach Solutions | Web Design & Development in Cyprus",
+    title: "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
     description:
-      "Cyprus-based web design and development studio building fast, modern, high-converting websites and web apps.",
+      "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We build fast, modern, and secure websites.",
     images: ["/hero-banner.jpg"],
   },
   robots: {

@@ -18,55 +18,55 @@ const services = [
         icon: Palette,
         title: 'Web Design & Development',
         description:
-            'Custom, high-performance websites and web apps designed to impress and built to convert.',
+            'Custom, high-performance web design and development services in Cyprus built with Next.js to impress and convert.',
     },
     {
         icon: Target,
         title: 'Google Ads',
         description:
-            'Targeted Search & Display campaigns that put you in front of customers ready to buy.',
+            'Targeted search and display advertising campaigns in Cyprus that put you in front of local customers ready to buy.',
     },
     {
         icon: Facebook,
         title: 'Facebook Ads',
         description:
-            'Scroll-stopping Meta campaigns that build awareness and bring in qualified leads.',
+            'Scroll-stopping Meta campaigns that build brand awareness and capture qualified local leads.',
     },
     {
         icon: Instagram,
         title: 'Instagram Ads',
         description:
-            'Visually-driven Instagram advertising that grows your audience and drives sales.',
+            'Visually-driven Instagram advertising to grow your Cyprus business audience and drive sales.',
     },
     {
         icon: Sparkles,
         title: 'Content Creation',
         description:
-            'Eye-catching graphics, photos and video tailored to your brand and your channels.',
+            'Eye-catching graphics, photography, and video assets tailored to elevate your brand identity.',
     },
     {
         icon: PenLine,
-        title: 'Blog Writing',
+        title: 'Blog & Content Writing',
         description:
-            'SEO-friendly articles that build authority and pull in steady organic traffic.',
+            'SEO-friendly articles and blogs that establish industry authority and pull in steady organic traffic.',
     },
     {
         icon: Search,
-        title: 'Basic SEO',
+        title: 'On-Page SEO Services',
         description:
-            'On-page essentials — titles, meta, structure and speed — so Google can find you.',
+            'Essential on-page optimization—page titles, meta descriptions, semantic HTML, and core web vitals speed optimization.',
     },
     {
         icon: TrendingUp,
-        title: 'Advanced SEO',
+        title: 'Local SEO & Optimization',
         description:
-            'Technical SEO, content strategy and local optimisation to climb the rankings.',
+            'Technical SEO audits, keyword targeting, and local optimization in Limassol to outrank your competitors.',
     },
     {
         icon: LifeBuoy,
         title: 'Support & Maintenance',
         description:
-            'Ongoing updates, monitoring and improvements to keep everything running smoothly.',
+            'Ongoing software updates, security monitoring, and regular maintenance to keep your site running smoothly.',
     },
 ];
 
