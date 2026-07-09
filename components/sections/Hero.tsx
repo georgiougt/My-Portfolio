@@ -12,16 +12,16 @@ export function Hero() {
     const [isContactOpen, setIsContactOpen] = useState(false);
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 text-center">
-            {/* Background Layer 1: Animated GIF */}
-            {/* Background Layer 1: Animated Video (Plays Once) */}
+            {/* Background Layer 1: Animated Video (Loops Smoothly) */}
             <div className="absolute inset-0 z-0">
                 <video
                     autoPlay
                     muted
+                    loop
                     playsInline
                     className="h-full w-full object-cover scale-110 origin-top"
                 >
-                    <source src="/Whisk_qdn3y2m2qgomnjy10smkdtytktoirtlyigzl1iz.mp4" type="video/mp4" />
+                    <source src="/Create_slight_movement_components_202607090912.mp4" type="video/mp4" />
                 </video>
             </div>
 
