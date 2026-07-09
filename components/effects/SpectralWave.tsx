@@ -57,7 +57,7 @@ export function SpectralWave() {
             // Scale by device pixel ratio for sharp retina rendering
             const dpr = window.devicePixelRatio || 1;
             width = rect.width;
-            height = 120; // fixed divider height
+            height = 140; // fixed divider height
             
             canvas.width = width * dpr;
             canvas.height = height * dpr;
@@ -118,39 +118,39 @@ export function SpectralWave() {
 
         const waves: WaveConfig[] = [
             {
-                amplitude: 22,
+                amplitude: 28,
                 frequency: 0.0035,
                 speed: 0.006,
                 phaseOffset: 0,
-                lineWidth: 1.5,
-                opacity: 0.6,
+                lineWidth: 3.5,
+                opacity: 0.65,
                 color: '224, 242, 254', // sky-100 (RGB)
             },
             {
-                amplitude: 16,
+                amplitude: 20,
                 frequency: 0.0055,
                 speed: -0.008,
                 phaseOffset: Math.PI / 3,
-                lineWidth: 1.2,
-                opacity: 0.5,
+                lineWidth: 2.8,
+                opacity: 0.55,
                 color: '125, 211, 252', // sky-300
             },
             {
-                amplitude: 26,
+                amplitude: 34,
                 frequency: 0.002,
                 speed: 0.004,
                 phaseOffset: Math.PI * 0.7,
-                lineWidth: 2.0,
-                opacity: 0.35,
+                lineWidth: 4.5,
+                opacity: 0.45,
                 color: '56, 189, 248', // sky-400
             },
             {
-                amplitude: 12,
+                amplitude: 15,
                 frequency: 0.008,
                 speed: 0.012,
                 phaseOffset: Math.PI * 1.3,
-                lineWidth: 0.8,
-                opacity: 0.4,
+                lineWidth: 2.0,
+                opacity: 0.5,
                 color: '186, 230, 253', // sky-200
             },
         ];
@@ -200,33 +200,85 @@ export function SpectralWave() {
                 ctx.restore();
             });
 
-            // Draw Wave Ribbon Bundle
+            // 1. Draw Background Ambient Glow Pass (Super thick, low opacity)
+            waves.forEach((w) => {
+                ctx.beginPath();
+                ctx.lineWidth = w.lineWidth * 14; // Ultra-wide glow
+                
+                const grad = ctx.createLinearGradient(0, 0, width, 0);
+                const glowOpacity = w.opacity * 0.06;
+                grad.addColorStop(0, `rgba(${w.color}, 0)`);
+                grad.addColorStop(0.2, `rgba(${w.color}, ${glowOpacity * 0.3})`);
+                grad.addColorStop(0.5, `rgba(${w.color}, ${glowOpacity})`);
+                grad.addColorStop(0.85, `rgba(${w.color}, ${glowOpacity * 0.3})`);
+                grad.addColorStop(1, `rgba(${w.color}, 0)`);
+                
+                ctx.strokeStyle = grad;
+                
+                for (let x = 0; x <= width; x += 8) {
+                    const phase = time * w.speed + w.phaseOffset;
+                    const y = centerY + 
+                        Math.sin(x * w.frequency + phase) * w.amplitude * 
+                        Math.cos(x * (w.frequency * 0.35) + phase * 0.6);
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            });
+
+            // 2. Draw Secondary Glow Pass (Medium thickness, glowing)
+            waves.forEach((w) => {
+                ctx.beginPath();
+                ctx.lineWidth = w.lineWidth * 6; // Medium glow
+                
+                const grad = ctx.createLinearGradient(0, 0, width, 0);
+                const glowOpacity = w.opacity * 0.15;
+                grad.addColorStop(0, `rgba(${w.color}, 0)`);
+                grad.addColorStop(0.2, `rgba(${w.color}, ${glowOpacity * 0.3})`);
+                grad.addColorStop(0.5, `rgba(${w.color}, ${glowOpacity})`);
+                grad.addColorStop(0.85, `rgba(${w.color}, ${glowOpacity * 0.3})`);
+                grad.addColorStop(1, `rgba(${w.color}, 0)`);
+                
+                ctx.strokeStyle = grad;
+                
+                for (let x = 0; x <= width; x += 6) {
+                    const phase = time * w.speed + w.phaseOffset;
+                    const y = centerY + 
+                        Math.sin(x * w.frequency + phase) * w.amplitude * 
+                        Math.cos(x * (w.frequency * 0.35) + phase * 0.6);
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            });
+
+            // 3. Draw Core Sharp Wave Ribbon Bundle
             waves.forEach((w) => {
                 // To get the ribbon/spectral texture like the image, we draw multiple sub-strands 
                 // nested together with slight phase and amplitude offsets
-                const subStrands = 5;
+                const subStrands = 6;
                 
                 for (let s = 0; s < subStrands; s++) {
                     ctx.beginPath();
                     
                     const subRatio = s / subStrands;
                     // Vary thickness and opacity across the sub-strands
-                    ctx.lineWidth = w.lineWidth * (1 - subRatio * 0.4);
-                    const subOpacity = w.opacity * (1 - subRatio * 0.6);
+                    ctx.lineWidth = w.lineWidth * (1.1 - subRatio * 0.45);
+                    const subOpacity = w.opacity * (1.1 - subRatio * 0.55);
 
                     // Fade at the left and right edges (linear gradient)
                     const grad = ctx.createLinearGradient(0, 0, width, 0);
                     grad.addColorStop(0, `rgba(${w.color}, 0)`);
-                    grad.addColorStop(0.15, `rgba(${w.color}, ${subOpacity * 0.2})`);
+                    grad.addColorStop(0.15, `rgba(${w.color}, ${subOpacity * 0.25})`);
                     grad.addColorStop(0.5, `rgba(${w.color}, ${subOpacity})`);
-                    grad.addColorStop(0.85, `rgba(${w.color}, ${subOpacity * 0.2})`);
+                    grad.addColorStop(0.85, `rgba(${w.color}, ${subOpacity * 0.25})`);
                     grad.addColorStop(1, `rgba(${w.color}, 0)`);
                     
                     ctx.strokeStyle = grad;
 
                     // Wave equation configuration
-                    const offsetPhase = (s - subStrands / 2) * 0.06;
-                    const offsetAmplitude = (s - subStrands / 2) * 1.8;
+                    const offsetPhase = (s - subStrands / 2) * 0.05;
+                    const offsetAmplitude = (s - subStrands / 2) * 2.2;
 
                     // Draw the curve across screen width
                     for (let x = 0; x <= width; x += 3) {
@@ -289,11 +341,11 @@ export function SpectralWave() {
     return (
         <div 
             ref={containerRef} 
-            className="pointer-events-none relative z-15 w-full overflow-hidden bg-transparent select-none py-4"
-            style={{ height: '120px' }}
+            className="pointer-events-none relative z-15 w-full overflow-hidden bg-transparent select-none py-2"
+            style={{ height: '140px' }}
         >
             {/* Ambient background glow behind the wave */}
-            <div className="absolute inset-x-0 top-1/2 left-1/2 h-20 w-3/4 -translate-x-1/2 -translate-y-1/2 bg-sky-500/5 blur-[80px] rounded-full mix-blend-screen" />
+            <div className="absolute inset-x-0 top-1/2 left-1/2 h-24 w-11/12 -translate-x-1/2 -translate-y-1/2 bg-sky-500/8 blur-[100px] rounded-full mix-blend-screen" />
             <canvas ref={canvasRef} className="block w-full h-full" />
         </div>
     );
