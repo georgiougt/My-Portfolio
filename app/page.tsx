@@ -8,6 +8,7 @@ import { Process } from "@/components/sections/Process";
 import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
+import { SpectralWave } from "@/components/effects/SpectralWave";
 
 export const metadata: Metadata = {
   title: "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
@@ -21,10 +22,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-background text-foreground">
       <Navbar />
       <Hero />
+      <SpectralWave />
       <Stats />
       <Services />
+      <SpectralWave />
       <Process />
       <PortfolioGrid />
+      <SpectralWave />
       <FAQ />
       <CTA />
       <Footer />
