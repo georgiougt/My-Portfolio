@@ -36,9 +36,9 @@ export function Navbar() {
                         <Image 
                             src="/logo.png" 
                             alt="Stellar Reach Solutions Logo" 
-                            width={160} 
-                            height={48} 
-                            className="h-9 md:h-12 w-auto object-contain hover:scale-105 transition-transform duration-200" 
+                            width={240} 
+                            height={72} 
+                            className="h-12 md:h-18 w-auto object-contain hover:scale-105 transition-transform duration-200" 
                             priority
                         />
                     </Link>
