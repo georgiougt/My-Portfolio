@@ -24,54 +24,63 @@ export function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
             <div className="container mx-auto px-6 py-3">
-                {/* Desktop Layout (grouped tightly in the center) */}
-                <div className="hidden md:flex items-center justify-center gap-10">
-                    <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
-                    <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
-                    
-                    <Link href="/" className="flex items-center mx-6 shrink-0">
-                        <Image 
-                            src="/logo.png" 
-                            alt="Stellar Reach Solutions Logo" 
-                            width={240} 
-                            height={72} 
-                            className="h-18 w-auto object-contain hover:scale-105 transition-transform duration-200" 
-                            priority
-                        />
+                {/* Desktop Layout (grouped tightly in the center, with name below) */}
+                <div className="hidden md:flex flex-col items-center justify-center gap-2 py-1">
+                    <div className="flex items-center justify-center gap-10">
+                        <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
+                        <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
+                        
+                        <Link href="/" className="flex items-center mx-4 shrink-0">
+                            <Image 
+                                src="/logo-icon.png" 
+                                alt="Stellar Reach Solutions Logo Icon" 
+                                width={80} 
+                                height={80} 
+                                className="h-10 w-auto object-contain hover:scale-105 transition-transform duration-200" 
+                                priority
+                            />
+                        </Link>
+                        
+                        <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+                        <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+                        
+                        {mounted && (
+                            <div className="pl-4 border-l border-border/60">
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                    aria-label="Toggle theme"
+                                >
+                                    {theme === 'dark' ? (
+                                        <Sun className="h-5 w-5" />
+                                    ) : (
+                                        <Moon className="h-5 w-5" />
+                                    )}
+                                </Button>
+                            </div>
+                        )}
+                    </div>
+                    {/* Centered text in a straight line below options */}
+                    <Link href="/" className="text-xs font-bold tracking-[0.22em] text-foreground/80 hover:text-primary transition-colors uppercase leading-none">
+                        Stellar Reach Solutions
                     </Link>
-                    
-                    <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
-                    <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
-                    
-                    {mounted && (
-                        <div className="pl-4 border-l border-border/60">
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                aria-label="Toggle theme"
-                            >
-                                {theme === 'dark' ? (
-                                    <Sun className="h-5 w-5" />
-                                ) : (
-                                    <Moon className="h-5 w-5" />
-                                )}
-                            </Button>
-                        </div>
-                    )}
                 </div>
 
-                {/* Mobile Layout (logo on the left, controls on the right) */}
+                {/* Mobile Layout (logo icon + text on the left, controls on the right) */}
                 <div className="flex md:hidden items-center justify-between">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center gap-2.5">
                         <Image 
-                            src="/logo.png" 
+                            src="/logo-icon.png" 
                             alt="Stellar Reach Solutions Logo" 
-                            width={160} 
-                            height={48} 
-                            className="h-12 w-auto object-contain" 
+                            width={80} 
+                            height={80} 
+                            className="h-8 w-auto object-contain" 
                             priority
                         />
+                        <span className="text-xs font-bold tracking-[0.15em] uppercase text-foreground/95">
+                            Stellar Reach
+                        </span>
                     </Link>
                     
                     <div className="flex items-center gap-2">
