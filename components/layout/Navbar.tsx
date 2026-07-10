@@ -23,76 +23,85 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
-            <div className="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between md:grid md:grid-cols-3">
-                {/* Desktop Left Menu Links */}
-                <div className="hidden md:flex items-center gap-8 justify-start">
+            <div className="container mx-auto px-6 py-3">
+                {/* Desktop Layout (grouped tightly in the center) */}
+                <div className="hidden md:flex items-center justify-center gap-10">
                     <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
                     <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
-                </div>
-
-                {/* Center Logo */}
-                <div className="flex justify-start md:justify-center items-center">
-                    <Link href="/" className="flex items-center">
+                    
+                    <Link href="/" className="flex items-center mx-6 shrink-0">
                         <Image 
                             src="/logo.png" 
                             alt="Stellar Reach Solutions Logo" 
                             width={240} 
                             height={72} 
-                            className="h-12 md:h-18 w-auto object-contain hover:scale-105 transition-transform duration-200" 
+                            className="h-18 w-auto object-contain hover:scale-105 transition-transform duration-200" 
                             priority
                         />
                     </Link>
-                </div>
-
-                {/* Desktop Right Menu Links + Theme Toggle */}
-                <div className="hidden md:flex items-center gap-8 justify-end">
+                    
                     <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
                     <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+                    
                     {mounted && (
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            aria-label="Toggle theme"
-                        >
-                            {theme === 'dark' ? (
-                                <Sun className="h-5 w-5" />
-                            ) : (
-                                <Moon className="h-5 w-5" />
-                            )}
-                        </Button>
+                        <div className="pl-4 border-l border-border/60">
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                aria-label="Toggle theme"
+                            >
+                                {theme === 'dark' ? (
+                                    <Sun className="h-5 w-5" />
+                                ) : (
+                                    <Moon className="h-5 w-5" />
+                                )}
+                            </Button>
+                        </div>
                     )}
                 </div>
 
-                {/* Mobile Menu Toggle & Theme Toggle */}
-                <div className="flex md:hidden items-center gap-4 ml-auto">
-                    {mounted && (
+                {/* Mobile Layout (logo on the left, controls on the right) */}
+                <div className="flex md:hidden items-center justify-between">
+                    <Link href="/" className="flex items-center">
+                        <Image 
+                            src="/logo.png" 
+                            alt="Stellar Reach Solutions Logo" 
+                            width={160} 
+                            height={48} 
+                            className="h-12 w-auto object-contain" 
+                            priority
+                        />
+                    </Link>
+                    
+                    <div className="flex items-center gap-2">
+                        {mounted && (
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                                aria-label="Toggle theme"
+                            >
+                                {theme === 'dark' ? (
+                                    <Sun className="h-5 w-5" />
+                                ) : (
+                                    <Moon className="h-5 w-5" />
+                                )}
+                            </Button>
+                        )}
                         <Button
                             variant="ghost"
                             size="icon"
-                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                            aria-label="Toggle theme"
-                            className="mr-2"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle mobile menu"
                         >
-                            {theme === 'dark' ? (
-                                <Sun className="h-5 w-5" />
+                            {isMobileMenuOpen ? (
+                                <X className="h-6 w-6" />
                             ) : (
-                                <Moon className="h-5 w-5" />
+                                <Menu className="h-6 w-6" />
                             )}
                         </Button>
-                    )}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle mobile menu"
-                    >
-                        {isMobileMenuOpen ? (
-                            <X className="h-6 w-6" />
-                        ) : (
-                            <Menu className="h-6 w-6" />
-                        )}
-                    </Button>
+                    </div>
                 </div>
             </div>
 
