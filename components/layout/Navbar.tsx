@@ -23,7 +23,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
-            <div className="container mx-auto px-6 py-3 flex items-center justify-between md:grid md:grid-cols-3">
+            <div className="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between md:grid md:grid-cols-3">
                 {/* Desktop Left Menu Links */}
                 <div className="hidden md:flex items-center gap-8 justify-start">
                     <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
@@ -34,7 +34,7 @@ export function Navbar() {
                 <div className="flex justify-start md:justify-center items-center">
                     <Link href="/" className="flex items-center">
                         <Image 
-                            src="/logo.jpg" 
+                            src="/logo.png" 
                             alt="Stellar Reach Solutions Logo" 
                             width={160} 
                             height={48} 
