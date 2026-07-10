@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/Button';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export function Navbar() {
     const { theme, setTheme } = useTheme();
@@ -22,19 +23,31 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
-            <div className="container mx-auto flex items-center justify-between px-6 py-4">
-                <Link href="/" className="text-2xl font-bold text-gradient">
-                    Stellar Reach Solutions
-                </Link>
-
-                {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
-                    <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
+            <div className="container mx-auto px-6 py-3 flex items-center justify-between md:grid md:grid-cols-3">
+                {/* Desktop Left Menu Links */}
+                <div className="hidden md:flex items-center gap-8 justify-start">
                     <Link href="/portfolio" className="text-sm font-medium hover:text-primary transition-colors">Work</Link>
-                    <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
                     <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
-                    <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
+                </div>
 
+                {/* Center Logo */}
+                <div className="flex justify-start md:justify-center items-center">
+                    <Link href="/" className="flex items-center">
+                        <Image 
+                            src="/logo.jpg" 
+                            alt="Stellar Reach Solutions Logo" 
+                            width={160} 
+                            height={48} 
+                            className="h-9 md:h-12 w-auto object-contain hover:scale-105 transition-transform duration-200" 
+                            priority
+                        />
+                    </Link>
+                </div>
+
+                {/* Desktop Right Menu Links + Theme Toggle */}
+                <div className="hidden md:flex items-center gap-8 justify-end">
+                    <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
+                    <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
                     {mounted && (
                         <Button
                             variant="ghost"
@@ -51,8 +64,8 @@ export function Navbar() {
                     )}
                 </div>
 
-                {/* Mobile Menu Toggle */}
-                <div className="flex md:hidden items-center gap-4">
+                {/* Mobile Menu Toggle & Theme Toggle */}
+                <div className="flex md:hidden items-center gap-4 ml-auto">
                     {mounted && (
                         <Button
                             variant="ghost"
