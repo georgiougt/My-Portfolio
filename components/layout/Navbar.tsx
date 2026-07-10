@@ -23,7 +23,7 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md transition-colors duration-300">
-            <div className="container mx-auto px-6 py-3">
+            <div className="container mx-auto px-6 py-3 relative">
                 {/* Desktop Layout (grouped tightly in the center, with name below) */}
                 <div className="hidden md:flex flex-col items-center justify-center gap-2 py-1">
                     <div className="flex items-center justify-center gap-10">
@@ -43,29 +43,30 @@ export function Navbar() {
                         
                         <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
                         <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</Link>
-                        
-                        {mounted && (
-                            <div className="pl-4 border-l border-border/60">
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                    aria-label="Toggle theme"
-                                >
-                                    {theme === 'dark' ? (
-                                        <Sun className="h-5 w-5" />
-                                    ) : (
-                                        <Moon className="h-5 w-5" />
-                                    )}
-                                </Button>
-                            </div>
-                        )}
                     </div>
                     {/* Centered text in a straight line below options */}
-                    <Link href="/" className="text-xs font-bold tracking-[0.22em] text-foreground/80 hover:text-primary transition-colors uppercase leading-none">
+                    <Link href="/" className="text-xs font-bold tracking-[0.22em] pl-[0.22em] text-foreground/80 hover:text-primary transition-colors uppercase leading-none">
                         Stellar Reach Solutions
                     </Link>
                 </div>
+
+                {/* Absolute Theme Toggle on the right side for desktop */}
+                {mounted && (
+                    <div className="hidden md:block absolute right-6 top-1/2 -translate-y-1/2">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            aria-label="Toggle theme"
+                        >
+                            {theme === 'dark' ? (
+                                <Sun className="h-5 w-5" />
+                            ) : (
+                                <Moon className="h-5 w-5" />
+                            )}
+                        </Button>
+                    </div>
+                )}
 
                 {/* Mobile Layout (logo icon + text on the left, controls on the right) */}
                 <div className="flex md:hidden items-center justify-between">
