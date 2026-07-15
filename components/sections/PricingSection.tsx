@@ -179,10 +179,12 @@ export function PricingSection() {
                 </div>
 
                 {/* 5-Page Website Offer */}
-                <div className="rounded-3xl p-8 ring-2 ring-primary bg-card/65 backdrop-blur-sm shadow-2xl relative overflow-hidden flex flex-col justify-between border border-primary/20">
-                    <div>
+                <div className="rounded-3xl p-8 ring-2 ring-primary bg-card/65 backdrop-blur-sm shadow-2xl relative flex flex-col justify-between border border-primary/20">
+                    <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                         <div className="absolute top-0 right-0 -mt-2 -mr-8 w-32 h-32 bg-secondary/35 rounded-full blur-3xl"></div>
-                        <div className="absolute top-0 right-4 translate-y-[-50%] bg-primary text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                    </div>
+                    <div>
+                        <div className="absolute top-0 right-4 translate-y-[-50%] bg-primary text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-10">
                             Most Popular
                         </div>
                         <h3 className="text-2xl font-bold tracking-tight text-foreground text-center mb-2">5-Page Offer</h3>
