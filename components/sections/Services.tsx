@@ -1,73 +1,90 @@
 import React from 'react';
+import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { HexIcon } from '@/components/ui/HexIcon';
 import { Reveal } from '@/components/effects/Reveal';
+import { ArrowRight } from 'lucide-react';
 import {
     Palette,
-    Target,
-    Facebook,
-    Instagram,
-    Sparkles,
-    PenLine,
+    Code2,
+    ShoppingCart,
     Search,
-    TrendingUp,
+    MapPin,
+    Target,
+    Megaphone,
+    PenLine,
     LifeBuoy,
 } from 'lucide-react';
 
+/**
+ * Homepage service cards. Each one links to its own /services/<slug> landing
+ * page — the slugs here must match lib/services.ts, which is the source of
+ * truth for the pages themselves. Previously these cards linked nowhere, so
+ * nine commercial keywords shared a single "#services" anchor.
+ */
 const services = [
     {
+        slug: 'web-design',
         icon: Palette,
-        title: 'Web Design & Development',
+        title: 'Web Design',
         description:
-            'Custom, high-performance web design and development services in Cyprus built with Next.js to impress and convert.',
+            'Custom, high-performance web design in Cyprus — drawn from scratch around your customers, never a bought template.',
     },
     {
+        slug: 'web-development',
+        icon: Code2,
+        title: 'Web Development',
+        description:
+            'Next.js and TypeScript builds that load in under a second, cost almost nothing to host, and belong to you.',
+    },
+    {
+        slug: 'ecommerce-development',
+        icon: ShoppingCart,
+        title: 'E-Commerce',
+        description:
+            'Online stores with Cyprus payment gateways, correct VAT handling and product pages built to rank and convert.',
+    },
+    {
+        slug: 'seo-services',
+        icon: Search,
+        title: 'SEO Services',
+        description:
+            'Technical audits, on-page optimisation and structured data that get you found by customers ready to buy.',
+    },
+    {
+        slug: 'local-seo',
+        icon: MapPin,
+        title: 'Local SEO',
+        description:
+            'Google Business Profile, citations and reviews — the work that puts you in the map pack in your city.',
+    },
+    {
+        slug: 'google-ads',
         icon: Target,
         title: 'Google Ads',
         description:
-            'Targeted search and display advertising campaigns in Cyprus that put you in front of local customers ready to buy.',
+            'Search campaigns built around buying intent, measured on cost per lead rather than cost per click.',
     },
     {
-        icon: Facebook,
-        title: 'Facebook Ads',
+        slug: 'meta-ads',
+        icon: Megaphone,
+        title: 'Facebook & Instagram Ads',
         description:
-            'Scroll-stopping Meta campaigns that build brand awareness and capture qualified local leads.',
+            'Scroll-stopping Meta campaigns with creative produced in-house, tracked through to real enquiries.',
     },
     {
-        icon: Instagram,
-        title: 'Instagram Ads',
-        description:
-            'Visually-driven Instagram advertising to grow your Cyprus business audience and drive sales.',
-    },
-    {
-        icon: Sparkles,
-        title: 'Content Creation',
-        description:
-            'Eye-catching graphics, photography, and video assets tailored to elevate your brand identity.',
-    },
-    {
+        slug: 'content-writing',
         icon: PenLine,
-        title: 'Blog & Content Writing',
+        title: 'Content & Copywriting',
         description:
-            'SEO-friendly articles and blogs that establish industry authority and pull in steady organic traffic.',
+            'Articles and website copy that answer what your customers actually search for, and keep earning traffic.',
     },
     {
-        icon: Search,
-        title: 'On-Page SEO Services',
-        description:
-            'Essential on-page optimization—page titles, meta descriptions, semantic HTML, and core web vitals speed optimization.',
-    },
-    {
-        icon: TrendingUp,
-        title: 'Local SEO & Optimization',
-        description:
-            'Technical SEO audits, keyword targeting, and local optimization in Limassol to outrank your competitors.',
-    },
-    {
+        slug: 'website-maintenance',
         icon: LifeBuoy,
         title: 'Support & Maintenance',
         description:
-            'Ongoing software updates, security monitoring, and regular maintenance to keep your site running smoothly.',
+            'Monitoring, security patching, backups and content updates so the site keeps working and keeps ranking.',
     },
 ];
 
@@ -92,21 +109,40 @@ export function Services() {
                     {services.map((service, i) => {
                         const Icon = service.icon;
                         return (
-                            <Reveal key={service.title} delay={(i % 3) * 0.1}>
-                                <Card className="group h-full p-8 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                            <Reveal key={service.slug} delay={(i % 3) * 0.1}>
+                                <Card className="group relative h-full p-8 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
                                     {/* Hue ramps cyan (185°) → violet (275°) across the nine cards. */}
                                     <HexIcon Icon={Icon} hue={185 + i * 11.25} id={i} />
                                     <h3 className="mt-6 font-display text-xl font-semibold text-foreground">
-                                        {service.title}
+                                        <Link
+                                            href={`/services/${service.slug}`}
+                                            className="after:absolute after:inset-0 group-hover:text-primary"
+                                        >
+                                            {service.title}
+                                        </Link>
                                     </h3>
                                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                                         {service.description}
                                     </p>
+                                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                                        Learn more
+                                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    </span>
                                 </Card>
                             </Reveal>
                         );
                     })}
                 </div>
+
+                <Reveal className="mt-12 text-center">
+                    <Link
+                        href="/services"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                    >
+                        See all services and pricing
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
+                </Reveal>
             </div>
         </section>
     );

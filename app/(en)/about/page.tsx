@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
+import { alternatesFor, staticRoutes } from "@/lib/i18n";
 
 export const metadata: Metadata = {
     title: "About Us",
     description:
         "Stellar Reach Solutions is a Cyprus-based web design and development studio founded by engineer George Georgiou, crafting secure, scalable, high-performance websites and web apps.",
-    alternates: { canonical: "/about" },
+    alternates: {
+        canonical: "/about",
+        languages: alternatesFor({
+            en: staticRoutes.about.en,
+            el: staticRoutes.about.el,
+        }),
+    },
 };
 
 export default function About() {
     return (
         <main className="min-h-screen bg-transparent text-foreground pb-20">
-            <Navbar />
+            <Navbar locale="en" altHref={staticRoutes.about.el} />
             <div className="container mx-auto px-4 pt-32">
                 <div className="mx-auto max-w-5xl">
                     <div className="flex flex-col md:flex-row gap-12 items-start mb-16">

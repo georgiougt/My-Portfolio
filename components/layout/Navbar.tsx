@@ -3,29 +3,71 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Facebook, Linkedin, Youtube, Menu, X, Phone } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Github, Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
-import { smoothScrollToId, smoothScrollToTop } from '@/lib/scroll';
+import { smoothScrollToTop } from '@/lib/scroll';
+import { site } from '@/lib/site';
+import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
+import { staticRoutes, type Locale } from '@/lib/i18n';
+import { t } from '@/lib/ui';
 
-export function Navbar() {
+/**
+ * Nav targets per locale. The Greek tree uses translated slugs, so the links
+ * are looked up rather than built by prefixing "/el" onto the English path.
+ */
+function navLinks(locale: Locale) {
+    const s = t(locale).nav;
+    if (locale === 'el') {
+        return [
+            { href: staticRoutes.about.el, label: s.about },
+            { href: staticRoutes.services.el, label: s.services },
+            { href: staticRoutes.pricing.el, label: s.pricing },
+            { href: staticRoutes.contact.el, label: s.contact },
+        ];
+    }
+    return [
+        { href: staticRoutes.about.en, label: s.about },
+        { href: staticRoutes.services.en, label: s.services },
+        { href: '/portfolio', label: s.projects },
+        { href: staticRoutes.pricing.en, label: s.pricing },
+        { href: '/blog', label: s.insights },
+        { href: staticRoutes.contact.en, label: s.contact },
+    ];
+}
+
+const socialIcons = {
+    facebook: Facebook,
+    linkedin: Linkedin,
+    instagram: Instagram,
+    github: Github,
+} as const;
+
+/** Configured social profiles only — placeholders in site.ts are skipped. */
+const navSocials = Object.entries(site.socials)
+    .filter(([key, url]) => url.startsWith('http') && key in socialIcons)
+    .map(([key, url]) => ({
+        key,
+        url,
+        Icon: socialIcons[key as keyof typeof socialIcons],
+    }));
+
+export function Navbar({
+    locale = 'en',
+    altHref,
+}: {
+    locale?: Locale;
+    /** The equivalent page in the other language, for the switcher. */
+    altHref?: string;
+} = {}) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
-    // For links that point at a section on the homepage: if we're already on the
-    // homepage, intercept and ease-scroll to it instead of doing an instant jump.
-    // Off the homepage, let the Link navigate normally (then the browser jumps).
-    const handleSectionClick =
-        (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-            setIsMobileMenuOpen(false);
-            if (pathname === '/') {
-                e.preventDefault();
-                smoothScrollToId(id);
-            }
-        };
+    const home = locale === 'el' ? staticRoutes.home.el : staticRoutes.home.en;
+    const links = navLinks(locale);
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         setIsMobileMenuOpen(false);
-        if (pathname === '/') {
+        if (pathname === home) {
             e.preventDefault();
             smoothScrollToTop();
         }
@@ -36,7 +78,7 @@ export function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-cyan-500/20 bg-[#071521]/80 backdrop-blur-md transition-colors duration-300">
             <div className="container mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Brand Logo - Bracketed High-Tech Style [STELLAR REACH] */}
-                <Link href="/" onClick={handleHomeClick} className="flex items-center gap-3 group">
+                <Link href={home} onClick={handleHomeClick} className="flex items-center gap-3 group">
                     <Image
                         src="/logo-icon.png"
                         alt="Stellar Reach Logo"
@@ -54,71 +96,42 @@ export function Navbar() {
 
                 {/* Desktop Navigation Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    <Link
-                        href="/about"
-                        className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
-                    >
-                        ABOUT US
-                    </Link>
-                    <Link
-                        href="/#services"
-                        onClick={handleSectionClick('services')}
-                        className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
-                    >
-                        SERVICES
-                    </Link>
-                    <Link
-                        href="/portfolio"
-                        className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
-                    >
-                        PROJECTS
-                    </Link>
-                    <Link
-                        href="/pricing"
-                        className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
-                    >
-                        PRICING
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
-                    >
-                        CONTACT
-                    </Link>
+                    {links.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 transition-colors"
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
                 </div>
 
                 {/* Right Side: Social Media Icons & Boxed Phone */}
                 <div className="hidden lg:flex items-center gap-4">
-                    <div className="flex items-center gap-2 border-r border-cyan-500/20 pr-4">
-                        <a
-                            href="https://facebook.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
-                            aria-label="Facebook"
-                        >
-                            <Facebook className="h-4 w-4" />
-                        </a>
-                        <a
-                            href="https://linkedin.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
-                            aria-label="LinkedIn"
-                        >
-                            <Linkedin className="h-4 w-4" />
-                        </a>
-                        <a
-                            href="https://youtube.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
-                            aria-label="YouTube"
-                        >
-                            <Youtube className="h-4 w-4" />
-                        </a>
-                    </div>
-                    
+                    {/* Only real profiles. The previous links pointed at Facebook,
+                        LinkedIn and YouTube's own homepages — sitewide outbound
+                        links that identify nobody. */}
+                    {navSocials.length > 0 && (
+                        <div className="flex items-center gap-2 border-r border-cyan-500/20 pr-4">
+                            {navSocials.map(({ key, url, Icon }) => (
+                                <a
+                                    key={key}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer me"
+                                    className="p-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
+                                    aria-label={`Stellar Reach Solutions on ${key.charAt(0).toUpperCase()}${key.slice(1)}`}
+                                >
+                                    <Icon className="h-4 w-4" />
+                                </a>
+                            ))}
+                        </div>
+                    )}
+
+
+                    <LanguageSwitcher locale={locale} href={altHref} className="pr-1" />
+
                     <a
                         href="tel:+35799717717"
                         className="border border-white/40 hover:border-cyan-400 bg-cyan-950/40 hover:bg-cyan-500/10 px-3.5 py-1.5 text-xs font-bold tracking-[0.15em] text-white hover:text-cyan-400 transition-all rounded-xs flex items-center gap-2"
@@ -147,47 +160,23 @@ export function Navbar() {
         {isMobileMenuOpen && (
                 <div className="md:hidden fixed inset-0 top-0 z-40 flex flex-col overflow-y-auto bg-[#071521] px-6 pt-24 pb-10 space-y-4">
                     <Link
-                        href="/"
+                        href={home}
                         className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
                         onClick={handleHomeClick}
                     >
-                        Home
+                        {locale === 'el' ? 'Αρχική' : 'Home'}
                     </Link>
-                    <Link
-                        href="/about"
-                        className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        About Us
-                    </Link>
-                    <Link
-                        href="/#services"
-                        className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
-                        onClick={handleSectionClick('services')}
-                    >
-                        Services
-                    </Link>
-                    <Link
-                        href="/portfolio"
-                        className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Projects
-                    </Link>
-                    <Link
-                        href="/pricing"
-                        className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Pricing
-                    </Link>
-                    <Link
-                        href="/contact"
-                        className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Contact
-                    </Link>
+                    {links.map((link) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className="block text-sm font-bold uppercase tracking-[0.2em] text-slate-200 hover:text-cyan-400 py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {link.label}
+                        </Link>
+                    ))}
+                    <LanguageSwitcher locale={locale} href={altHref} className="py-2 text-sm" />
                     <div className="pt-4 border-t border-cyan-500/20 flex flex-col gap-3">
                         <a
                             href="tel:+35799717717"

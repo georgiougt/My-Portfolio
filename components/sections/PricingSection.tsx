@@ -5,30 +5,45 @@ import { Check, X, Phone } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { useState } from "react";
-import NextImage from "next/image";
 
-export function PricingSection() {
+/**
+ * Rendered both on /pricing (where it owns the page) and on the homepage
+ * (where the Hero owns the H1). Two H1s on one page splits the topical signal,
+ * so the heading level is passed in rather than hardcoded.
+ */
+export function PricingSection({
+    as: Heading = 'h1',
+}: {
+    as?: 'h1' | 'h2';
+}) {
     const [isContactOpen, setIsContactOpen] = useState(false);
 
     return (
         <div className="container mx-auto px-4 py-24 sm:py-32">
             {/* Header */}
             <div className="mx-auto max-w-2xl text-center mb-16">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+                <Heading className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
                     <span className="text-gradient">Pricing & Offers</span>
-                </h1>
+                </Heading>
                 <p className="text-lg leading-8 text-muted-foreground mb-12">
                     Professional web solutions tailored for your business needs.
                 </p>
 
                 <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl border border-border bg-black/10">
-                    <NextImage
-                        src="/service-preview.gif"
-                        alt="Services Preview"
-                        fill
-                        unoptimized
-                        className="object-cover"
-                    />
+                    {/* Was a 7.2MB animated GIF. The same 8 seconds as H.264 is
+                        194KB — a 97% reduction with no visible difference. */}
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="none"
+                        poster="/service-preview-poster.jpg"
+                        aria-label="Preview of websites built by Stellar Reach Solutions"
+                        className="h-full w-full object-cover"
+                    >
+                        <source src="/service-preview.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
 

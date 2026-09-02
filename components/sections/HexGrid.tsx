@@ -19,7 +19,7 @@ const hexItems = [
         id: 'services',
         title: 'SERVICES',
         subtitle: 'Web Design & SEO',
-        image: '/service-preview.gif',
+        image: '/service-preview-poster.jpg',
         href: '/#services',
         row: 'top',
     },
@@ -134,8 +134,8 @@ function HexTile({ item, index, onOpenModal }: HexTileProps) {
                         src={item.image}
                         alt={item.title}
                         fill
+                        sizes="(max-width: 640px) 100vw, 290px"
                         className="object-cover opacity-35 transition-transform duration-700 group-hover:scale-115 group-hover:opacity-55"
-                        unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#071521]/70 via-[#0A2234]/80 to-[#071521]/95" />
                 </div>

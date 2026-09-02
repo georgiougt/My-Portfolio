@@ -42,3 +42,7 @@ next-env.d.ts
 
 # local tool directories
 .claude/
+
+# Local backups of media replaced by compressed versions.
+# The originals are already tracked in git history, so this is a redundant 12MB.
+/public/_originals/

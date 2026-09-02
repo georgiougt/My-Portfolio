@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { CursorGlow } from "@/components/effects/CursorGlow";
-import { Starfield } from "@/components/effects/Starfield";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
+import "../globals.css";
+import { RootShell } from "@/components/layout/RootShell";
+import { alternatesFor, staticRoutes } from "@/lib/i18n";
 
 const siteUrl = "https://stellar-reach-solutions.com";
 
@@ -31,11 +18,13 @@ export const metadata: Metadata = {
     "web design Cyprus",
     "web development Cyprus",
     "website design Limassol",
-    "web designer Cyprus",
-    "web development Limassol",
-    "custom websites Cyprus",
+    "web design Nicosia",
+    "web design Larnaca",
+    "web design Paphos",
+    "SEO Cyprus",
+    "local SEO Cyprus",
     "ecommerce website Cyprus",
-    "web app development",
+    "Google Ads Cyprus",
     "Next.js development",
     "digital agency Cyprus",
     "Stellar Reach Solutions",
@@ -46,10 +35,15 @@ export const metadata: Metadata = {
   applicationName: "Stellar Reach Solutions",
   alternates: {
     canonical: "/",
+    languages: alternatesFor({
+      en: staticRoutes.home.en,
+      el: staticRoutes.home.el,
+    }),
   },
   openGraph: {
     type: "website",
     locale: "en_US",
+    alternateLocale: ["el_CY"],
     url: siteUrl,
     siteName: "Stellar Reach Solutions",
     title: "Stellar Reach Solutions | Premium Web Design & SEO Cyprus",
@@ -71,6 +65,10 @@ export const metadata: Metadata = {
       "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We build fast, modern, and secure websites.",
     images: ["/hero-banner.jpg"],
   },
+  // 👉 Paste the token from Google Search Console → Settings → Ownership
+  // verification → HTML tag. Verifying the property is what unlocks the query,
+  // indexing and Core Web Vitals data that everything else here is measured by.
+  // verification: { google: "PASTE_YOUR_TOKEN_HERE" },
   robots: {
     index: true,
     follow: true,
@@ -85,65 +83,10 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Stellar Reach Solutions",
-  image: `${siteUrl}/hero-banner.jpg`,
-  "@id": siteUrl,
-  url: siteUrl,
-  email: "georgiougt94@icloud.com",
-  description:
-    "Cyprus-based web design and development studio building fast, modern, high-converting websites and web apps for businesses in Limassol and across Cyprus.",
-  founder: {
-    "@type": "Person",
-    name: "George Georgiou",
-  },
-  areaServed: [
-    { "@type": "City", name: "Limassol" },
-    { "@type": "Country", name: "Cyprus" },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "Limassol",
-    addressCountry: "CY",
-  },
-  knowsAbout: [
-    "Web Design",
-    "Web Development",
-    "E-commerce",
-    "Web Applications",
-    "SEO",
-  ],
-  sameAs: ["https://github.com/georgiougt"],
-};
-
-export default function RootLayout({
+export default function EnglishRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${outfit.variable} antialiased bg-background text-foreground`}
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Starfield />
-          <CursorGlow />
-          {children}
-          <WhatsAppButton />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+  return <RootShell locale="en">{children}</RootShell>;
 }

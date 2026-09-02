@@ -22,14 +22,20 @@ export function Hero() {
         <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden pt-28 pb-16 text-center">
             {/* Background Layer 1: Animated Video */}
             <div className="absolute inset-0 z-0">
+                {/* 805KB, 1280w, faststart — down from a 3.8MB source that blocked
+                    the hero on every page load. The poster paints immediately so
+                    there is no empty frame while the video buffers. */}
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="metadata"
+                    poster="/hero-poster.jpg"
+                    aria-hidden="true"
                     className="h-full w-full object-cover scale-105 opacity-40 mix-blend-luminosity"
                 >
-                    <source src="/Create_slight_movement_components_202607090912.mp4" type="video/mp4" />
+                    <source src="/hero-bg.mp4" type="video/mp4" />
                 </video>
             </div>
 
