@@ -2,61 +2,79 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
-import * as motion from "framer-motion/client"
-import Image from 'next/image';
+import { ChevronDown } from 'lucide-react';
 import { Modal } from '@/components/ui/Modal';
 import { ContactForm } from '@/components/sections/ContactForm';
+import { smoothScrollToId } from '@/lib/scroll';
 
 export function Hero() {
     const [isContactOpen, setIsContactOpen] = useState(false);
+
+    // Eased scroll to the next section — smoother than the browser's instant
+    // anchor jump. Falls back to the default jump if the target isn't present.
+    const scrollToNext = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (!document.getElementById('hex-grid')) return;
+        e.preventDefault();
+        smoothScrollToId('hex-grid');
+    };
+
     return (
-        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden pt-20 text-center">
-            {/* Background Layer 1: Animated Video (Loops Smoothly) */}
+        <section className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden pt-28 pb-16 text-center">
+            {/* Background Layer 1: Animated Video */}
             <div className="absolute inset-0 z-0">
                 <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    className="h-full w-full object-cover scale-110 origin-top"
+                    className="h-full w-full object-cover scale-105 opacity-40 mix-blend-luminosity"
                 >
                     <source src="/Create_slight_movement_components_202607090912.mp4" type="video/mp4" />
                 </video>
             </div>
 
-            {/* Background Layer 2: Overlay */}
-            <div className="absolute inset-0 z-0 bg-black/60" />
+            {/* Background Layer 2: Deep Cyan Gradient & Ambient Grid Overlay */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071521]/90 via-[#071521]/70 to-[#071521]" />
+            <div className="absolute left-1/2 top-1/3 z-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[140px] pointer-events-none" />
 
-            {/* Background Layer 3: Glow (Optional) */}
-            <div className="absolute left-1/2 top-1/2 z-0 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-[120px] mix-blend-overlay" />
-
-            <div className="container px-4 animation-fade-in-up relative z-10">
-                <h1 className="mb-8 text-5xl font-extrabold tracking-tight sm:text-7xl leading-tight">
-                    Web Design & <br className="hidden sm:block" />
-                    <span className="text-gradient pb-2">Development in Cyprus</span>
-                </h1>
-                <p className="mx-auto mb-10 max-w-2xl text-lg text-white/60 sm:text-xl">
-                    A premium web design and development studio in Limassol, Cyprus. We build fast, modern, and secure websites and web apps optimized for SEO and conversion.
+            <div className="container relative z-10 mx-auto px-4 flex flex-col items-center">
+                {/* Uppercase Small Tagline */}
+                <p className="mb-6 text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-cyan-400">
+                    WHEN SPEED TO MARKET MATTERS, TRUST STELLAR REACH
                 </p>
-                <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                    <Button size="lg" variant="gradient" asChild>
-                        <Link href="/portfolio">
-                            Explore Projects <span className="ml-2">→</span>
-                        </Link>
-                    </Button>
-                    <Button
-                        size="lg"
-                        variant="outline"
+
+                {/* Main Highlight Headline */}
+                <h1 className="mb-8 font-display text-4xl sm:text-6xl md:text-7xl font-light tracking-[0.15em] text-white leading-tight uppercase max-w-5xl">
+                    DIGITAL <span className="font-extrabold text-white">SOLUTIONS</span>
+                    <span className="block text-xl sm:text-3xl font-bold tracking-[0.35em] text-cyan-400 mt-2">
+                        EXPERTISE
+                    </span>
+                </h1>
+
+                {/* Outline Action Button */}
+                <div className="mt-4 mb-12">
+                    <button
                         onClick={() => setIsContactOpen(true)}
+                        className="btn-tech-outline group relative overflow-hidden"
                     >
-                        Get Started
-                    </Button>
+                        LEARN MORE
+                    </button>
                 </div>
 
+                {/* Down Arrow Chevron Scroll Indicator */}
+                <a
+                    href="#hex-grid"
+                    onClick={scrollToNext}
+                    className="inline-flex items-center justify-center p-2 text-cyan-400 hover:text-white transition-colors animate-bounce mt-4"
+                    aria-label="Scroll to features"
+                >
+                    <ChevronDown className="h-7 w-7 stroke-[1.5]" />
+                </a>
+
+                {/* Modal Contact Form */}
                 <Modal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} title="Get Started">
-                    <p className="mb-4 text-sm text-muted-foreground text-left">
-                        Fill out the form below and I'll get back to you to discuss your project.
+                    <p className="mb-4 text-sm text-slate-300 text-left">
+                        Fill out the form below and we'll reach out to discuss your project requirements.
                     </p>
                     <ContactForm showCard={false} />
                 </Modal>

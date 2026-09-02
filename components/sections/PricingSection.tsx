@@ -155,9 +155,9 @@ export function PricingSection() {
                             * Terms and conditions apply.
                         </div>
 
-                        <div className="flex flex-col gap-3 sm:flex-row">
+                        <div className="flex flex-col gap-3">
                             <Button
-                                className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                className="animated-edge w-full whitespace-nowrap bg-gradient-brand hover:opacity-90 transition-opacity"
                                 size="lg"
                                 onClick={() => setIsContactOpen(true)}
                             >
@@ -166,7 +166,7 @@ export function PricingSection() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="flex-1 gap-2"
+                                className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
                                 <a href="tel:+35799717717">
@@ -231,9 +231,9 @@ export function PricingSection() {
                             * Terms and conditions apply.
                         </div>
 
-                        <div className="flex flex-col gap-3 sm:flex-row">
+                        <div className="flex flex-col gap-3">
                             <Button
-                                className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                className="animated-edge w-full whitespace-nowrap bg-gradient-brand hover:opacity-90 transition-opacity"
                                 size="lg"
                                 onClick={() => setIsContactOpen(true)}
                             >
@@ -242,7 +242,7 @@ export function PricingSection() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="flex-1 gap-2"
+                                className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
                                 <a href="tel:+35799717717">
@@ -301,9 +301,9 @@ export function PricingSection() {
                             Fully customized scope and quotes.
                         </div>
 
-                        <div className="flex flex-col gap-3 sm:flex-row">
+                        <div className="flex flex-col gap-3">
                             <Button
-                                className="flex-1 bg-gradient-brand hover:opacity-90 transition-opacity"
+                                className="animated-edge w-full whitespace-nowrap bg-gradient-brand hover:opacity-90 transition-opacity"
                                 size="lg"
                                 onClick={() => setIsContactOpen(true)}
                             >
@@ -312,7 +312,7 @@ export function PricingSection() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="flex-1 gap-2"
+                                className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
                                 <a href="tel:+35799717717">

@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { CursorGlow } from "@/components/effects/CursorGlow";
+import { Starfield } from "@/components/effects/Starfield";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const inter = Inter({
@@ -137,6 +138,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Starfield />
           <CursorGlow />
           {children}
           <WhatsAppButton />

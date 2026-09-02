@@ -18,7 +18,7 @@ const stats: Stat[] = [
 
 export function Stats() {
     return (
-        <section className="relative z-10 border-y border-border bg-background">
+        <section className="relative z-10 border-y border-border bg-transparent">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 divide-x divide-border md:grid-cols-4">
                     {stats.map((stat, i) => (

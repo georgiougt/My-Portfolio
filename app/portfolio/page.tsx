@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
     return (
-        <main className="min-h-screen bg-background text-foreground pb-20">
+        <main className="min-h-screen bg-transparent text-foreground pb-20">
             <Navbar />
             <div className="pt-20">
                 <h1 className="sr-only">Our Web Design & Development Portfolio</h1>

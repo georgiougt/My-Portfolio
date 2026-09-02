@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '@/components/ui/Card';
+import { HexIcon } from '@/components/ui/HexIcon';
 import { Reveal } from '@/components/effects/Reveal';
 import {
     Palette,
@@ -72,7 +73,7 @@ const services = [
 
 export function Services() {
     return (
-        <section id="services" className="relative z-10 bg-background py-24 sm:py-32">
+        <section id="services" className="relative z-10 bg-transparent py-24 sm:py-32">
             <div className="container mx-auto px-4">
                 <Reveal className="mx-auto mb-16 max-w-2xl text-center">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
@@ -93,9 +94,8 @@ export function Services() {
                         return (
                             <Reveal key={service.title} delay={(i % 3) * 0.1}>
                                 <Card className="group h-full p-8 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-                                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-brand text-white shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:scale-110">
-                                        <Icon className="h-6 w-6" />
-                                    </div>
+                                    {/* Hue ramps cyan (185°) → violet (275°) across the nine cards. */}
+                                    <HexIcon Icon={Icon} hue={185 + i * 11.25} id={i} />
                                     <h3 className="mt-6 font-display text-xl font-semibold text-foreground">
                                         {service.title}
                                     </h3>

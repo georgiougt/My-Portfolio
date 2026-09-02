@@ -45,7 +45,7 @@ export default async function ProjectDetail({
     if (!project) notFound();
 
     return (
-        <main className="min-h-screen bg-background text-foreground">
+        <main className="min-h-screen bg-transparent text-foreground">
             <Navbar />
 
             <article className="container mx-auto px-4 pt-32">

@@ -12,6 +12,8 @@ interface ContactFormProps {
 export function ContactForm({ className = '', showCard = true }: ContactFormProps) {
     const FormContent = (
         <form className={`space-y-6 ${className}`} action="https://formspree.io/f/maqbkqzg" method="POST">
+            {/* Honeypot field to prevent bot spam */}
+            <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
             <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
                 <input

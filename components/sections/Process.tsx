@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal } from '@/components/effects/Reveal';
+import { HexIcon } from '@/components/ui/HexIcon';
 import { Search, PenTool, Code2, Rocket } from 'lucide-react';
 
 const steps = [
@@ -31,7 +32,7 @@ const steps = [
 
 export function Process() {
     return (
-        <section id="process" className="relative z-10 bg-background py-24 sm:py-32">
+        <section id="process" className="relative z-10 bg-transparent py-24 sm:py-32">
             <div className="container mx-auto px-4">
                 <Reveal className="mx-auto mb-16 max-w-2xl text-center">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
@@ -51,11 +52,10 @@ export function Process() {
                         const Icon = step.icon;
                         return (
                             <Reveal key={step.title} delay={i * 0.1} className="relative">
-                                <div className="flex flex-col">
+                                <div className="group flex flex-col">
                                     <div className="flex items-center gap-4">
-                                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-brand text-white shadow-lg shadow-primary/20">
-                                            <Icon className="h-6 w-6" />
-                                        </span>
+                                        {/* Hue ramps cyan (185°) → violet (275°) across the four steps. */}
+                                        <HexIcon Icon={Icon} hue={185 + i * 30} id={`process-${i}`} />
                                         <span className="font-display text-4xl font-bold text-border">
                                             0{i + 1}
                                         </span>
