@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Facebook, Linkedin, Instagram, Github, Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { smoothScrollToTop } from '@/lib/scroll';
-import { site } from '@/lib/site';
+import { site, phoneHref } from '@/lib/site';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 import { staticRoutes, type Locale } from '@/lib/i18n';
 import { t } from '@/lib/ui';
@@ -133,11 +133,11 @@ export function Navbar({
                     <LanguageSwitcher locale={locale} href={altHref} className="pr-1" />
 
                     <a
-                        href="tel:+35799717717"
+                        href={phoneHref}
                         className="border border-white/40 hover:border-cyan-400 bg-cyan-950/40 hover:bg-cyan-500/10 px-3.5 py-1.5 text-xs font-bold tracking-[0.15em] text-white hover:text-cyan-400 transition-all rounded-xs flex items-center gap-2"
                     >
                         <Phone className="h-3.5 w-3.5 text-cyan-400" />
-                        +357 99 717717
+                        {site.phoneDisplay}
                     </a>
                 </div>
 
@@ -179,10 +179,10 @@ export function Navbar({
                     <LanguageSwitcher locale={locale} href={altHref} className="py-2 text-sm" />
                     <div className="pt-4 border-t border-cyan-500/20 flex flex-col gap-3">
                         <a
-                            href="tel:+35799717717"
+                            href={phoneHref}
                             className="border border-cyan-400/50 bg-cyan-950/40 text-center py-2.5 text-xs font-bold tracking-[0.15em] text-cyan-400 rounded-xs"
                         >
-                            CALL +357 99 717717
+                            CALL {site.phoneDisplay}
                         </a>
                     </div>
                 </div>

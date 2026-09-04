@@ -5,6 +5,7 @@ import { Check, X, Phone } from "lucide-react";
 import { Modal } from "@/components/ui/Modal";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { useState } from "react";
+import { phoneHref } from "@/lib/site";
 
 /**
  * Rendered both on /pricing (where it owns the page) and on the homepage
@@ -184,7 +185,7 @@ export function PricingSection({
                                 className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
-                                <a href="tel:+35799717717">
+                                <a href={phoneHref}>
                                     <Phone className="h-4 w-4" />
                                     Call Us
                                 </a>
@@ -260,7 +261,7 @@ export function PricingSection({
                                 className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
-                                <a href="tel:+35799717717">
+                                <a href={phoneHref}>
                                     <Phone className="h-4 w-4" />
                                     Call Us
                                 </a>
@@ -330,7 +331,7 @@ export function PricingSection({
                                 className="animated-edge w-full gap-2 whitespace-nowrap"
                                 asChild
                             >
-                                <a href="tel:+35799717717">
+                                <a href={phoneHref}>
                                     <Phone className="h-4 w-4" />
                                     Call Us
                                 </a>

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Facebook, Linkedin, Instagram, Github, Phone, MapPin } from 'lucide-react';
 import { services } from '@/lib/services';
 import { locations } from '@/lib/locations';
-import { site } from '@/lib/site';
+import { site, phoneHref } from '@/lib/site';
 import { staticRoutes, serviceBase, locationBase, type Locale } from '@/lib/i18n';
 import { servicesEl } from '@/lib/services.el';
 import { locationsEl } from '@/lib/locations.el';
@@ -170,11 +170,11 @@ export function Footer({ locale = 'en' }: { locale?: Locale } = {}) {
                             {/* Boxed Phone Number */}
                             <li className="pt-1">
                                 <a
-                                    href="tel:+35799717717"
+                                    href={phoneHref}
                                     className="inline-flex items-center gap-2 border border-white/30 hover:border-cyan-400 bg-cyan-950/40 px-3 py-1.5 font-bold tracking-[0.15em] text-white hover:text-cyan-400 transition-colors rounded-xs text-[0.7rem]"
                                 >
                                     <Phone className="h-3.5 w-3.5 text-cyan-400" />
-                                    +357 99 717717
+                                    {site.phoneDisplay}
                                 </a>
                             </li>
 
