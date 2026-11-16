@@ -23,7 +23,7 @@ export const site = {
     bookingUrl: '',
 
     socials: {
-        github: 'https://github.com/georgiougt',
+        github: '#',
         linkedin: '#',
         instagram: '#',
     },
