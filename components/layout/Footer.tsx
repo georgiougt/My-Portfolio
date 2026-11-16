@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Facebook, Linkedin, Instagram, Github, Phone, MapPin } from 'lucide-react';
 import { services } from '@/lib/services';
 import { locations } from '@/lib/locations';
+import { adsLocations, adsLocationBase } from '@/lib/adsLocations';
 import { site, phoneHref } from '@/lib/site';
 import { staticRoutes, serviceBase, locationBase, type Locale } from '@/lib/i18n';
 import { servicesEl } from '@/lib/services.el';
@@ -132,6 +133,20 @@ export function Footer({ locale = 'en' }: { locale?: Locale } = {}) {
                                     </Link>
                                 </li>
                             ))}
+                            {/* Google Ads city pages are English-only, so they are
+                                left out of the Greek footer rather than sending
+                                Greek readers to an English page. */}
+                            {!el &&
+                                adsLocations.map((location) => (
+                                    <li key={`ads-${location.slug}`}>
+                                        <Link
+                                            href={`${adsLocationBase}/${location.slug}`}
+                                            className="hover:text-cyan-400 transition-colors"
+                                        >
+                                            Google Ads {location.city}
+                                        </Link>
+                                    </li>
+                                ))}
                             <li>
                                 <Link href={r.pricing} className="hover:text-cyan-400 transition-colors">
                                     {el ? 'Τιμές & Πακέτα' : 'Pricing & Packages'}

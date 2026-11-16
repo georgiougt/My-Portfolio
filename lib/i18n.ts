@@ -58,7 +58,14 @@ export const locationBase: Record<Locale, string> = {
 };
 
 /** English-only sections. Listed so it is explicit that they are not yet translated. */
-export const englishOnlyRoutes = ['/blog', '/portfolio', '/projects', '/privacy', '/terms'];
+export const englishOnlyRoutes = [
+    '/blog',
+    '/portfolio',
+    '/projects',
+    '/google-ads',
+    '/privacy',
+    '/terms',
+];
 
 /**
  * Builds the `alternates` block for Next metadata.

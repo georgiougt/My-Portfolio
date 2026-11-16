@@ -11,6 +11,7 @@ import { Reveal } from '@/components/effects/Reveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { locations, getLocation } from '@/lib/locations';
 import { services } from '@/lib/services';
+import { adsLocationBase, getAdsLocation } from '@/lib/adsLocations';
 import {
     ORGANIZATION_ID,
     abs,
@@ -194,15 +195,25 @@ export default async function LocationPage({
                         Services available in {location.city}
                     </h2>
                     <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        {services.map((service) => (
-                            <Link
-                                key={service.slug}
-                                href={`/services/${service.slug}`}
-                                className="rounded-lg border border-border bg-card px-4 py-3 text-sm transition-colors hover:border-primary/50 hover:text-primary"
-                            >
-                                {service.name}
-                            </Link>
-                        ))}
+                        {services.map((service) => {
+                            // Where a city-specific Google Ads page exists, link
+                            // to it rather than the island-wide service page.
+                            const cityAds =
+                                service.slug === 'google-ads' && getAdsLocation(location.slug);
+                            return (
+                                <Link
+                                    key={service.slug}
+                                    href={
+                                        cityAds
+                                            ? `${adsLocationBase}/${location.slug}`
+                                            : `/services/${service.slug}`
+                                    }
+                                    className="rounded-lg border border-border bg-card px-4 py-3 text-sm transition-colors hover:border-primary/50 hover:text-primary"
+                                >
+                                    {cityAds ? `Google Ads ${location.city}` : service.name}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </Reveal>
 

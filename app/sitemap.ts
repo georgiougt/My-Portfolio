@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects";
 import { services } from "@/lib/services";
 import { locations } from "@/lib/locations";
+import { adsLocations, adsLocationBase } from "@/lib/adsLocations";
 import { posts } from "@/lib/posts";
 import { servicesEl } from "@/lib/services.el";
 import { locationsEl } from "@/lib/locations.el";
@@ -104,6 +105,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // English-only sections. No hreflang until Greek versions exist.
     const englishOnly: Entry[] = [
+        // Google Ads city pages — same weight as the web-design city pages.
+        ...adsLocations.map((l) =>
+            single(`${adsLocationBase}/${l.slug}`, { priority: 0.85, changeFrequency: "monthly" })
+        ),
         single("/portfolio", { priority: 0.8, changeFrequency: "monthly" }),
         single("/blog", { priority: 0.8, changeFrequency: "weekly" }),
         ...posts.map((p) =>

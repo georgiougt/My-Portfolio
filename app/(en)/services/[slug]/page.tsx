@@ -11,6 +11,7 @@ import { Reveal } from '@/components/effects/Reveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { services, getService } from '@/lib/services';
 import { locations } from '@/lib/locations';
+import { adsLocations, adsLocationBase } from '@/lib/adsLocations';
 import {
     breadcrumbSchema,
     faqSchema,
@@ -223,6 +224,25 @@ export default async function ServicePage({
                         ))}
                         .
                     </p>
+                    {/* The Google Ads service has its own city pages — link them
+                        from the parent so they are not orphaned. */}
+                    {service.slug === 'google-ads' && (
+                        <p className="mt-3 text-sm text-muted-foreground">
+                            City-specific Google Ads management:{' '}
+                            {adsLocations.map((location, i) => (
+                                <span key={location.slug}>
+                                    <Link
+                                        href={`${adsLocationBase}/${location.slug}`}
+                                        className="text-primary hover:underline"
+                                    >
+                                        Google Ads {location.city}
+                                    </Link>
+                                    {i < adsLocations.length - 1 ? ', ' : ''}
+                                </span>
+                            ))}
+                            .
+                        </p>
+                    )}
                 </Reveal>
             </div>
 
