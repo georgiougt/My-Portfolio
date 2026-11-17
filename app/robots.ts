@@ -7,9 +7,11 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 allow: "/",
-                // Next.js internals and API routes carry no ranking value and only
-                // consume crawl budget.
-                disallow: ["/_next/", "/api/"],
+                // Only API routes are blocked. /_next/ must stay crawlable: it
+                // serves the CSS, JavaScript and optimised images Google needs
+                // to render the pages, and blocking it meant every page was
+                // rendered unstyled with its images missing.
+                disallow: ["/api/"],
             },
         ],
         sitemap: `${siteUrl}/sitemap.xml`,

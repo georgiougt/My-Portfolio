@@ -23,6 +23,18 @@ const nextConfig: NextConfig = {
   // /services/ never both resolve as separate indexable URLs.
   trailingSlash: false,
 
+  async redirects() {
+    return [
+      {
+        // An old URL Google still has on file (reported as a 404 in Search
+        // Console). The page lives at /terms.
+        source: "/terms-of-service",
+        destination: "/terms",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

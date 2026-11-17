@@ -14,6 +14,16 @@ type Entry = MetadataRoute.Sitemap[number];
 const abs = (path: string) => `${siteUrl}${path === "/" ? "" : path}`;
 
 /**
+ * The date the site's content last changed in a way worth re-crawling.
+ *
+ * This used to be `new Date()`, which stamped every URL with the build time on
+ * every deploy. Google learns to ignore lastmod when it always says "now", so
+ * the one signal that could prompt a re-crawl was worthless. Bump this by hand
+ * when pages are meaningfully edited; blog posts carry their own dates.
+ */
+const CONTENT_UPDATED = new Date("2026-11-17");
+
+/**
  * A bilingual pair: both URLs are listed, and each carries xhtml:link
  * alternates pointing at the other plus x-default. Google wants the hreflang
  * set reciprocal, and declaring it in the sitemap as well as in the page head
@@ -31,7 +41,7 @@ function pair(
         "x-default": abs(enPath),
     };
     const common = {
-        lastModified: opts.lastModified ?? new Date(),
+        lastModified: opts.lastModified ?? CONTENT_UPDATED,
         changeFrequency: opts.changeFrequency,
         priority: opts.priority,
         alternates: { languages },
@@ -49,7 +59,7 @@ function single(
 ): Entry {
     return {
         url: abs(path),
-        lastModified: opts.lastModified ?? new Date(),
+        lastModified: opts.lastModified ?? CONTENT_UPDATED,
         changeFrequency: opts.changeFrequency,
         priority: opts.priority,
     };
