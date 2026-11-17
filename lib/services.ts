@@ -381,7 +381,7 @@ export const services: Service[] = [
         name: 'Website Maintenance',
         metaTitle: 'Website Maintenance Cyprus',
         metaDescription:
-            'Website maintenance and support in Cyprus. Security monitoring, updates, backups and performance checks so your site keeps working and keeps ranking.',
+            'Website maintenance and support in Cyprus. Web maintenance plans covering security monitoring, updates, backups and performance checks, so your site keeps working and keeps ranking.',
         h1: 'Website Maintenance & Support in Cyprus',
         intro:
             'A website is not a thing you finish; it is a thing you run. Dependencies age, forms silently break, hosting changes, and Core Web Vitals drift. We keep yours monitored, updated and fast, and we fix things before you find out from a customer.',
@@ -400,6 +400,11 @@ export const services: Service[] = [
             'Anyone whose last developer disappeared',
         ],
         faqs: [
+            {
+                question: 'What does web maintenance actually cover?',
+                answer:
+                    'Four things: keeping the software behind the site patched and current, keeping tested backups off-site, watching that the site is up and fast, and making the small content changes — prices, opening hours, a new photo — that otherwise never get done. Web maintenance is the difference between a site that quietly degrades and one that works the same in year three as on launch day.',
+            },
             {
                 question: 'What happens if my site goes down?',
                 answer:

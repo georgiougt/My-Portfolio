@@ -32,7 +32,7 @@ export const locations: Location[] = [
         slug: 'limassol',
         city: 'Limassol',
         cityGreek: 'Λεμεσός',
-        metaTitle: 'Web Design Limassol',
+        metaTitle: 'Web Design Limassol | Website Design Company',
         metaDescription:
             'Web design and development in Limassol. We build fast, bilingual websites for Limassol businesses — shipping, forex, hospitality, clinics and trades.',
         h1: 'Web Design in Limassol',
@@ -76,13 +76,28 @@ export const locations: Location[] = [
                 answer:
                     'Three things, in order: a verified and fully filled Google Business Profile, consistent name, address and phone details across the web, and a steady flow of genuine reviews. The website supports all three but rarely wins the map pack on its own.',
             },
+            {
+                question: 'How much does a website cost in Limassol?',
+                answer:
+                    'The same as anywhere else in Cyprus — we do not add a Limassol premium. What tends to make Limassol projects larger is scope: more of them need two or three languages, and more of them compete with firms that have already invested heavily in their sites. Every quote is a fixed price, agreed before work begins.',
+            },
+            {
+                question: 'Can you build a Limassol website in Russian as well as Greek and English?',
+                answer:
+                    'Yes. The site is structured so any number of languages can be added, each on its own indexable URLs so it ranks independently. In Limassol, Russian is the most common third language after Greek and English.',
+            },
+            {
+                question: 'Can you redesign our existing site without losing our Google rankings?',
+                answer:
+                    'Yes, and in a market as contested as Limassol it is the part of a redesign that matters most. We map every existing URL to its new equivalent, redirect anything that moves, and carry over the titles and content that already rank before changing a single design.',
+            },
         ],
     },
     {
         slug: 'nicosia',
         city: 'Nicosia',
         cityGreek: 'Λευκωσία',
-        metaTitle: 'Web Design Nicosia',
+        metaTitle: 'Web Design Nicosia | Website Design Company',
         metaDescription:
             'Web design and development in Nicosia. Websites for Nicosia law firms, accountants, clinics and retailers — built to rank in Greek and English search.',
         h1: 'Web Design in Nicosia',
@@ -132,7 +147,7 @@ export const locations: Location[] = [
         slug: 'larnaca',
         city: 'Larnaca',
         cityGreek: 'Λάρνακα',
-        metaTitle: 'Web Design Larnaca',
+        metaTitle: 'Web Design Larnaca | Website Design Company',
         metaDescription:
             'Web design and development in Larnaca. Fast, mobile-first websites for Larnaca hospitality, tourism, property and local service businesses.',
         h1: 'Web Design in Larnaca',
@@ -182,7 +197,7 @@ export const locations: Location[] = [
         slug: 'paphos',
         city: 'Paphos',
         cityGreek: 'Πάφος',
-        metaTitle: 'Web Design Paphos',
+        metaTitle: 'Web Design Paphos | Website Design Company',
         metaDescription:
             'Web design and development in Paphos. Multilingual websites for Paphos tourism, property, healthcare and expat-facing businesses.',
         h1: 'Web Design in Paphos',

@@ -12,6 +12,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { services, getService } from '@/lib/services';
 import { locations } from '@/lib/locations';
 import { adsLocations, adsLocationBase } from '@/lib/adsLocations';
+import { posts } from '@/lib/posts';
 import {
     breadcrumbSchema,
     faqSchema,
@@ -80,6 +81,10 @@ export default async function ServicePage({
     const related = service.related
         .map((s) => getService(s))
         .filter((s): s is NonNullable<typeof s> => Boolean(s));
+
+    // Articles that name this service as related — the reverse of the
+    // "Services related to this article" block on each post.
+    const guides = posts.filter((p) => p.relatedServices.includes(service.slug));
 
     const schema = graph(
         breadcrumbSchema(crumbs),
@@ -185,6 +190,27 @@ export default async function ServicePage({
                         ))}
                     </div>
                 </Reveal>
+
+                {/* Guides — links each service page to the articles written for it */}
+                {guides.length > 0 && (
+                    <Reveal className="mx-auto mt-16 max-w-3xl">
+                        <h2 className="font-display text-2xl font-bold sm:text-3xl">
+                            Guides on {service.name.toLowerCase()}
+                        </h2>
+                        <ul className="mt-6 space-y-3">
+                            {guides.map((post) => (
+                                <li key={post.slug}>
+                                    <Link
+                                        href={`/blog/${post.slug}`}
+                                        className="text-sm text-primary hover:underline"
+                                    >
+                                        {post.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </Reveal>
+                )}
 
                 {/* Related services — internal linking between commercial pages */}
                 <Reveal className="mx-auto mt-16 max-w-3xl">

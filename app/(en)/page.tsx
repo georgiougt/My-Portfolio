@@ -11,7 +11,10 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Stellar Reach Solutions | High-Tech Web Engineering & SEO Cyprus",
+  // The layout's title template does not apply to a page in the same segment,
+  // so the brand is written out here. Leads with the head keyword: this is the
+  // strongest page on the site and it previously never said "web design".
+  title: "Web Design & SEO in Cyprus | Stellar Reach Solutions",
   description:
     "Stellar Reach Solutions is a premier web design and development agency in Cyprus. We design and build fast, modern, and SEO-optimized websites for businesses in Limassol and across Cyprus.",
   alternates: {

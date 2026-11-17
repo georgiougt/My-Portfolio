@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Plus } from 'lucide-react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CTA } from '@/components/sections/CTA';
@@ -8,7 +9,14 @@ import { Reveal } from '@/components/effects/Reveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { posts, getPost, sortedPosts, type Block } from '@/lib/posts';
 import { getService } from '@/lib/services';
-import { ORGANIZATION_ID, abs, breadcrumbSchema, graph, jsonLdProps } from '@/lib/seo';
+import {
+    ORGANIZATION_ID,
+    abs,
+    breadcrumbSchema,
+    faqSchema,
+    graph,
+    jsonLdProps,
+} from '@/lib/seo';
 
 export function generateStaticParams() {
     return posts.map((p) => ({ slug: p.slug }));
@@ -126,7 +134,9 @@ export default async function BlogPost({
         .filter((p) => p.slug !== post.slug)
         .slice(0, 2);
 
-    const schema = graph(breadcrumbSchema(crumbs), {
+    const faqs = post.faqs ?? [];
+
+    const article = {
         '@type': 'BlogPosting',
         '@id': `${abs(`/blog/${post.slug}`)}#article`,
         headline: post.title,
@@ -154,7 +164,13 @@ export default async function BlogPost({
             '@type': 'WebPage',
             '@id': abs(`/blog/${post.slug}`),
         },
-    });
+    };
+
+    const schema = graph(
+        breadcrumbSchema(crumbs),
+        article,
+        ...(faqs.length ? [faqSchema(faqs)] : [])
+    );
 
     return (
         <main className="min-h-screen bg-transparent text-foreground">
@@ -200,6 +216,28 @@ export default async function BlogPost({
                     </Reveal>
 
                     <div className="mt-4">{post.body.map(renderBlock)}</div>
+
+                    {/* Quick answers — matched by FAQPage structured data above */}
+                    {faqs.length > 0 && (
+                        <div className="mt-14">
+                            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                                Quick answers
+                            </h2>
+                            <div className="mt-6 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-card">
+                                {faqs.map((faq) => (
+                                    <details key={faq.question} className="group">
+                                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-medium text-foreground transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
+                                            <h3 className="text-base font-medium">{faq.question}</h3>
+                                            <Plus className="h-5 w-5 shrink-0 text-primary transition-transform duration-300 group-open:rotate-45" />
+                                        </summary>
+                                        <div className="px-6 pb-5 text-sm leading-relaxed text-muted-foreground">
+                                            {faq.answer}
+                                        </div>
+                                    </details>
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
                     {/* Funnel from the article into commercial pages */}
                     <div className="mt-16 rounded-2xl border border-border bg-card p-7">

@@ -35,6 +35,8 @@ export type Post = {
     /** Slugs of services this post should funnel readers towards. */
     relatedServices: string[];
     body: Block[];
+    /** Optional Q&A block rendered after the body and emitted as FAQPage data. */
+    faqs?: { question: string; answer: string }[];
 };
 
 export const posts: Post[] = [
@@ -45,6 +47,7 @@ export const posts: Post[] = [
         description:
             'Real price ranges for websites in Cyprus in 2026 — what a €500 site actually gets you, what drives cost up, and the recurring fees nobody mentions in the quote.',
         published: '2026-08-18',
+        updated: '2026-11-16',
         author: 'George Georgiou',
         readingMinutes: 8,
         category: 'Pricing',
@@ -121,6 +124,35 @@ export const posts: Post[] = [
             {
                 type: 'p',
                 text: 'We start at €800 for design and €1,200 for a built site, quoted as a fixed price before work begins. We build on Next.js rather than WordPress, which means hosting costs are close to zero, there are no plugins to be exploited, and the site loads in well under a second. You own the code. Nothing is rented back to you.',
+            },
+        ],
+        // Every figure below repeats one already given in the body above —
+        // keep the two in step when prices change.
+        faqs: [
+            {
+                question: 'How much does a basic website cost in Cyprus?',
+                answer:
+                    'A template build costs roughly €400–€900. A custom small-business website of five to fifteen pages, with proper SEO foundations and page-speed work, is typically €900–€3,000.',
+            },
+            {
+                question: 'How much does an online store cost in Cyprus?',
+                answer:
+                    'E-commerce sites and web applications usually fall between €3,000 and €15,000 or more. The price follows functionality — payment gateways, VAT handling, bookings, user accounts — rather than the number of pages.',
+            },
+            {
+                question: 'What does a website cost per year after it is built?',
+                answer:
+                    'Expect €10–€20 a year for the domain, anywhere from €0 to €40 a month for hosting, and €50–€200 a month if you take a maintenance plan. A basic SSL certificate should be free.',
+            },
+            {
+                question: 'Does a Greek and English website cost more?',
+                answer:
+                    'Yes. A properly bilingual site is roughly 40–60% more than a single-language build, because every page exists twice and both versions need to be indexable by Google.',
+            },
+            {
+                question: 'Why do website quotes in Cyprus vary so much?',
+                answer:
+                    'Five things move the price: the number of unique page layouts, the number of languages, integrations such as payment gateways and booking systems, whether you or the agency produce the content, and any custom functionality.',
             },
         ],
     },

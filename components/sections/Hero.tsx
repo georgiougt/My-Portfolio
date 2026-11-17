@@ -51,9 +51,9 @@ export function Hero() {
 
                 {/* Main Highlight Headline */}
                 <h1 className="mb-8 font-display text-4xl sm:text-6xl md:text-7xl font-light tracking-[0.15em] text-white leading-tight uppercase max-w-5xl">
-                    DIGITAL <span className="font-extrabold text-white">SOLUTIONS</span>
+                    WEB <span className="font-extrabold text-white">DESIGN</span>
                     <span className="block text-xl sm:text-3xl font-bold tracking-[0.35em] text-cyan-400 mt-2">
-                        EXPERTISE
+                        IN CYPRUS
                     </span>
                 </h1>
 

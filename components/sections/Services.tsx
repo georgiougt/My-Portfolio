@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { HexIcon } from '@/components/ui/HexIcon';
 import { Reveal } from '@/components/effects/Reveal';
+import { locations } from '@/lib/locations';
 import { ArrowRight } from 'lucide-react';
 import {
     Palette,
@@ -142,6 +143,22 @@ export function Services() {
                         See all services and pricing
                         <ArrowRight className="h-4 w-4" />
                     </Link>
+                    {/* In-body links from the homepage to each city page, with the
+                        city keyword as the anchor — stronger than the footer link. */}
+                    <p className="mt-6 text-sm text-muted-foreground">
+                        Based in Limassol, working across Cyprus:{' '}
+                        {locations.map((location, i) => (
+                            <span key={location.slug}>
+                                <Link
+                                    href={`/web-design/${location.slug}`}
+                                    className="text-primary hover:underline"
+                                >
+                                    web design {location.city}
+                                </Link>
+                                {i < locations.length - 1 ? ' · ' : ''}
+                            </span>
+                        ))}
+                    </p>
                 </Reveal>
             </div>
         </section>

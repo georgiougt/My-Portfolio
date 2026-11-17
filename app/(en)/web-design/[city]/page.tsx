@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/effects/Reveal';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import { locations, getLocation } from '@/lib/locations';
-import { services } from '@/lib/services';
+import { services, getService } from '@/lib/services';
 import { adsLocationBase, getAdsLocation } from '@/lib/adsLocations';
 import {
     ORGANIZATION_ID,
@@ -82,6 +82,11 @@ export default async function LocationPage({
     ];
 
     const others = locations.filter((l) => l.slug !== location.slug);
+
+    // Starting prices come from lib/services.ts so this block cannot drift
+    // from the service pages.
+    const euro = (slug: string) =>
+        `€${(getService(slug)?.startingPrice ?? 0).toLocaleString('en-GB')}`;
 
     const schema = graph(
         breadcrumbSchema(crumbs),
@@ -187,6 +192,40 @@ export default async function LocationPage({
                             </span>
                         ))}
                     </div>
+                </Reveal>
+
+                {/* Pricing — answers the cost question on the page and links the
+                    pricing article, which city pages did not link to before. */}
+                <Reveal className="mx-auto mt-16 max-w-3xl">
+                    <h2 className="font-display text-2xl font-bold sm:text-3xl">
+                        What a web design company costs in {location.city}
+                    </h2>
+                    <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+                        We are a web design company based in Limassol, and we quote{' '}
+                        {location.city} projects the way we quote every project: a fixed
+                        price, agreed before work begins. Design starts at{' '}
+                        <strong className="text-foreground">{euro('web-design')}</strong>, a
+                        fully built website at{' '}
+                        <strong className="text-foreground">{euro('web-development')}</strong>{' '}
+                        and an online store at{' '}
+                        <strong className="text-foreground">
+                            {euro('ecommerce-development')}
+                        </strong>
+                        . What moves the price is scope — languages, page layouts and
+                        integrations — not the city you are in.
+                    </p>
+                    <p className="mt-4 text-sm text-muted-foreground">
+                        <Link
+                            href="/blog/how-much-does-a-website-cost-in-cyprus"
+                            className="text-primary hover:underline"
+                        >
+                            How much does a website cost in Cyprus?
+                        </Link>
+                        {' · '}
+                        <Link href="/pricing" className="text-primary hover:underline">
+                            Pricing and packages
+                        </Link>
+                    </p>
                 </Reveal>
 
                 {/* Services available here — links every city page to every service */}
