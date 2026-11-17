@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morrow — Coffee Roasters and Bakery</title>
+<meta name="description" content="Morrow is a neighbourhood coffee roaster and bakery. Single-origin beans roasted in small batches, pastry baked every morning.">
+<meta name="theme-color" content="#f3ebde">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23c2512c'/%3E%3Cpath d='M9 22V11l7 7 7-7v11' fill='none' stroke='%23f3ebde' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#menu">Menu</a>
+    <a href="#beans">Beans</a>
+    <a href="#craft">Our craft</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="brand" href="#top" aria-label="Morrow, home">Morrow</a>
+  <div class="header__right">
+    <span class="open"><i></i>Open today until 6</span>
+    <a class="btn btn--dark" href="#subscribe">Subscribe</a>
+  </div>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero wrap" id="top">
+    <div class="hero__copy">
+      <p class="eyebrow" data-reveal>Coffee roasters and bakery</p>
+      <h1 class="hero__title" data-split>Slow mornings, <em>roasted</em> daily.</h1>
+      <p class="hero__lede" data-reveal data-delay="350">We roast single-origin coffee in small batches behind the counter and bake before the street wakes up. Come in, take your time.</p>
+      <div class="hero__actions" data-reveal data-delay="450">
+        <a class="btn btn--accent" href="#menu">See the menu</a>
+        <a class="link" href="#beans">Shop this week's beans
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <figure class="arch" data-reveal="clip">
+        <img data-parallax="0.06" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1300&q=78" alt="A flat white with latte art beside a potted plant">
+      </figure>
+      <figure class="hero__small" data-reveal data-delay="500">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=75" alt="Fresh croissants dusted with sugar">
+      </figure>
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circle" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs>
+          <text><textPath href="#circle" textLength="480">Roasted in small batches &#183; Baked every morning &#183;</textPath></text>
+        </svg>
+        <svg class="badge__cup" viewBox="0 0 48 48"><path d="M10 18h24v9a12 12 0 0 1-24 0zM34 20h3a4.500 4.500 0 0 1 0 9h-3.300M8 41h28M18 7c-2 2 2 4 0 6M26 7c-2 2 2 4 0 6"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Ethiopia Guji</span><i></i><span>Colombia Huila</span><i></i><span>Kenya Nyeri</span><i></i><span>Guatemala Antigua</span><i></i><span>Rwanda Nyamasheke</span><i></i>
+      <span>Ethiopia Guji</span><i></i><span>Colombia Huila</span><i></i><span>Kenya Nyeri</span><i></i><span>Guatemala Antigua</span><i></i><span>Rwanda Nyamasheke</span><i></i>
+    </div>
+  </div>
+
+  <section class="menu wrap" id="menu">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>On the counter</p>
+      <h2 class="h2" data-split>A short menu, <em>done properly.</em></h2>
+    </div>
+    <div class="menu__grid">
+      <article class="menu__col" data-reveal>
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 20h24v8a12 12 0 0 1-24 0zM33 22h3a4 4 0 0 1 0 8h-3M7 42h28"/></svg>
+        <h3>Espresso bar</h3>
+        <ul>
+          <li><span>Espresso</span><b>3.2</b></li>
+          <li><span>Cortado</span><b>3.8</b></li>
+          <li><span>Flat white</span><b>4.2</b></li>
+          <li><span>Oat cappuccino</span><b>4.6</b></li>
+          <li><span>Iced latte</span><b>4.8</b></li>
+          <li><span>Mocha, single-estate cocoa</span><b>5.2</b></li>
+        </ul>
+      </article>
+      <article class="menu__col" data-reveal data-delay="120">
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 9h26l-9 14h-8zM20 23v4h8v-4M16 31h16l-2 11H18zM24 27v4"/></svg>
+        <h3>Slow bar</h3>
+        <ul>
+          <li><span>Batch brew</span><b>3.4</b></li>
+          <li><span>V60 pour over</span><b>5.0</b></li>
+          <li><span>Aeropress</span><b>4.8</b></li>
+          <li><span>Cold brew, 18 hours</span><b>4.6</b></li>
+          <li><span>Guest roaster flight</span><b>8.0</b></li>
+          <li><span>Loose-leaf tea</span><b>3.8</b></li>
+        </ul>
+      </article>
+      <article class="menu__col" data-reveal data-delay="240">
+        <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30c0-9 8-16 18-16s18 7 18 16c0 3-3 5-6 4l-4-2-4 3h-8l-4-3-4 2c-3 1-6-1-6-4zM18 15l-2 16M30 15l2 16M24 14v20"/></svg>
+        <h3>From the oven</h3>
+        <ul>
+          <li><span>Butter croissant</span><b>3.6</b></li>
+          <li><span>Cardamom bun</span><b>4.0</b></li>
+          <li><span>Sourdough toast, cultured butter</span><b>5.5</b></li>
+          <li><span>Seeded rye, soft egg</span><b>8.5</b></li>
+          <li><span>Brown butter cookie</span><b>3.2</b></li>
+          <li><span>Seasonal fruit galette</span><b>5.8</b></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="split wrap">
+    <figure class="media split__a" data-reveal="clip">
+      <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1300&q=75" alt="A pour over brewing on the slow bar">
+    </figure>
+    <div class="split__copy">
+      <p class="eyebrow" data-reveal>Since 2014</p>
+      <h2 class="h2" data-split>We know the farmers. <em>You can taste it.</em></h2>
+      <p data-reveal>Every coffee on our shelf comes from a producer we have visited and paid well above market. We buy small lots, roast them light enough to keep their character, and sell them within three weeks.</p>
+      <dl class="stats" data-reveal data-delay="120">
+        <div><dt><span data-count="14">14</span></dt><dd>Partner farms</dd></div>
+        <div><dt><span data-count="12">12</span><small>kg</small></dt><dd>Per batch, never more</dd></div>
+        <div><dt><span data-count="21">21</span></dt><dd>Days from roast, at most</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="beans" id="beans">
+    <div class="wrap">
+      <div class="section-head section-head--row">
+        <div>
+          <p class="eyebrow" data-reveal>This week's roast</p>
+          <h2 class="h2" data-split>Beans for <em>home.</em></h2>
+        </div>
+        <p class="section-head__aside" data-reveal>Roasted Tuesday, shipped Wednesday. Whole bean or ground to your brewer, in 250 g bags.</p>
+      </div>
+      <div class="bags">
+        <article class="bag bag--a" data-reveal>
+          <div class="bag__label">
+            <p class="bag__origin">Ethiopia</p>
+            <h3>Guji Hambela</h3>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44"/><path d="M60 16c-22 22-22 66 0 88M60 16c22 22 22 66 0 88M16 60h88"/></svg>
+            <p class="bag__notes">Bergamot, apricot, honey</p>
+          </div>
+          <div class="bag__foot">
+            <div class="roast" aria-label="Roast level: light"><span>Roast</span><i class="on"></i><i></i><i></i><i></i></div>
+            <a class="bag__buy" href="#subscribe">16 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
+          </div>
+        </article>
+        <article class="bag bag--b" data-reveal data-delay="120">
+          <div class="bag__label">
+            <p class="bag__origin">Colombia</p>
+            <h3>Huila El Mirador</h3>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 92l28-44 16 22 14-28 34 50zM84 30a8 8 0 1 0 .01 0"/></svg>
+            <p class="bag__notes">Red apple, caramel, cocoa</p>
+          </div>
+          <div class="bag__foot">
+            <div class="roast" aria-label="Roast level: medium"><span>Roast</span><i class="on"></i><i class="on"></i><i></i><i></i></div>
+            <a class="bag__buy" href="#subscribe">14 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
+          </div>
+        </article>
+        <article class="bag bag--c" data-reveal data-delay="240">
+          <div class="bag__label">
+            <p class="bag__origin">House espresso</p>
+            <h3>Daybreak Blend</h3>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 78a40 40 0 0 1 80 0zM10 78h100M60 18v10M24 34l7 7M96 34l-7 7M28 92h64M40 104h40"/></svg>
+            <p class="bag__notes">Hazelnut, dark sugar, plum</p>
+          </div>
+          <div class="bag__foot">
+            <div class="roast" aria-label="Roast level: medium dark"><span>Roast</span><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+            <a class="bag__buy" href="#subscribe">13 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="craft wrap" id="craft">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Our craft</p>
+      <h2 class="h2" data-split>From cherry <em>to cup.</em></h2>
+    </div>
+    <ol class="steps">
+      <li data-reveal>
+        <span class="steps__no">01</span>
+        <h3>Source</h3>
+        <p>We cup hundreds of samples each harvest and buy the handful that stop the table talking.</p>
+      </li>
+      <li data-reveal data-delay="100">
+        <span class="steps__no">02</span>
+        <h3>Roast</h3>
+        <p>Twelve kilos at a time on a restored drum roaster, profiled by hand and by taste.</p>
+      </li>
+      <li data-reveal data-delay="200">
+        <span class="steps__no">03</span>
+        <h3>Rest</h3>
+        <p>Five to ten days of rest lets the coffee settle before it meets a grinder.</p>
+      </li>
+      <li data-reveal data-delay="300">
+        <span class="steps__no">04</span>
+        <h3>Brew</h3>
+        <p>Recipes are dialled in every morning. Water, dose, time and temperature, written on the board.</p>
+      </li>
+    </ol>
+    <div class="craft__media">
+      <figure class="media" data-reveal="clip"><img data-parallax="0.06" loading="lazy" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=75" alt="Freshly roasted coffee beans"></figure>
+      <figure class="media" data-reveal="clip" data-delay="150"><img data-parallax="0.06" loading="lazy" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=75" alt="Ground coffee in a portafilter"></figure>
+    </div>
+  </section>
+
+  <section class="visit wrap" id="visit">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Visit</p>
+      <h2 class="h2" data-split>Two rooms, <em>one roaster.</em></h2>
+    </div>
+    <div class="shops">
+      <article class="shop" data-reveal>
+        <figure class="media"><img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1300&q=75" alt="The roastery cafe with long shared tables"></figure>
+        <div class="shop__row">
+          <div><h3>The Roastery</h3><p>22 Foundry Lane, Riverside</p></div>
+          <p class="shop__hours">Mon to Fri, 7 to 6<br>Sat and Sun, 8 to 5</p>
+        </div>
+      </article>
+      <article class="shop" data-reveal data-delay="140">
+        <figure class="media"><img loading="lazy" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1300&q=75" alt="The corner bar with stools at the window"></figure>
+        <div class="shop__row">
+          <div><h3>The Corner Bar</h3><p>5 Linden Street, Old Town</p></div>
+          <p class="shop__hours">Every day, 7 to 4<br>Standing room and takeaway</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="subscribe" id="subscribe">
+    <div class="wrap subscribe__inner">
+      <h2 class="subscribe__title" data-split>Fresh beans at your door, <em>every two weeks.</em></h2>
+      <div data-reveal>
+        <p>Pick a coffee or let us choose. Pause, skip or cancel whenever you like. First bag is on us.</p>
+        <form class="signup" data-demo-form="You are on the list. Check your inbox for the first roast.">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          <p class="signup__note" data-form-note role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <p class="footer__brand">Morrow</p>
+    <div><h3>Shop</h3><a href="#beans">Beans</a><a href="#subscribe">Subscriptions</a><a href="#top">Brewing gear</a></div>
+    <div><h3>Company</h3><a href="#craft">Our craft</a><a href="#top">Wholesale</a><a href="#top">Careers</a></div>
+    <div><h3>Say hello</h3><a href="mailto:hello@morrow.example">hello@morrow.example</a><a href="#top">Instagram</a></div>
+  </div>
+  <div class="wrap footer__base">
+    <p>&copy; <span data-year>2026</span> Morrow Coffee Roasters. Concept site.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillwater — Bathhouse and Spa</title>
+<meta name="description" content="Stillwater is a city bathhouse and spa. Thermal pools, sauna, massage and facial treatments in a quiet, phone-free space.">
+<meta name="theme-color" content="#f2ebe3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%233b2e27'/%3E%3Cpath d='M7 14c3-3 6 3 9 0s6 3 9 0M7 20c3-3 6 3 9 0s6 3 9 0' fill='none' stroke='%23d9a58c' stroke-width='1.800' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#treatments">Treatments</a>
+    <a href="#circuit">The circuit</a>
+    <a href="#passes">Passes</a>
+  </nav>
+  <a class="brand" href="#top" aria-label="Stillwater, home">
+    <svg viewBox="0 0 40 16" aria-hidden="true"><path d="M2 5c6-5 12 5 18 0s12 5 18 0M2 12c6-5 12 5 18 0s12 5 18 0"/></svg>
+    <span>Stillwater</span>
+  </a>
+  <div class="header__right">
+    <a href="tel:+10000000000">+1 000 000 0000</a>
+    <a class="btn" href="#reserve">Reserve</a>
+  </div>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <img data-parallax="-0.1" src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=2200&q=78" alt="A stone soaking tub in a quiet, softly lit room">
+    </div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-reveal>Bathhouse and spa</p>
+      <h1 class="hero__title" data-split>Slow down. <em>Sink in.</em></h1>
+      <p class="hero__lede" data-reveal data-delay="400">Warm water, dry heat and unhurried hands, ten minutes from the centre of town.</p>
+      <a class="btn btn--light" href="#reserve" data-reveal data-delay="500">Reserve your visit</a>
+    </div>
+    <p class="hero__note" data-reveal data-delay="700">Open daily<br>07:00 to 22:00</p>
+  </section>
+
+  <section class="intro wrap">
+    <p class="eyebrow" data-reveal>The idea</p>
+    <h2 class="statement" data-split>A bathhouse is not a luxury. It is an old, simple habit: get warm, get cold, rest, repeat. We built a place to practise it properly.</h2>
+    <div class="pillars">
+      <article data-reveal>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 40c-4-6 4-10 0-16s4-10 0-16M24 40c-4-6 4-10 0-16s4-10 0-16M32 40c-4-6 4-10 0-16s4-10 0-16"/></svg>
+        <h3>Heat</h3><p>Cedar sauna, steam room and a heated stone bench to lie on.</p>
+      </article>
+      <article data-reveal data-delay="120">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 18c7-6 13 6 20 0s13 6 20 0M4 27c7-6 13 6 20 0s13 6 20 0M4 36c7-6 13 6 20 0s13 6 20 0"/></svg>
+        <h3>Water</h3><p>Three pools at 38, 32 and 12 degrees, filled from our own spring.</p>
+      </article>
+      <article data-reveal data-delay="240">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 42V24a4 4 0 0 1 8 0M22 24V10a4 4 0 0 1 8 0v14M30 22a4 4 0 0 1 8 0v8c0 7-5 12-12 12h-4c-5 0-8-3-10-7"/></svg>
+        <h3>Touch</h3><p>Massage and facial work from therapists with a decade of practice.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="treatments" id="treatments" data-tabs>
+    <div class="wrap treatments__inner">
+      <figure class="media treatments__media" data-reveal="clip">
+        <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=75" alt="A therapist working along a guest's back">
+      </figure>
+      <div>
+        <p class="eyebrow" data-reveal>Treatments</p>
+        <h2 class="h2" data-split>Hands that <em>take their time</em></h2>
+        <div class="tabs" role="tablist" data-reveal>
+          <button class="is-active" role="tab" aria-selected="true" data-tab="body">Body</button>
+          <button role="tab" aria-selected="false" data-tab="face">Face</button>
+          <button role="tab" aria-selected="false" data-tab="ritual">Rituals</button>
+        </div>
+        <div class="panel is-shown" data-panel="body" data-reveal>
+          <ul class="list">
+            <li><div><h3>Deep tissue massage</h3><p>Slow, firm work for backs that sit at desks.</p></div><span>60 min</span><b>95</b></li>
+            <li><div><h3>Warm oil massage</h3><p>Long flowing strokes with heated sesame oil.</p></div><span>75 min</span><b>110</b></li>
+            <li><div><h3>Hot stone therapy</h3><p>Basalt stones placed and moved along the spine.</p></div><span>90 min</span><b>135</b></li>
+            <li><div><h3>Salt and cedar scrub</h3><p>Full-body exfoliation, rinsed under a warm cascade.</p></div><span>45 min</span><b>70</b></li>
+          </ul>
+        </div>
+        <div class="panel" data-panel="face" hidden>
+          <ul class="list">
+            <li><div><h3>The reset facial</h3><p>Cleanse, steam, massage and mask for tired skin.</p></div><span>60 min</span><b>90</b></li>
+            <li><div><h3>Sculpting massage</h3><p>Lifting facial massage, no products beyond oil.</p></div><span>45 min</span><b>80</b></li>
+            <li><div><h3>Clay and botanical mask</h3><p>A short add-on to follow the steam room.</p></div><span>30 min</span><b>45</b></li>
+          </ul>
+        </div>
+        <div class="panel" data-panel="ritual" hidden>
+          <ul class="list">
+            <li><div><h3>The long afternoon</h3><p>Circuit, scrub, massage and tea in the garden room.</p></div><span>4 hours</span><b>240</b></li>
+            <li><div><h3>Bath for two</h3><p>A private soaking room, then side-by-side massage.</p></div><span>2 hours</span><b>290</b></li>
+            <li><div><h3>Sleep ritual</h3><p>Evening heat, magnesium bath and a scalp massage.</p></div><span>2 hours</span><b>160</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="circuit wrap" id="circuit">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>The thermal circuit</p>
+      <h2 class="h2" data-split>Warm, cold, rest, <em>repeat</em></h2>
+    </div>
+    <ol class="stages">
+      <li data-reveal>
+        <figure class="media"><img loading="lazy" src="https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=900&q=75" alt="A dim steam room with tiered benches"></figure>
+        <span>01 &middot; 15 minutes</span><h3>Warm</h3><p>Start in the sauna or steam room until you feel properly hot.</p>
+      </li>
+      <li data-reveal data-delay="120">
+        <figure class="media"><img loading="lazy" src="https://images.unsplash.com/photo-1532926381893-7542290edf1d?auto=format&fit=crop&w=900&q=75" alt="A guest resting in a tub beside a window"></figure>
+        <span>02 &middot; 1 minute</span><h3>Cool</h3><p>Step into the cold plunge. Breathe out slowly. It passes.</p>
+      </li>
+      <li data-reveal data-delay="240">
+        <figure class="media"><img loading="lazy" src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=900&q=75" alt="Loungers beside a still pool surrounded by plants"></figure>
+        <span>03 &middot; 20 minutes</span><h3>Rest</h3><p>Lie down in the garden room with tea and nothing to do.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="passes" id="passes">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="eyebrow" data-reveal>Passes</p>
+        <h2 class="h2" data-split>Come once, <em>or make it a habit</em></h2>
+      </div>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <h3>Day pass</h3>
+          <p class="card__price">48</p>
+          <p>Three hours in the thermal circuit. Robe, towel and tea included.</p>
+          <a class="link" href="#reserve">Reserve a day</a>
+        </article>
+        <article class="card card--dark" data-reveal data-delay="120">
+          <h3>Membership</h3>
+          <p class="card__price">135<small>per month</small></p>
+          <p>Unlimited circuit visits, one guest pass and fifteen percent off treatments.</p>
+          <a class="link" href="#reserve">Become a member</a>
+        </article>
+        <article class="card" data-reveal data-delay="240">
+          <h3>Gift card</h3>
+          <p class="card__price">From 50</p>
+          <p>Sent by post in a linen envelope or by email within the minute.</p>
+          <a class="link" href="#reserve">Give Stillwater</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserve" id="reserve">
+    <div class="reserve__media"><img data-parallax="-0.08" loading="lazy" src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?auto=format&fit=crop&w=1800&q=70" alt=""></div>
+    <div class="wrap reserve__inner">
+      <div>
+        <p class="eyebrow" data-reveal>Reserve</p>
+        <h2 class="h2" data-split>Leave your phone <em>in the locker</em></h2>
+        <p class="reserve__lede" data-reveal>Tell us when you would like to come. We will confirm by email and send a short note on what to bring, which is nothing.</p>
+        <p class="reserve__addr" data-reveal>4 Spring Lane, Riverside<br>hello@stillwater.example</p>
+      </div>
+      <form class="form" data-demo-form="Thank you. Your reservation request is with us." data-reveal data-delay="150">
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Visit
+          <select name="visit"><option>Day pass</option><option>Massage</option><option>Facial</option><option>A ritual</option></select>
+        </label>
+        <label>Guests
+          <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
+        </label>
+        <label class="form__wide">Date<input type="date" name="date" required></label>
+        <button class="btn btn--solid form__wide" type="submit">Request reservation</button>
+        <p class="form__note form__wide" data-form-note role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <a class="brand" href="#top"><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M2 5c6-5 12 5 18 0s12 5 18 0M2 12c6-5 12 5 18 0s12 5 18 0"/></svg><span>Stillwater</span></a>
+  <nav aria-label="Footer"><a href="#treatments">Treatments</a><a href="#circuit">The circuit</a><a href="#passes">Passes</a><a href="#reserve">Reserve</a></nav>
+  <p>&copy; <span data-year>2026</span> Stillwater Bathhouse. Concept site.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

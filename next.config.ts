@@ -35,6 +35,19 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // The static project sites under /public/sites are hosted on this domain. Keep them
+        // out of the index so invented business names, prices and reviews are
+        // never served as search results under our domain. Visitors can still
+        // open them; the /projects/<slug> pages are what should rank.
+        source: "/sites/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 };

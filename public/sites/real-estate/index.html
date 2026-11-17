@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arden Vale — Residential Estate Agency</title>
+<meta name="description" content="Arden Vale is an independent estate agency for architecturally significant homes. Sales, acquisitions and discreet off-market advice.">
+<meta name="theme-color" content="#f5f3ee">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e3229'/%3E%3Cpath d='M7 25V14l9-7 9 7v11' fill='none' stroke='%23b3925a' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <a class="brand" href="#top" aria-label="Arden Vale, home">
+    <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M3 25V12l11-9 11 9v13M11 25v-8h6v8"/></svg>
+    <span>Arden Vale</span>
+  </a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#listings">Properties</a>
+    <a href="#services">Services</a>
+    <a href="#studio">The agency</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="btn header__cta" href="#contact">Arrange a viewing</a>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__copy">
+      <p class="eyebrow" data-reveal>Residential estate agency, est. 1998</p>
+      <h1 class="hero__title" data-split>Homes of quiet distinction.</h1>
+      <p class="hero__lede" data-reveal data-delay="350">We represent a small number of architecturally significant homes, and the people looking for them.</p>
+      <form class="search" data-demo-form="Thank you. We will send a shortlist that matches within the day." data-reveal data-delay="450">
+        <label>Location
+          <select name="location"><option>All areas</option><option>The Coast</option><option>Old Town</option><option>Hillside</option><option>Harbour Quarter</option></select>
+        </label>
+        <label>Type
+          <select name="type"><option>Any</option><option>Villa</option><option>House</option><option>Apartment</option></select>
+        </label>
+        <label>Budget
+          <select name="budget"><option>No limit</option><option>Up to 1.5m</option><option>1.5m to 3m</option><option>3m and above</option></select>
+        </label>
+        <button type="submit" aria-label="Search properties"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.500"/><path d="M16 16l5 5"/></svg></button>
+        <p class="search__note" data-form-note role="status"></p>
+      </form>
+    </div>
+    <div class="hero__visual">
+      <figure class="media hero__media" data-reveal="clip">
+        <img data-parallax="0.06" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1700&q=78" alt="A contemporary house with a pool at dusk">
+      </figure>
+      <a class="feature" href="#listings" data-reveal data-delay="700">
+        <span class="feature__tag">New to market</span>
+        <strong>The Glass House</strong>
+        <span>Hillside &middot; 5 bedrooms</span>
+        <b>4,250,000</b>
+      </a>
+    </div>
+  </section>
+
+  <section class="figures wrap">
+    <dl>
+      <div data-reveal><dt><span data-count="27">27</span></dt><dd>Years advising private clients</dd></div>
+      <div data-reveal data-delay="100"><dt><span data-count="1.8">1.8</span><small>bn</small></dt><dd>In sales completed since 2015</dd></div>
+      <div data-reveal data-delay="200"><dt><span data-count="64">64</span><small>%</small></dt><dd>Of homes sold before reaching the open market</dd></div>
+      <div data-reveal data-delay="300"><dt><span data-count="38">38</span></dt><dd>Days, on average, from listing to accepted offer</dd></div>
+    </dl>
+  </section>
+
+  <section class="listings wrap" id="listings" data-filter-group>
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-reveal>Selected properties</p>
+        <h2 class="h2" data-split>Currently on our books</h2>
+      </div>
+      <div class="filters" data-reveal>
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="villa">Villas</button>
+        <button data-filter="house">Houses</button>
+        <button data-filter="apartment">Apartments</button>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="home" data-cat="villa" data-reveal>
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1300&q=75" alt="A modern white villa with terraces and a pool"><span>For sale</span></a>
+        <div class="home__row"><h3>Villa Serein</h3><p class="home__price">3,450,000</p></div>
+        <p class="home__place">Cliff Road, The Coast</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>5 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>4 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>420 m&sup2;</li>
+        </ul>
+      </article>
+      <article class="home" data-cat="house" data-reveal data-delay="100">
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1300&q=75" alt="A timber and glass house lit at dusk"><span>For sale</span></a>
+        <div class="home__row"><h3>Cedar House</h3><p class="home__price">2,180,000</p></div>
+        <p class="home__place">Larch Lane, Hillside</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>4 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>3 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>310 m&sup2;</li>
+        </ul>
+      </article>
+      <article class="home" data-cat="villa" data-reveal data-delay="200">
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1300&q=75" alt="A white villa beside a long pool"><span>Under offer</span></a>
+        <div class="home__row"><h3>Casa Olea</h3><p class="home__price">2,950,000</p></div>
+        <p class="home__place">Olive Terrace, The Coast</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>4 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>4 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>365 m&sup2;</li>
+        </ul>
+      </article>
+      <article class="home" data-cat="apartment" data-reveal>
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1300&q=75" alt="A bright apartment living room with a blue sofa"><span>For sale</span></a>
+        <div class="home__row"><h3>The Atelier Loft</h3><p class="home__price">890,000</p></div>
+        <p class="home__place">Printworks Yard, Old Town</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>2 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>2 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>128 m&sup2;</li>
+        </ul>
+      </article>
+      <article class="home" data-cat="house" data-reveal data-delay="100">
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1300&q=75" alt="A white family house behind a lawn"><span>For sale</span></a>
+        <div class="home__row"><h3>Whitmoor Lodge</h3><p class="home__price">1,640,000</p></div>
+        <p class="home__place">Whitmoor Green, Hillside</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>5 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>3 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>290 m&sup2;</li>
+        </ul>
+      </article>
+      <article class="home" data-cat="apartment" data-reveal data-delay="200">
+        <a href="#contact" class="home__media"><img loading="lazy" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1300&q=75" alt="A calm living room with pale furniture and plants"><span>For sale</span></a>
+        <div class="home__row"><h3>Harbour Residence 12</h3><p class="home__price">1,120,000</p></div>
+        <p class="home__place">Quay Street, Harbour Quarter</p>
+        <ul class="home__spec">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 15h18M6 10V7h12v3M3 18v2M21 18v2"/></svg>3 beds</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 13V6a2 2 0 0 1 4 0"/></svg>2 baths</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 10h4M4 15h4M10 20v-4M15 20v-4"/></svg>164 m&sup2;</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="spotlight">
+    <div class="spotlight__media">
+      <img data-parallax="-0.08" loading="lazy" src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=2200&q=75" alt="A white modernist villa and pool under a clear sky">
+    </div>
+    <div class="wrap spotlight__inner">
+      <div class="spotlight__card" data-reveal>
+        <p class="eyebrow">Property in focus</p>
+        <h2 class="h3">The Glass House</h2>
+        <p>Completed in 2021 by a celebrated local practice, set in an acre of terraced garden with uninterrupted views to the water.</p>
+        <dl>
+          <div><dt>Guide price</dt><dd>4,250,000</dd></div>
+          <div><dt>Interior</dt><dd>510 m&sup2;</dd></div>
+          <div><dt>Plot</dt><dd>4,100 m&sup2;</dd></div>
+        </dl>
+        <a class="link" href="#contact">Request the brochure
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-reveal>What we do</p>
+          <h2 class="h2" data-split>Advice first, then property</h2>
+        </div>
+      </div>
+      <div class="services__grid">
+        <article data-reveal>
+          <span>01</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 42V20L24 6l18 14v22M18 42V28h12v14M2 42h44"/></svg>
+          <h3>Selling</h3>
+          <p>Honest pricing, considered presentation and a buyer list built over twenty-seven years. Most of our sales never need a public listing.</p>
+        </article>
+        <article data-reveal data-delay="120">
+          <span>02</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="30" r="9"/><path d="M23 24L42 6M34 14l6 6M29 19l4 4"/></svg>
+          <h3>Acquiring</h3>
+          <p>We act for buyers too. Tell us what matters and we will find it, including the homes that are not officially for sale.</p>
+        </article>
+        <article data-reveal data-delay="240">
+          <span>03</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10zM17 24l5 5 9-10"/></svg>
+          <h3>Managing</h3>
+          <p>Lettings, maintenance and oversight for owners who are often elsewhere. One point of contact, one monthly report.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="studio wrap" id="studio">
+    <div class="studio__media">
+      <figure class="media studio__a" data-reveal="clip"><img data-parallax="0.06" loading="lazy" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=75" alt="A living room with soft furniture and tall windows"></figure>
+      <figure class="media studio__b" data-reveal="clip" data-delay="200"><img data-parallax="0.12" loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=75" alt="A bright interior with timber details"></figure>
+    </div>
+    <div class="studio__copy">
+      <p class="eyebrow" data-reveal>The agency</p>
+      <blockquote class="quote" data-split>We would rather tell you not to buy a house than sell you the wrong one.</blockquote>
+      <p class="studio__name" data-reveal>Eleanor Arden, founding partner</p>
+      <p class="studio__text" data-reveal data-delay="100">Arden Vale is owned by the partners who run it. There are eleven of us, we take on around forty instructions a year, and each one is handled by a partner from valuation to completion.</p>
+      <a class="link" href="#contact" data-reveal data-delay="200">Meet the partners
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact__inner">
+      <div>
+        <p class="eyebrow" data-reveal>Contact</p>
+        <h2 class="h2" data-split>Arrange a private viewing</h2>
+        <dl class="office" data-reveal>
+          <div><dt>Office</dt><dd>9 Chancery Square<br>Old Town</dd></div>
+          <div><dt>Hours</dt><dd>Monday to Friday, 9 to 6<br>Saturday by appointment</dd></div>
+          <div><dt>Direct</dt><dd><a href="tel:+10000000000">+1 000 000 0000</a><br><a href="mailto:enquiries@ardenvale.example">enquiries@ardenvale.example</a></dd></div>
+        </dl>
+      </div>
+      <form class="form" data-demo-form="Thank you. A partner will be in touch within one working day." data-reveal data-delay="150">
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Full name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>I am interested in
+          <select name="interest"><option>Buying a home</option><option>Selling a home</option><option>A valuation</option><option>Property management</option></select>
+        </label>
+        <label>Property
+          <select name="property"><option>No particular property</option><option>The Glass House</option><option>Villa Serein</option><option>Cedar House</option><option>Casa Olea</option><option>The Atelier Loft</option><option>Whitmoor Lodge</option><option>Harbour Residence 12</option></select>
+        </label>
+        <label class="form__wide">Message<textarea name="message" rows="3" placeholder="Anything we should know"></textarea></label>
+        <button class="btn btn--solid form__wide" type="submit">Send enquiry</button>
+        <p class="form__note form__wide" data-form-note role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <a class="brand" href="#top"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M3 25V12l11-9 11 9v13M11 25v-8h6v8"/></svg><span>Arden Vale</span></a>
+    <nav aria-label="Footer"><a href="#listings">Properties</a><a href="#services">Services</a><a href="#studio">The agency</a><a href="#contact">Contact</a></nav>
+  </div>
+  <div class="wrap footer__base">
+    <p>&copy; <span data-year>2026</span> Arden Vale Estates. Concept site.</p>
+    <p>Prices shown in EUR and for illustration only.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurel — Wood-Fire Kitchen and Wine Room</title>
+<meta name="description" content="Aurel is a wood-fire kitchen and wine room. Seasonal tasting menus, a raw bar, and a cellar of small growers.">
+<meta name="theme-color" content="#12100e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312100e'/%3E%3Cpath d='M16 6 L24 26 H21 L16 12 L11 26 H8 Z' fill='%23c08552'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <a class="brand" href="#top" aria-label="Aurel, home">Aurel</a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#menu">Menu</a>
+    <a href="#kitchen">Kitchen</a>
+    <a href="#chef">Chef</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn--line header__cta" href="#reserve">Reserve</a>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <img data-parallax="-0.12" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=75" alt="The dining room at Aurel, lit low in the evening">
+    </div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-reveal>Wood-fire kitchen and wine room</p>
+      <h1 class="hero__title" data-split>Fire, season, <em>and a long table.</em></h1>
+      <div class="hero__foot" data-reveal data-delay="500">
+        <p>Dinner, Tuesday to Sunday<br>From half past five</p>
+        <a class="link-arrow" href="#reserve">Book a table
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hero__addr">14 Tannery Row<br>Old Quarter</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro wrap">
+    <p class="eyebrow" data-reveal>The house</p>
+    <h2 class="statement" data-split>We cook over oak and vine cuttings, serve what the week brings, and pour wine from growers we know by first name.</h2>
+    <div class="intro__grid">
+      <figure class="media media--tall" data-reveal="clip">
+        <img data-parallax="0.08" loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=75" alt="A plated course on a set table">
+      </figure>
+      <div class="intro__copy" data-reveal data-delay="150">
+        <p>Aurel opened in a former tannery with one hearth, forty seats and a short list of rules. Nothing travels far. Nothing is rushed. The menu changes when the market does, sometimes twice in a week.</p>
+        <p>Come for the tasting menu at the long table, or take a stool at the bar and order as you go.</p>
+        <a class="link-arrow" href="#menu">See this week's menu
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <figure class="media media--small" data-reveal="clip" data-delay="200">
+        <img data-parallax="0.14" loading="lazy" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=75" alt="Herbs being cut at the pass">
+      </figure>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Open hearth</span><i></i><span>Raw bar</span><i></i><span>Small growers</span><i></i><span>Seasonal tasting</span><i></i><span>Late supper</span><i></i>
+      <span>Open hearth</span><i></i><span>Raw bar</span><i></i><span>Small growers</span><i></i><span>Seasonal tasting</span><i></i><span>Late supper</span><i></i>
+    </div>
+  </div>
+
+  <section class="menu wrap" id="menu" data-tabs>
+    <div class="menu__head">
+      <div>
+        <p class="eyebrow" data-reveal>Menu, week forty-six</p>
+        <h2 class="h2" data-split>What we are <em>cooking</em></h2>
+      </div>
+      <div class="tabs" role="tablist" data-reveal>
+        <button class="is-active" role="tab" aria-selected="true" data-tab="tasting">Tasting</button>
+        <button role="tab" aria-selected="false" data-tab="carte">A la carte</button>
+        <button role="tab" aria-selected="false" data-tab="cellar">Cellar</button>
+      </div>
+    </div>
+
+    <div class="menu__body">
+      <div class="menu__lists" data-reveal>
+        <div class="panel is-shown" data-panel="tasting">
+          <p class="panel__note">Seven courses, 135 per guest. Wine pairing 85.</p>
+          <ul class="dishes">
+            <li><div><h3>Oyster, smoked cream, apple</h3><p>Shucked to order, cold-smoked over vine</p></div><span>I</span></li>
+            <li><div><h3>Hearth bread, cultured butter</h3><p>Three-day rye sourdough, sea salt</p></div><span>II</span></li>
+            <li><div><h3>Beetroot, black garlic, hazelnut</h3><p>Slow-roasted in the embers</p></div><span>III</span></li>
+            <li><div><h3>Line-caught bass, fennel, citrus</h3><p>Grilled on the bone, burnt lemon</p></div><span>IV</span></li>
+            <li><div><h3>Aged rib, bone marrow, shallot</h3><p>Forty-five days dry-aged, oak fire</p></div><span>V</span></li>
+            <li><div><h3>Ewe's milk cheese, honeycomb</h3><p>From the hill farm, with walnut toast</p></div><span>VI</span></li>
+            <li><div><h3>Burnt cream, quince, bay</h3><p>Finished with the iron</p></div><span>VII</span></li>
+          </ul>
+        </div>
+        <div class="panel" data-panel="carte" hidden>
+          <p class="panel__note">Served at the bar and on the terrace, every evening.</p>
+          <ul class="dishes">
+            <li><div><h3>Raw scallop, green almond, oil</h3><p>Hand-dived, dressed at the pass</p></div><span>19</span></li>
+            <li><div><h3>Charred leeks, egg yolk, crumb</h3><p>Cooked in their skins over coals</p></div><span>14</span></li>
+            <li><div><h3>Wood-roast chicken, tarragon</h3><p>Half bird, pan juices, bitter leaves</p></div><span>29</span></li>
+            <li><div><h3>Salmon, sorrel, new potato</h3><p>Lightly cured, grilled skin side only</p></div><span>31</span></li>
+            <li><div><h3>Sirloin on the bone, for two</h3><p>Ember onions, anchovy butter</p></div><span>88</span></li>
+            <li><div><h3>Chocolate, olive oil, salt</h3><p>Warm, with creme fraiche ice cream</p></div><span>12</span></li>
+          </ul>
+        </div>
+        <div class="panel" data-panel="cellar" hidden>
+          <p class="panel__note">A rotating list of 180 bottles. A few we are pouring by the glass.</p>
+          <ul class="dishes">
+            <li><div><h3>Chenin Blanc, Anjou, 2022</h3><p>Stone fruit, beeswax, long and dry</p></div><span>14</span></li>
+            <li><div><h3>Assyrtiko, Santorini, 2023</h3><p>Salt, lemon peel, volcanic grip</p></div><span>16</span></li>
+            <li><div><h3>Gamay, Morgon, 2021</h3><p>Whole bunch, served a little cool</p></div><span>13</span></li>
+            <li><div><h3>Nebbiolo, Langhe, 2020</h3><p>Rose, tar, fine tannin</p></div><span>17</span></li>
+            <li><div><h3>Xinomavro, Naoussa, 2018</h3><p>Dried cherry, olive, old oak</p></div><span>15</span></li>
+            <li><div><h3>Late harvest Riesling, Mosel</h3><p>Honeyed, bright, with dessert</p></div><span>12</span></li>
+          </ul>
+        </div>
+      </div>
+      <figure class="media menu__media" data-reveal="clip">
+        <img data-parallax="0.08" loading="lazy" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=75" alt="Shared plates laid out across a table">
+      </figure>
+    </div>
+  </section>
+
+  <section class="plates" id="kitchen">
+    <div class="wrap plates__head">
+      <div>
+        <p class="eyebrow" data-reveal>From the hearth</p>
+        <h2 class="h2" data-split>Plates of the <em>season</em></h2>
+      </div>
+      <div class="rail-nav" data-reveal>
+        <button data-rail-prev="#rail" aria-label="Previous plates"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button data-rail-next="#rail" aria-label="Next plates"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="rail" id="rail" data-drag>
+      <article class="plate" data-reveal>
+        <div class="media"><img loading="lazy" draggable="false" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=75" alt="Sliced aged beef"></div>
+        <p class="plate__no">01</p><h3>Aged rib</h3><p>Bone marrow, shallot, oak</p>
+      </article>
+      <article class="plate" data-reveal data-delay="80">
+        <div class="media"><img loading="lazy" draggable="false" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=75" alt="Salmon with greens"></div>
+        <p class="plate__no">02</p><h3>Cured salmon</h3><p>Sorrel, new potato, lemon</p>
+      </article>
+      <article class="plate" data-reveal data-delay="160">
+        <div class="media"><img loading="lazy" draggable="false" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=75" alt="A bowl of leaves and vegetables"></div>
+        <p class="plate__no">03</p><h3>Garden bowl</h3><p>Bitter leaves, seeds, verjus</p>
+      </article>
+      <article class="plate" data-reveal data-delay="240">
+        <div class="media"><img loading="lazy" draggable="false" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=75" alt="Egg on toasted bread"></div>
+        <p class="plate__no">04</p><h3>Hearth toast</h3><p>Soft egg, greens, brown butter</p>
+      </article>
+      <article class="plate" data-reveal data-delay="320">
+        <div class="media"><img loading="lazy" draggable="false" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=75" alt="Glazed ribs on a board"></div>
+        <p class="plate__no">05</p><h3>Glazed short rib</h3><p>Molasses, pickles, charred lime</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="chef wrap" id="chef">
+    <figure class="media chef__media" data-reveal="clip">
+      <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1100&q=75" alt="The chef at work in the kitchen">
+    </figure>
+    <div class="chef__copy">
+      <p class="eyebrow" data-reveal>Chef and founder</p>
+      <blockquote class="quote" data-split>A good fire does half the work. The rest is knowing when to leave things alone.</blockquote>
+      <p class="chef__name" data-reveal>Matteo Rinaldi</p>
+      <p class="chef__bio" data-reveal data-delay="100">Matteo trained in Piedmont and spent a decade on the line in Copenhagen and London before building the hearth at Aurel by hand. He still lights it himself each afternoon at three.</p>
+      <dl class="stats" data-reveal data-delay="200">
+        <div><dt><span data-count="40">40</span></dt><dd>Seats at the table</dd></div>
+        <div><dt><span data-count="180">180</span></dt><dd>Bottles in the cellar</dd></div>
+        <div><dt><span data-count="12">12</span></dt><dd>Farms we buy from</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="reserve" id="reserve">
+    <div class="reserve__media">
+      <img data-parallax="-0.08" loading="lazy" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1800&q=70" alt="">
+    </div>
+    <div class="wrap reserve__inner">
+      <div>
+        <p class="eyebrow" data-reveal>Reservations</p>
+        <h2 class="h2" data-split>Join us at <em>the table</em></h2>
+        <p class="reserve__lede" data-reveal>Tables open thirty days ahead. For parties of eight or more, or to take the whole room, write to us and we will plan the evening together.</p>
+      </div>
+      <form class="form" data-demo-form="Thank you. Your request is in, and we will confirm by email within the day." data-reveal data-delay="150">
+        <label>Date<input type="date" name="date" required></label>
+        <label>Time
+          <select name="time"><option>17:30</option><option>18:30</option><option selected>19:30</option><option>20:30</option><option>21:30</option></select>
+        </label>
+        <label>Guests
+          <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select>
+        </label>
+        <label class="form__wide">Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+        <label class="form__wide">Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <button class="btn btn--solid form__wide" type="submit">Request a table</button>
+        <p class="form__note form__wide" data-form-note role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="visit">
+  <div class="wrap footer__grid">
+    <div>
+      <h3>Visit</h3>
+      <p>14 Tannery Row<br>Old Quarter<br>Entrance through the courtyard</p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <p>Tuesday to Thursday, 17:30 to 23:00<br>Friday and Saturday, 17:30 to 00:30<br>Sunday, 13:00 to 21:00</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="mailto:table@aurel.example">table@aurel.example</a><br><a href="tel:+10000000000">+1 000 000 0000</a></p>
+    </div>
+    <div>
+      <h3>Follow</h3>
+      <p><a href="#top">Instagram</a><br><a href="#top">Journal</a><br><a href="#top">Gift cards</a></p>
+    </div>
+  </div>
+  <p class="footer__mark" aria-hidden="true">Aurel</p>
+  <div class="wrap footer__base">
+    <p>&copy; <span data-year>2026</span> Aurel. A concept site.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

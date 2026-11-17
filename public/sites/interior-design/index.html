@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norde — Interior Design Studio</title>
+<meta name="description" content="Norde is an interior design studio creating calm, characterful homes. Full-service design from first sketch to final cushion.">
+<meta name="theme-color" content="#f6f5f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b1a18'/%3E%3Cpath d='M9 23V9l14 14V9' fill='none' stroke='%23f6f5f1' stroke-width='2.600'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <a class="brand" href="#top" aria-label="Norde, home">Norde</a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#work"><sup>01</sup>Work</a>
+    <a href="#process"><sup>02</sup>Process</a>
+    <a href="#studio"><sup>03</sup>Studio</a>
+    <a href="#contact"><sup>04</sup>Contact</a>
+  </nav>
+  <a class="pill header__cta" href="#contact">Start a project</a>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__copy wrap">
+      <h1 class="hero__title" data-split>Rooms with a point of view.</h1>
+      <div class="hero__row">
+        <p class="hero__lede" data-reveal data-delay="350">Interior design studio for homes that feel settled, personal and a little unexpected.</p>
+        <p class="hero__meta" data-reveal data-delay="450">Residential interiors<br>Est. 2013<br>Currently booking spring</p>
+      </div>
+    </div>
+    <figure class="media hero__media" data-reveal="clip">
+      <img data-parallax="0.08" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2200&q=78" alt="A warm living room with a low sofa, timber shelving and layered rugs">
+      <figcaption><span>Featured</span>Larch House, living room</figcaption>
+    </figure>
+  </section>
+
+  <section class="work wrap" id="work" data-filter-group>
+    <div class="section-head">
+      <h2 class="h2" data-split>Selected work</h2>
+      <div class="filters" data-reveal>
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="living">Living</button>
+        <button data-filter="kitchen">Kitchen</button>
+        <button data-filter="bedroom">Bedroom</button>
+      </div>
+    </div>
+    <div class="projects">
+      <a class="project" href="#contact" data-cat="living" data-reveal>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1300&q=75" alt="A pale living room with a round table and soft seating"></figure>
+        <div class="project__row"><h3>Harbour Flat</h3><span>2025</span></div>
+        <p>Living room &middot; Full renovation, 140 m&sup2;</p>
+      </a>
+      <a class="project" href="#contact" data-cat="kitchen" data-reveal data-delay="120">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1300&q=75" alt="A bright kitchen with an island and pendant lights"></figure>
+        <div class="project__row"><h3>Mill Kitchen</h3><span>2025</span></div>
+        <p>Kitchen &middot; Bespoke joinery and lighting</p>
+      </a>
+      <a class="project" href="#contact" data-cat="bedroom" data-reveal>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1300&q=75" alt="A calm bedroom with an upholstered headboard"></figure>
+        <div class="project__row"><h3>Elm House</h3><span>2024</span></div>
+        <p>Bedroom suite &middot; Furnishing and styling</p>
+      </a>
+      <a class="project" href="#contact" data-cat="living" data-reveal data-delay="120">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1300&q=75" alt="A living room with plants and a gallery wall"></figure>
+        <div class="project__row"><h3>Garden Apartment</h3><span>2024</span></div>
+        <p>Living room &middot; Colour, art and planting</p>
+      </a>
+      <a class="project" href="#contact" data-cat="kitchen" data-reveal>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1300&q=75" alt="A compact monochrome kitchen with bar stools"></figure>
+        <div class="project__row"><h3>Tannery Loft</h3><span>2023</span></div>
+        <p>Kitchen &middot; Compact layout redesign</p>
+      </a>
+      <a class="project" href="#contact" data-cat="living" data-reveal data-delay="120">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1300&q=75" alt="A neutral sitting room with woven wall pieces"></figure>
+        <div class="project__row"><h3>Dune Cottage</h3><span>2023</span></div>
+        <p>Sitting room &middot; Natural materials throughout</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Oak</span><span>Linen</span><span>Travertine</span><span>Lime plaster</span><span>Aged brass</span><span>Wool boucle</span><span>Terracotta</span>
+      <span>Oak</span><span>Linen</span><span>Travertine</span><span>Lime plaster</span><span>Aged brass</span><span>Wool boucle</span><span>Terracotta</span>
+    </div>
+  </div>
+
+  <section class="process wrap" id="process">
+    <div class="process__head">
+      <h2 class="h2" data-split>How a project runs</h2>
+      <p data-reveal>Most homes take five to nine months. You will always know which stage you are in and what it costs.</p>
+    </div>
+    <ol class="stages">
+      <li data-reveal><span>01</span><div><h3>Listen</h3><p>We walk the space together and talk about how you live, what you own and what you would never part with.</p></div><b>2 weeks</b></li>
+      <li data-reveal><span>02</span><div><h3>Concept</h3><p>Layouts, a material palette and reference images presented in the studio with real samples on the table.</p></div><b>4 weeks</b></li>
+      <li data-reveal><span>03</span><div><h3>Detail</h3><p>Drawings, lighting plans, joinery and a line-by-line schedule your builder can price without guessing.</p></div><b>8 weeks</b></li>
+      <li data-reveal><span>04</span><div><h3>Deliver</h3><p>We manage orders, visit site weekly and install everything down to the books on the shelves.</p></div><b>To completion</b></li>
+    </ol>
+  </section>
+
+  <section class="studio" id="studio">
+    <div class="wrap studio__inner">
+      <figure class="media studio__media" data-reveal="clip">
+        <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=75" alt="A yellow armchair beside a floor lamp and framed print">
+      </figure>
+      <div>
+        <p class="tag" data-reveal>The studio</p>
+        <blockquote class="quote" data-split>We design for the tenth year, not the first photograph.</blockquote>
+        <p class="studio__text" data-reveal>Norde is led by Ingrid Solheim and a team of six designers and makers. We take eight projects a year so each one gets a senior designer from start to finish.</p>
+        <dl class="stats" data-reveal>
+          <div><dt><span data-count="96">96</span></dt><dd>Homes completed</dd></div>
+          <div><dt><span data-count="12">12</span></dt><dd>Years of practice</dd></div>
+          <div><dt><span data-count="8">8</span></dt><dd>Projects a year</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact wrap" id="contact">
+    <p class="tag" data-reveal>Start a project</p>
+    <h2 class="contact__title" data-split>Tell us about your home.</h2>
+    <div class="contact__grid">
+      <form class="form" data-demo-form="Thank you. We will reply within three working days." data-reveal>
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Project
+          <select name="type"><option>Whole home</option><option>Kitchen</option><option>Living spaces</option><option>Bedroom and bath</option><option>Consultation only</option></select>
+        </label>
+        <label>Budget
+          <select name="budget"><option>Under 50k</option><option>50k to 150k</option><option>150k to 400k</option><option>Above 400k</option></select>
+        </label>
+        <label class="form__wide">A few words<textarea name="notes" rows="2" placeholder="Where it is, when you hope to start"></textarea></label>
+        <div class="form__foot form__wide">
+          <button class="pill pill--dark" type="submit">Send enquiry</button>
+          <p class="form__note" data-form-note role="status"></p>
+        </div>
+      </form>
+      <div class="contact__side" data-reveal data-delay="150">
+        <p><span>Studio</span>12 Weaver's Yard<br>Open by appointment</p>
+        <p><span>New projects</span><a href="mailto:studio@norde.example">studio@norde.example</a></p>
+        <p><span>Follow</span><a href="#top">Instagram</a><br><a href="#top">Pinterest</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer__mark" aria-hidden="true">Norde</p>
+  <div class="wrap footer__base"><p>&copy; <span data-year>2026</span> Norde Studio. Concept site.</p><a href="#top">Back to top</a></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

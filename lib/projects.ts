@@ -96,7 +96,7 @@ export const projects: Project[] = [
         year: '2025',
         services: ['Web App Development', 'UI/UX Design', 'Data Visualisation'],
         challenge:
-            'The brief was a polished fintech dashboard that turns dense transaction data into something a user can read at a glance and trust.',
+            'The goal was a polished fintech dashboard that turns dense transaction data into something a user can read at a glance and trust.',
         approach:
             'We designed a clear information hierarchy with real-time data views and clean charts, focusing on legibility, performance and a confident, modern UI.',
         deliverables: [
@@ -423,6 +423,326 @@ export const projects: Project[] = [
             'Curated natural wine and tasting flight menu',
             'Integrated evening table booking platform',
             'Mobile-first responsive design',
+        ],
+    },
+
+    // Projects 23–37 are static sites hosted from /public/sites/<folder> on
+    // this domain rather than on a separate host. Those URLs are sent with a
+    // noindex header (see next.config.ts); the /projects/<slug> pages are the
+    // ones meant to rank. Their forms are front-end only.
+    {
+        id: 23,
+        slug: 'aurel-restaurant',
+        title: 'Aurel',
+        description: 'Wood-fire kitchen and wine room, built around the tasting menu and the table request.',
+        category: 'Hospitality',
+        image: '/projects/aurel.jpg',
+        link: '/sites/restaurant/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Restaurant websites tend to bury the two things a guest wants — what is on the menu this week and how to get a table — under a slideshow. The goal was a fine-dining site that answers both within one scroll.',
+        approach:
+            'A charcoal, bone and copper palette with a serif display face carries the mood, while the structure stays plain: the story, the seasonal plates, then the table. Motion is limited to slow reveals so the food photography does the work.',
+        deliverables: [
+            'Editorial dark design with a serif and sans pairing',
+            'Seasonal menu section with tabbed courses',
+            'Table request form with inline confirmation',
+            'Lightweight static build with no framework',
+        ],
+    },
+    {
+        id: 24,
+        slug: 'meridian-automobiles',
+        title: 'Meridian',
+        description: 'Independent dealer in performance and collector cars, with a deliberately short inventory.',
+        category: 'Services',
+        image: '/projects/meridian.jpg',
+        link: '/sites/car-dealership/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Most dealership sites are a search box over hundreds of listings. The goal here was the opposite: a specialist with six cars, where each one has to feel inspected and worth the journey to see it.',
+        approach:
+            'Graphite and chalk with a single signal-lime accent, a condensed grotesque for headlines and a monospaced face for the figures. Each car gets a specification sheet rather than a sales paragraph, and the only call to action is a private viewing.',
+        deliverables: [
+            'Curated inventory with per-car specification sheets',
+            'Sourcing, finance and delivery services section',
+            'Private viewing request form',
+            'Technical, monospaced data styling throughout',
+        ],
+    },
+    {
+        id: 25,
+        slug: 'morrow-coffee',
+        title: 'Morrow',
+        description: 'Neighbourhood coffee roaster and bakery, covering the café menu, beans for home and a subscription.',
+        category: 'Hospitality',
+        image: '/projects/morrow.jpg',
+        link: '/sites/coffee-shop/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'A roaster-café is three businesses on one page: somewhere to sit, a shop for beans, and a subscription. The goal was a site where each of the three is easy to find without the page feeling like a catalogue.',
+        approach:
+            'Oat cream, espresso and terracotta with a soft serif give it the warmth of the room itself. The page moves from the menu to the farmers to the beans, with the roasting process told as a short sequence instead of a wall of text.',
+        deliverables: [
+            'Café menu, origin stories and bean shop sections',
+            'From-cherry-to-cup process sequence',
+            'Two-location details with opening hours',
+            'Bean subscription sign-up form',
+        ],
+    },
+    {
+        id: 26,
+        slug: 'solstice-travel',
+        title: 'Solstice',
+        description: 'Tailor-made travel studio that sells conversations with a planner, not packaged tours.',
+        category: 'Hospitality',
+        image: '/projects/solstice.jpg',
+        link: '/sites/travel-agency/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'A bespoke travel designer cannot compete with booking engines on price or choice. The goal was a site that makes the planner the product, and makes starting a conversation feel easier than running a search.',
+        approach:
+            'Sand, deep teal and amber with an elegant serif for headlines. Destinations are shown as places the team keeps returning to, one journey is told in full as a worked example, and the enquiry form asks where your mind keeps wandering rather than for dates and a budget.',
+        deliverables: [
+            'Destination showcase with filterable regions',
+            'Three-step planning process section',
+            'Featured itinerary told as a full story',
+            'Traveller stories and open-ended enquiry form',
+        ],
+    },
+    {
+        id: 27,
+        slug: 'arden-vale-estates',
+        title: 'Arden Vale',
+        description: 'Estate agency dealing in architecturally significant homes, on and off the market.',
+        category: 'Real Estate',
+        image: '/projects/arden-vale.jpg',
+        link: '/sites/real-estate/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Property portals flatten every home into the same grid of thumbnails. The goal was an agency site where a small number of houses are presented with the care of an architecture magazine.',
+        approach:
+            'Limestone, forest green and brass with a refined display face. Listings are few and large, one house is given a full feature, and the advisory side of the business is put ahead of the listings, where a portal would never put it.',
+        deliverables: [
+            'Current listings with key facts per home',
+            'Full-width feature on a single property',
+            'Sales, acquisition and off-market advisory sections',
+            'Private viewing request form',
+        ],
+    },
+    {
+        id: 28,
+        slug: 'lumen-dental',
+        title: 'Lumen',
+        description: 'Modern dental studio, written for patients who would rather not be there.',
+        category: 'Healthcare',
+        image: '/projects/lumen.jpg',
+        link: '/sites/dental-clinic/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'People put off the dentist out of nerves and fear of the bill. The goal was a clinic site that deals with both honestly: what it will feel like, and what it will cost, before anyone picks up the phone.',
+        approach:
+            'Mist white, petrol and aqua keep it clinical without feeling cold. A section speaks directly to anxious patients, treatment results can be compared side by side, the fees are published on the page, and the team is shown as people rather than qualifications.',
+        deliverables: [
+            'Treatment overview across general, cosmetic and orthodontic care',
+            'Dedicated section for nervous patients',
+            'Before-and-after comparison and published fee guide',
+            'Team profiles and appointment request form',
+        ],
+    },
+    {
+        id: 29,
+        slug: 'hale-and-mercer',
+        title: 'Hale & Mercer',
+        description: 'Independent law firm advising companies, founders and families.',
+        category: 'Corporate',
+        image: '/projects/hale-mercer.jpg',
+        link: '/sites/law-firm/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Law firm websites tend to list every practice area in the same grave tone and say nothing a client can use. The goal was a firm that sounds like a senior lawyer talking plainly across a table.',
+        approach:
+            'Ivory, ink navy and claret with a classical serif, set with generous margins like a well-made document. Six disciplines are explained in terms of the business problem behind them, partners are presented as the people you will actually deal with, and insights are kept short.',
+        deliverables: [
+            'Six practice areas explained in plain language',
+            'Partner profiles with direct contact',
+            'Short-form briefings section',
+            'Confidential enquiry form',
+        ],
+    },
+    {
+        id: 30,
+        slug: 'tempo-strength-club',
+        title: 'Tempo',
+        description: 'Coach-led strength and conditioning club with small classes and a free first week.',
+        category: 'Services',
+        image: '/projects/tempo.jpg',
+        link: '/sites/fitness-studio/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Gym sites sell a transformation and hide the timetable and the price. The goal was a club that shows exactly what happens this week and what it costs, and trusts that to be enough.',
+        approach:
+            'Concrete, black and cobalt with a heavy condensed display face give it the feel of the gym floor. The four ways to train are set out side by side, the weekly timetable is on the page, and membership is one simple table.',
+        deliverables: [
+            'Four training programmes compared side by side',
+            'Weekly class timetable',
+            'Facility tour and plain membership pricing',
+            'Free first-week sign-up form',
+        ],
+    },
+    {
+        id: 31,
+        slug: 'blackwood-and-sons',
+        title: 'Blackwood & Sons',
+        description: 'Third-generation traditional barbershop taking appointments and walk-ins.',
+        category: 'Services',
+        image: '/projects/blackwood-sons.jpg',
+        link: '/sites/barbershop/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'A barbershop with sixty years behind it should not look like a booking app. The goal was a site with the character of the shop itself that still gets someone into a chair in two taps.',
+        approach:
+            'Bottle green, parchment and mustard with an old-style serif, written in the first person by the owner. The services and prices come first, the history of the room second, and the six barbers are introduced by name.',
+        deliverables: [
+            'Service and price list',
+            'Shop history told in the owner\'s voice',
+            'Profiles of the six barbers',
+            'Appointment request form with walk-in hours',
+        ],
+    },
+    {
+        id: 32,
+        slug: 'juniper-veterinary',
+        title: 'Juniper',
+        description: 'Neighbourhood veterinary clinic for dogs, cats and small pets, open seven days a week.',
+        category: 'Healthcare',
+        image: '/projects/juniper.jpg',
+        link: '/sites/veterinary-clinic/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Choosing a vet is an anxious decision made on behalf of someone who cannot speak. The goal was a clinic site that reassures the owner first and explains the medicine second.',
+        approach:
+            'Cream, plum and coral with a friendly rounded type family keep it warm without becoming childish. A first visit is walked through step by step, the vets are introduced as people who like the job, and stories from the waiting room stand in for star ratings.',
+        deliverables: [
+            'Full service list under one roof',
+            'Step-by-step guide to a first visit',
+            'Vet profiles and client stories',
+            'New patient registration form',
+        ],
+    },
+    {
+        id: 33,
+        slug: 'stillwater-bathhouse',
+        title: 'Stillwater',
+        description: 'City bathhouse and spa with thermal pools, sauna and treatments in a phone-free space.',
+        category: 'Services',
+        image: '/projects/stillwater.jpg',
+        link: '/sites/spa/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Spa sites usually sell luxury. The goal was a bathhouse that sells a habit instead — warm, cold, rest, repeat — and a site calm enough to feel like the first ten minutes of a visit.',
+        approach:
+            'Linen, bark and clay with a quiet display serif and a great deal of empty space. The thermal circuit is explained as a simple sequence, treatments are listed without superlatives, and the page is as slow as the motion budget allows.',
+        deliverables: [
+            'Thermal circuit explained step by step',
+            'Massage and facial treatment menu',
+            'Single visits and membership options',
+            'Visit booking request form',
+        ],
+    },
+    {
+        id: 34,
+        slug: 'norde-interiors',
+        title: 'Norde',
+        description: 'Residential interior design studio, led by the work and very little else.',
+        category: 'Services',
+        image: '/projects/norde.jpg',
+        link: '/sites/interior-design/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'A design studio is judged on its taste before a word is read. The goal was a site that gets out of the way of the photographs and still explains how a project actually runs.',
+        approach:
+            'Paper, soot and olive with one oversized grotesque headline and almost no decoration. Selected projects carry the page, the process is set out in numbered stages, and the enquiry form asks about the home rather than the budget.',
+        deliverables: [
+            'Selected work gallery with project filters',
+            'Numbered project process from first sketch to install',
+            'Studio introduction',
+            'New project enquiry form',
+        ],
+    },
+    {
+        id: 35,
+        slug: 'elise-marlow-photography',
+        title: 'Elise Marlow',
+        description: 'Wedding photographer working in natural light, with all-inclusive pricing on the page.',
+        category: 'Services',
+        image: '/projects/elise-marlow.jpg',
+        link: '/sites/photographer/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Couples compare dozens of wedding photographers in an evening, and most sites hide the price until an email exchange. The goal was a portfolio with a clear voice and nothing held back.',
+        approach:
+            'Paper, ink and blush with a high-contrast display serif, written in the first person. Three weddings are told as stories, a second gallery is given to the in-between moments, and the packages are published in full.',
+        deliverables: [
+            'Three featured weddings told as stories',
+            'Gallery of candid, unposed moments',
+            'All-inclusive package pricing',
+            'Date availability enquiry form',
+        ],
+    },
+    {
+        id: 36,
+        slug: 'ironside-plumbing',
+        title: 'Ironside',
+        description: 'Local plumbing and heating company, built to turn an emergency search into a call-back.',
+        category: 'Services',
+        image: '/projects/ironside.jpg',
+        link: '/sites/plumbing/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Someone with a burst pipe is on a phone, stressed, and will call the first trade that looks trustworthy. The goal was a site that gets that person to a call-back request without scrolling.',
+        approach:
+            'White, slate and safety orange with a condensed industrial typeface. The call-back form sits in the hero beside the phone number, the price promise is stated before the services, and the areas covered and customer reviews follow for anyone who wants to check first.',
+        deliverables: [
+            'Call-back form and click-to-call in the first screen',
+            'Emergency, boiler and bathroom service sections',
+            'Three-step process and areas covered',
+            'Customer review section',
+        ],
+    },
+    {
+        id: 37,
+        slug: 'wild-fern-florist',
+        title: 'Wild Fern',
+        description: 'Neighbourhood flower studio with seasonal bouquets, weekly subscriptions and wedding flowers.',
+        category: 'Services',
+        image: '/projects/wild-fern.jpg',
+        link: '/sites/florist/index.html',
+        year: '2026',
+        services: ['Web Design', 'Web Development', 'Brand Identity'],
+        challenge:
+            'Online florists show a hundred near-identical arrangements. The goal was a studio that offers four bouquets a season and makes that short list feel like the reason to buy.',
+        approach:
+            'Cream, petal and berry with an expressive serif and plenty of room around the flowers. The four seasonal bouquets lead, the Friday subscription and wedding work follow, and the page ends with an invitation to visit the shop.',
+        deliverables: [
+            'Four seasonal bouquets with same-day delivery details',
+            'Weekly flower subscription section',
+            'Wedding and event flowers section',
+            'Order enquiry form and shop details',
         ],
     },
 ];

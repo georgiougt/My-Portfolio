@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solstice — Private Journeys, Made by Hand</title>
+<meta name="description" content="Solstice designs private journeys for curious travellers. Tailor-made itineraries, trusted local hosts, and support at every hour.">
+<meta name="theme-color" content="#0d3a3b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230d3a3b'/%3E%3Cpath d='M6 20a10 10 0 0 1 20 0z' fill='%23e59c4d'/%3E%3Cpath d='M4 24h24' stroke='%23efe7da' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <a class="brand" href="#top" aria-label="Solstice, home">
+    <svg viewBox="0 0 32 22" aria-hidden="true"><path d="M5 15a11 11 0 0 1 22 0"/><path d="M1 20h30"/></svg>
+    <span>Solstice</span>
+  </a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#destinations">Destinations</a>
+    <a href="#approach">Approach</a>
+    <a href="#journey">Signature journey</a>
+    <a href="#stories">Stories</a>
+  </nav>
+  <a class="btn btn--light header__cta" href="#plan">Plan a journey</a>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__frame">
+      <img data-parallax="-0.1" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=2200&q=78" alt="A wooden boat on a still alpine lake between steep mountains">
+      <div class="hero__inner">
+        <p class="eyebrow" data-reveal>Private journeys, made by hand</p>
+        <h1 class="hero__title" data-split>The long way round, <em>beautifully.</em></h1>
+        <p class="hero__lede" data-reveal data-delay="400">Tailor-made travel for people who would rather know one place well than tick off ten.</p>
+      </div>
+      <p class="hero__coord" aria-hidden="true">46.6943 N &nbsp; 12.0854 E<br>Lago di Braies, Dolomites</p>
+    </div>
+    <form class="finder" data-demo-form="Thank you. A travel designer will send first ideas within two days." data-reveal data-delay="600">
+      <label>Where to
+        <select name="where"><option>Anywhere, surprise me</option><option>Japan</option><option>Italy</option><option>Greece</option><option>Indonesia</option><option>Morocco</option></select>
+      </label>
+      <label>When
+        <select name="when"><option>Spring</option><option>Summer</option><option selected>Autumn</option><option>Winter</option></select>
+      </label>
+      <label>Travellers
+        <select name="who"><option>Solo</option><option selected>Two of us</option><option>Family</option><option>Group of friends</option></select>
+      </label>
+      <button class="btn btn--accent" type="submit">Start planning
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="finder__note" data-form-note role="status"></p>
+    </form>
+  </section>
+
+  <section class="intro wrap">
+    <p class="eyebrow" data-reveal>Why Solstice</p>
+    <h2 class="statement" data-split>We are a small studio of travel designers. Each of us has lived in the places we plan, and every journey starts with <em>a conversation,</em> not a catalogue.</h2>
+    <dl class="stats">
+      <div data-reveal><dt><span data-count="42">42</span></dt><dd>Countries we know first-hand</dd></div>
+      <div data-reveal data-delay="100"><dt><span data-count="16">16</span></dt><dd>Years designing private travel</dd></div>
+      <div data-reveal data-delay="200"><dt><span data-count="4.9">4.9</span></dt><dd>Average rating from 2,300 travellers</dd></div>
+      <div data-reveal data-delay="300"><dt>24<small>/7</small></dt><dd>A real person on call while you travel</dd></div>
+    </dl>
+  </section>
+
+  <section class="destinations wrap" id="destinations">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-reveal>Destinations</p>
+        <h2 class="h2" data-split>Places we keep <em>going back to</em></h2>
+      </div>
+      <a class="link" href="#plan" data-reveal>All 42 countries
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="mosaic">
+      <a class="place place--a" href="#plan" data-reveal>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1300&q=75" alt="A lantern-lit street in Kyoto with a pagoda at dusk"></figure>
+        <div class="place__info"><p>Japan</p><h3>Kyoto and the Kiso Valley</h3><span>10 days &middot; from 6,400</span></div>
+      </a>
+      <a class="place place--b" href="#plan" data-reveal data-delay="120">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=75" alt="Colourful houses stacked above the sea in Cinque Terre"></figure>
+        <div class="place__info"><p>Italy</p><h3>The Ligurian coast</h3><span>8 days &middot; from 4,900</span></div>
+      </a>
+      <a class="place place--c" href="#plan" data-reveal>
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1000&q=75" alt="Whitewashed houses on the caldera in Santorini"></figure>
+        <div class="place__info"><p>Greece</p><h3>Cyclades by sail</h3><span>9 days &middot; from 5,800</span></div>
+      </a>
+      <a class="place place--d" href="#plan" data-reveal data-delay="120">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1000&q=75" alt="A sea temple at sunset in Bali"></figure>
+        <div class="place__info"><p>Indonesia</p><h3>Bali, inland and slow</h3><span>12 days &middot; from 5,200</span></div>
+      </a>
+      <a class="place place--e" href="#plan" data-reveal data-delay="240">
+        <figure><img loading="lazy" src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=1300&q=75" alt="A kasbah in the Moroccan desert beneath a wide sky"></figure>
+        <div class="place__info"><p>Morocco</p><h3>Atlas to the Sahara</h3><span>9 days &middot; from 4,300</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="approach" id="approach">
+    <div class="wrap approach__inner">
+      <div class="approach__head">
+        <p class="eyebrow" data-reveal>Our approach</p>
+        <h2 class="h2" data-split>Three steps, <em>no templates</em></h2>
+        <p data-reveal>You will work with one designer from the first call to the day you come home.</p>
+      </div>
+      <ol class="steps">
+        <li data-reveal>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M30.500 17.500l-4 9-9 4 4-9z"/><circle cx="24" cy="24" r="1.200"/></svg>
+          <div><span>01</span><h3>We listen</h3><p>An unhurried call about how you like to travel, what you want to feel, and what you would rather avoid.</p></div>
+        </li>
+        <li data-reveal data-delay="120">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38c8 0 4-12 12-12s6-14 16-16"/><circle cx="10" cy="38" r="3"/><circle cx="38" cy="10" r="3"/><path d="M22 26h.01"/></svg>
+          <div><span>02</span><h3>We draw the route</h3><p>A day-by-day proposal with places to stay, people to meet and room to wander. We refine it until it is yours.</p></div>
+        </li>
+        <li data-reveal data-delay="240">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="15" width="30" height="24" rx="3"/><path d="M18 15v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4M9 25h30M22 25v4h4v-4"/></svg>
+          <div><span>03</span><h3>You simply go</h3><p>Everything is booked and confirmed. Your designer and our local hosts are a message away, day and night.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="journey wrap" id="journey" data-tabs>
+    <figure class="media journey__media" data-reveal="clip">
+      <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=75" alt="A turquoise mountain lake seen from a high ridge">
+      <figcaption>Signature journey</figcaption>
+    </figure>
+    <div class="journey__copy">
+      <p class="eyebrow" data-reveal>Nine days, lake to summit</p>
+      <h2 class="h2" data-split>The quiet <em>Dolomites</em></h2>
+      <div class="tabs" role="tablist" data-reveal>
+        <button class="is-active" role="tab" aria-selected="true" data-tab="one">Days 1 to 3</button>
+        <button role="tab" aria-selected="false" data-tab="two">Days 4 to 6</button>
+        <button role="tab" aria-selected="false" data-tab="three">Days 7 to 9</button>
+      </div>
+      <div class="panel is-shown" data-panel="one">
+        <h3>Arrive by water</h3>
+        <p>A private boat across the lake to a family-run hotel on the shore. Mornings on the water, afternoons in the orchards, and a first dinner cooked by your host's mother.</p>
+        <ul><li>Lakeside suite, three nights</li><li>Dawn row with a local boatbuilder</li><li>Cellar visit and tasting</li></ul>
+      </div>
+      <div class="panel" data-panel="two" hidden>
+        <h3>Into the high valleys</h3>
+        <p>Walk hut to hut with a mountain guide while your bags travel ahead. The paths are old shepherd routes, and lunch is whatever the hut is cooking that day.</p>
+        <ul><li>Two nights in a restored rifugio</li><li>Guided ridge walk, at your pace</li><li>Evening with a wood carver</li></ul>
+      </div>
+      <div class="panel" data-panel="three" hidden>
+        <h3>Above the clouds</h3>
+        <p>Finish in a glass-fronted lodge at two thousand metres. Take the sunrise cable car, then do nothing at all in the spa while the weather moves through the peaks.</p>
+        <ul><li>Summit lodge, three nights</li><li>Sunrise ascent and breakfast</li><li>Private transfer to Venice</li></ul>
+      </div>
+      <a class="btn btn--dark" href="#plan" data-reveal>Request this itinerary</a>
+    </div>
+  </section>
+
+  <section class="stories" id="stories">
+    <div class="wrap section-head">
+      <div>
+        <p class="eyebrow" data-reveal>Traveller stories</p>
+        <h2 class="h2" data-split>Told on <em>the way home</em></h2>
+      </div>
+      <div class="rail-nav" data-reveal>
+        <button data-rail-prev="#stories-rail" aria-label="Previous story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button data-rail-next="#stories-rail" aria-label="Next story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="rail" id="stories-rail" data-drag>
+      <blockquote class="story" data-reveal>
+        <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V17C0 7 5 1 15 0v6c-5 1-7 4-7 9h7v15zm22 0V17C22 7 27 1 37 0v6c-5 1-7 4-7 9h7v15z"/></svg>
+        <p>They asked better questions than we would have asked ourselves. Ten days in Japan felt like a month, in the best way.</p>
+        <footer><b>Helena and Tom</b><span>Kyoto and the Kiso Valley</span></footer>
+      </blockquote>
+      <blockquote class="story" data-reveal data-delay="100">
+        <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V17C0 7 5 1 15 0v6c-5 1-7 4-7 9h7v15zm22 0V17C22 7 27 1 37 0v6c-5 1-7 4-7 9h7v15z"/></svg>
+        <p>When a storm closed the pass, a new plan was on my phone before I had finished my coffee. I never felt alone out there.</p>
+        <footer><b>Idris</b><span>Atlas to the Sahara</span></footer>
+      </blockquote>
+      <blockquote class="story" data-reveal data-delay="200">
+        <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V17C0 7 5 1 15 0v6c-5 1-7 4-7 9h7v15zm22 0V17C22 7 27 1 37 0v6c-5 1-7 4-7 9h7v15z"/></svg>
+        <p>Three generations, one sailing boat, and somehow everyone got the holiday they wanted. We have already booked the next one.</p>
+        <footer><b>The Marchetti family</b><span>Cyclades by sail</span></footer>
+      </blockquote>
+      <blockquote class="story" data-reveal data-delay="300">
+        <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V17C0 7 5 1 15 0v6c-5 1-7 4-7 9h7v15zm22 0V17C22 7 27 1 37 0v6c-5 1-7 4-7 9h7v15z"/></svg>
+        <p>Not one queue, not one tour bus. Just the right people opening the right doors at the right time.</p>
+        <footer><b>Sofia</b><span>The Ligurian coast</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="plan" id="plan">
+    <div class="plan__media"><img data-parallax="-0.08" loading="lazy" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=70" alt=""></div>
+    <div class="wrap plan__inner">
+      <div>
+        <p class="eyebrow" data-reveal>Begin</p>
+        <h2 class="plan__title" data-split>Tell us where your mind <em>keeps wandering.</em></h2>
+      </div>
+      <form class="form" data-demo-form="Thank you. Your designer will write to you within two working days." data-reveal data-delay="150">
+        <label>Your name<input type="text" name="name" autocomplete="name" placeholder="Full name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label class="form__wide">What are you dreaming of<textarea name="notes" rows="3" placeholder="A place, a pace, a feeling"></textarea></label>
+        <button class="btn btn--accent form__wide" type="submit">Send to a designer
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form__note form__wide" data-form-note role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__lead">
+      <a class="brand" href="#top"><svg viewBox="0 0 32 22" aria-hidden="true"><path d="M5 15a11 11 0 0 1 22 0"/><path d="M1 20h30"/></svg><span>Solstice</span></a>
+      <p>Private journeys for curious travellers, designed by people who have been there.</p>
+    </div>
+    <div><h3>Explore</h3><a href="#destinations">Destinations</a><a href="#journey">Signature journeys</a><a href="#stories">Stories</a></div>
+    <div><h3>Studio</h3><a href="#approach">Our approach</a><a href="#top">Travelling responsibly</a><a href="#top">Careers</a></div>
+    <div><h3>Contact</h3><a href="mailto:hello@solstice.example">hello@solstice.example</a><a href="tel:+10000000000">+1 000 000 0000</a></div>
+  </div>
+  <div class="wrap footer__base">
+    <p>&copy; <span data-year>2026</span> Solstice Private Journeys. Concept site.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

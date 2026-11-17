@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian — Performance Automobiles</title>
+<meta name="description" content="Meridian is an independent gallery of performance and collector automobiles. Curated inventory, sourcing, finance and worldwide delivery.">
+<meta name="theme-color" content="#0a0b0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0b0d'/%3E%3Cpath d='M6 23V9h3l7 9 7-9h3v14h-3V14l-7 9-7-9v9z' fill='%23d6f54a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="header" data-header>
+  <a class="brand" href="#top" aria-label="Meridian, home">
+    <svg viewBox="0 0 28 20" aria-hidden="true"><path d="M1 19V1h3.6L14 13 23.400 1H27v18h-3.600V7.200L14 19 4.600 7.200V19z"/></svg>
+    <span>Meridian</span>
+  </a>
+  <nav class="nav" data-nav aria-label="Primary">
+    <a href="#inventory">Inventory</a>
+    <a href="#standard">Standard</a>
+    <a href="#services">Services</a>
+    <a href="#showroom">Showroom</a>
+  </nav>
+  <a class="btn header__cta" href="#contact">Book a viewing</a>
+  <button class="burger" data-nav-toggle aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <img data-parallax="-0.1" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=2200&q=75" alt="A grey Mercedes-AMG GT photographed in profile">
+    </div>
+    <div class="hero__inner">
+      <p class="tag" data-reveal><i></i>Independent gallery, est. 2008</p>
+      <h1 class="hero__title" data-split>Machines <span class="outline">worth</span> keeping.</h1>
+      <div class="hero__bar" data-reveal data-delay="450">
+        <div class="hero__feature">
+          <p class="mono">Featured / Lot 041</p>
+          <p class="hero__car">Mercedes-AMG GT</p>
+        </div>
+        <dl class="spec">
+          <div><dt>Power</dt><dd>585 <small>PS</small></dd></div>
+          <div><dt>0 to 100</dt><dd>3.6 <small>s</small></dd></div>
+          <div><dt>V-max</dt><dd>318 <small>km/h</small></dd></div>
+        </dl>
+        <a class="round" href="#inventory" aria-label="View inventory">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Porsche</span><span>Ferrari</span><span>Lamborghini</span><span>McLaren</span><span>Mercedes-AMG</span><span>Bugatti</span><span>Aston Martin</span><span>BMW M</span>
+      <span>Porsche</span><span>Ferrari</span><span>Lamborghini</span><span>McLaren</span><span>Mercedes-AMG</span><span>Bugatti</span><span>Aston Martin</span><span>BMW M</span>
+    </div>
+  </div>
+
+  <section class="inventory wrap" id="inventory" data-filter-group>
+    <div class="section-head">
+      <div>
+        <p class="tag" data-reveal><i></i>Current inventory</p>
+        <h2 class="h2" data-split>Six cars. No filler.</h2>
+      </div>
+      <div class="filters" data-reveal>
+        <button class="is-active" data-filter="all">All</button>
+        <button data-filter="coupe">Coupe</button>
+        <button data-filter="super">Supercar</button>
+        <button data-filter="gt">Grand tourer</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="car" data-cat="coupe" data-reveal>
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1200&q=75" alt="White Porsche 911 GT3"><span class="car__lot mono">Lot 038</span></a>
+        <div class="car__row"><h3>Porsche 911 GT3</h3><p class="car__price">214,900</p></div>
+        <ul class="car__spec mono"><li>2023</li><li>510 PS</li><li>4,200 km</li><li>PDK</li></ul>
+      </article>
+      <article class="car" data-cat="super" data-reveal data-delay="90">
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=75" alt="Orange Lamborghini Aventador"><span class="car__lot mono">Lot 039</span></a>
+        <div class="car__row"><h3>Lamborghini Aventador</h3><p class="car__price">389,000</p></div>
+        <ul class="car__spec mono"><li>2019</li><li>740 PS</li><li>11,800 km</li><li>ISR</li></ul>
+      </article>
+      <article class="car" data-cat="coupe gt" data-reveal data-delay="180">
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=75" alt="Grey Mercedes-AMG GT"><span class="car__lot mono">Lot 041</span></a>
+        <div class="car__row"><h3>Mercedes-AMG GT</h3><p class="car__price">168,500</p></div>
+        <ul class="car__spec mono"><li>2021</li><li>585 PS</li><li>9,300 km</li><li>DCT</li></ul>
+      </article>
+      <article class="car" data-cat="super" data-reveal>
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=75" alt="White McLaren 720S"><span class="car__lot mono">Lot 042</span></a>
+        <div class="car__row"><h3>McLaren 720S</h3><p class="car__price">259,000</p></div>
+        <ul class="car__spec mono"><li>2020</li><li>720 PS</li><li>7,650 km</li><li>SSG</li></ul>
+      </article>
+      <article class="car" data-cat="super" data-reveal data-delay="90">
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1200&q=75" alt="Bugatti Chiron seen from the front"><span class="car__lot mono">Lot 044</span></a>
+        <div class="car__row"><h3>Bugatti Chiron</h3><p class="car__price">On request</p></div>
+        <ul class="car__spec mono"><li>2018</li><li>1,500 PS</li><li>2,100 km</li><li>DSG</li></ul>
+      </article>
+      <article class="car" data-cat="gt" data-reveal data-delay="180">
+        <a href="#contact" class="car__media"><img loading="lazy" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=75" alt="Black Porsche Panamera on an open road"><span class="car__lot mono">Lot 045</span></a>
+        <div class="car__row"><h3>Porsche Panamera</h3><p class="car__price">132,400</p></div>
+        <ul class="car__spec mono"><li>2022</li><li>550 PS</li><li>18,900 km</li><li>PDK</li></ul>
+      </article>
+    </div>
+    <p class="inventory__note mono" data-reveal>Prices in EUR, taxes included. Full history file available for every lot.</p>
+  </section>
+
+  <section class="standard" id="standard">
+    <div class="standard__media">
+      <img data-parallax="-0.08" loading="lazy" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=70" alt="">
+    </div>
+    <div class="wrap standard__inner">
+      <p class="tag" data-reveal><i></i>The Meridian standard</p>
+      <h2 class="statement" data-split>We turn down nine cars for every one we list. What is left has provenance, a clean file, and nothing to explain.</h2>
+      <dl class="numbers">
+        <div data-reveal><dt><span data-count="240">240</span></dt><dd>Point inspection before a car is offered</dd></div>
+        <div data-reveal data-delay="100"><dt><span data-count="1460">1,460</span></dt><dd>Cars placed with owners since 2008</dd></div>
+        <div data-reveal data-delay="200"><dt><span data-count="36">36</span></dt><dd>Countries delivered to, door to door</dd></div>
+        <div data-reveal data-delay="300"><dt><span data-count="98">98</span><small>%</small></dt><dd>Of clients return for their next car</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="services wrap" id="services">
+    <div class="section-head">
+      <div>
+        <p class="tag" data-reveal><i></i>Services</p>
+        <h2 class="h2" data-split>Beyond the sale.</h2>
+      </div>
+    </div>
+    <ul class="service-list">
+      <li data-reveal>
+        <span class="mono">01</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"/><path d="M30 30l11 11M21 15v12M15 21h12"/></svg>
+        <h3>Sourcing</h3>
+        <p>Tell us the specification. We search our network of collectors and dealers and report back within ten days.</p>
+      </li>
+      <li data-reveal>
+        <span class="mono">02</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="11" width="36" height="26" rx="2"/><path d="M6 19h36M12 30h9"/></svg>
+        <h3>Finance and leasing</h3>
+        <p>Balloon, hire purchase or lease, arranged in-house with specialist lenders who understand these cars.</p>
+      </li>
+      <li data-reveal>
+        <span class="mono">03</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 18h28l-7-7M40 30H12l7 7"/></svg>
+        <h3>Consignment and part exchange</h3>
+        <p>We prepare, photograph and present your car to qualified buyers, or take it against your next one.</p>
+      </li>
+      <li data-reveal>
+        <span class="mono">04</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 5 6 29 0 34M24 7c-6 5-6 29 0 34"/></svg>
+        <h3>Enclosed delivery</h3>
+        <p>Covered transport, customs and registration handled for you, anywhere in the world.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="showroom wrap" id="showroom">
+    <figure class="media showroom__media" data-reveal="clip">
+      <img data-parallax="0.07" loading="lazy" src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1600&q=75" alt="Rear of a sports car in evening traffic">
+    </figure>
+    <div class="showroom__copy">
+      <p class="tag" data-reveal><i></i>The showroom</p>
+      <h2 class="h2" data-split>By appointment, one client at a time.</h2>
+      <p class="lede" data-reveal>Viewings are private and unhurried. We will have the car on the lift, the file on the table and the keys in the ignition.</p>
+      <dl class="details mono" data-reveal data-delay="100">
+        <div><dt>Address</dt><dd>Hangar 4, Kessler Airfield<br>North Ring Road</dd></div>
+        <div><dt>Hours</dt><dd>Mon to Sat, 09:00 to 19:00<br>Sunday by request</dd></div>
+        <div><dt>Direct</dt><dd><a href="tel:+10000000000">+1 000 000 0000</a><br><a href="mailto:sales@meridian.example">sales@meridian.example</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact__inner">
+      <h2 class="contact__title" data-split>Book a <span class="outline">private</span> viewing.</h2>
+      <form class="form" data-demo-form="Received. A specialist will call you within one working day." data-reveal>
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Full name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <label>Car of interest
+          <select name="car"><option>Porsche 911 GT3</option><option>Lamborghini Aventador</option><option>Mercedes-AMG GT</option><option>McLaren 720S</option><option>Bugatti Chiron</option><option>Porsche Panamera</option><option>Something else</option></select>
+        </label>
+        <label>Preferred date<input type="date" name="date"></label>
+        <div class="form__foot">
+          <button class="btn btn--solid" type="submit">Request appointment
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__note mono" data-form-note role="status"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__top">
+    <a class="brand" href="#top"><svg viewBox="0 0 28 20" aria-hidden="true"><path d="M1 19V1h3.6L14 13 23.400 1H27v18h-3.600V7.200L14 19 4.600 7.200V19z"/></svg><span>Meridian</span></a>
+    <nav aria-label="Footer">
+      <a href="#inventory">Inventory</a><a href="#services">Services</a><a href="#showroom">Showroom</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap footer__base mono">
+    <p>&copy; <span data-year>2026</span> Meridian Performance Automobiles. Concept site.</p>
+    <p>Marques shown are the property of their owners.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

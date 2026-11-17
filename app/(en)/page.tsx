@@ -33,7 +33,8 @@ export default function Home() {
       <Hero />
       <HexGrid />
       <Services />
-      <PortfolioGrid />
+      {/* Three rows on the homepage; the full set lives on /portfolio. */}
+      <PortfolioGrid limit={9} />
       {/* h2 here — the Hero owns the homepage H1. */}
       <PricingSection as="h2" />
       <FAQ />

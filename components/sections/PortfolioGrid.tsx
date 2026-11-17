@@ -8,12 +8,18 @@ import { Reveal } from '@/components/effects/Reveal';
 import NextImage from 'next/image';
 import { projects, categories } from '@/lib/projects';
 
-export function PortfolioGrid() {
+/**
+ * `limit` caps how many cards are shown and adds a link to the full portfolio.
+ * The homepage uses it so the grid stays three rows deep however many projects
+ * exist; /portfolio leaves it unset and shows everything.
+ */
+export function PortfolioGrid({ limit }: { limit?: number } = {}) {
     const [activeCategory, setActiveCategory] = useState('All');
 
-    const filteredProjects = activeCategory === 'All'
+    const matching = activeCategory === 'All'
         ? projects
         : projects.filter(p => p.category === activeCategory);
+    const filteredProjects = limit ? matching.slice(0, limit) : matching;
 
     return (
         <section id="portfolio" className="py-24 sm:py-32 bg-transparent relative z-10">
@@ -26,7 +32,7 @@ export function PortfolioGrid() {
                         Recent projects we&apos;re proud of
                     </h2>
                     <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-                        A selection of real businesses we&apos;ve helped launch and grow online.
+                        A selection of websites and web apps we&apos;ve designed and built.
                     </p>
                 </Reveal>
 
@@ -88,6 +94,17 @@ export function PortfolioGrid() {
                         </Reveal>
                     ))}
                 </div>
+
+                {limit && matching.length > limit && (
+                    <div className="mt-12 text-center">
+                        <Link
+                            href="/portfolio"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                        >
+                            View all {projects.length} projects →
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

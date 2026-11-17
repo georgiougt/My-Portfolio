@@ -5,7 +5,7 @@ import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 export const metadata: Metadata = {
     title: "Our Work & Portfolio",
     description:
-        "Browse real websites and web apps built by Stellar Reach Solutions for clients across Cyprus — healthcare, services, fintech, education and more.",
+        "Browse websites and web apps designed and built by Stellar Reach Solutions in Cyprus — healthcare, hospitality, services, fintech, education and more.",
     alternates: { canonical: "/portfolio" },
 };
 
