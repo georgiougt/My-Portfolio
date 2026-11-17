@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
+import { AnalyticsConsentReset } from '@/components/analytics/Analytics';
 import { site } from '@/lib/site';
 import { breadcrumbSchema, graph, jsonLdProps } from '@/lib/seo';
 
@@ -18,7 +19,7 @@ const crumbs = [
     { name: 'Privacy Policy', path: '/privacy' },
 ];
 
-const LAST_UPDATED = '2 September 2026';
+const LAST_UPDATED = '17 November 2026';
 
 export default function PrivacyPolicy() {
     return (
@@ -83,8 +84,8 @@ export default function PrivacyPolicy() {
                                 </li>
                                 <li>
                                     <strong className="text-foreground">Analytics data.</strong>{' '}
-                                    Aggregated, non-identifying information about how the site is
-                                    used, where analytics are enabled.
+                                    Aggregated information about how the site is used, collected
+                                    through Google Analytics 4 as described under Cookies below.
                                 </li>
                             </ul>
                             <p className="mt-4 leading-relaxed">
@@ -149,12 +150,26 @@ export default function PrivacyPolicy() {
                                 Cookies
                             </h2>
                             <p className="mt-3 leading-relaxed">
-                                This site uses only the cookies and local storage strictly
-                                necessary for it to function — for example, remembering whether
-                                you prefer the light or dark theme. If we add analytics or
-                                marketing cookies, we will ask for your consent first and update
-                                this policy. You can clear or block cookies in your browser
-                                settings at any time.
+                                This site uses the cookies and local storage strictly necessary
+                                for it to function — for example, remembering whether you prefer
+                                the light or dark theme, and your answer to the analytics
+                                question.
+                            </p>
+                            <p className="mt-3 leading-relaxed">
+                                We also use Google Analytics 4, provided by Google Ireland
+                                Limited, to understand in aggregate how the site is used.
+                                Analytics cookies are set only if you choose Accept on the
+                                banner. Until then, and if you decline, Google Analytics runs
+                                without cookies and receives only cookieless signals that are not
+                                tied to you. We do not use advertising or marketing cookies.
+                            </p>
+                            <p className="mt-3 leading-relaxed">
+                                You can{' '}
+                                <AnalyticsConsentReset>
+                                    change your analytics choice
+                                </AnalyticsConsentReset>{' '}
+                                at any time, and you can clear or block cookies in your browser
+                                settings.
                             </p>
                         </section>
 

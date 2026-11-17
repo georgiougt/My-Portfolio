@@ -19,6 +19,14 @@ export const site = {
      */
     phoneDisplay: '+357 99 717717',
 
+    /**
+     * Google Analytics 4 measurement ID for the "Stellar Reach Solutions"
+     * property (web stream: stellar-reach-solutions.com). Not a secret — it is
+     * visible in the page source of any site that uses it. Leave empty to
+     * switch analytics off entirely.
+     */
+    gaMeasurementId: 'G-7BCYFTHVK1',
+
     // Optional: a Calendly / Cal.com booking link. Leave empty to fall back to contact form.
     bookingUrl: '',
 

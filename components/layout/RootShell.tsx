@@ -4,6 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { CursorGlow } from '@/components/effects/CursorGlow';
 import { Starfield } from '@/components/effects/Starfield';
 import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
+import { Analytics } from '@/components/analytics/Analytics';
 import { graph, jsonLdProps, organizationSchema, websiteSchema } from '@/lib/seo';
 import type { Locale } from '@/lib/i18n';
 
@@ -55,6 +56,7 @@ export function RootShell({
                     <CursorGlow />
                     {children}
                     <WhatsAppButton />
+                    <Analytics locale={locale} />
                 </ThemeProvider>
             </body>
         </html>
